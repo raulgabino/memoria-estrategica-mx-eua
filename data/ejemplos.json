@@ -1,0 +1,151 @@
+{
+ "generado": "2026-10-11",
+ "nota": "Respuestas de ejemplo generadas con el acervo; material de trabajo.",
+ "consulta": [
+  {
+   "pregunta": "¿Por qué Commerce pudo terminar el acuerdo en 2025?",
+   "respuesta": "Por una cláusula contractual con respaldo judicial, no por un hallazgo publicado de incumplimiento.\n\n- La sección XI.B del acuerdo de 2019 permite a Commerce, a un signatario o a los signatarios retirarse con 90 días de aviso escrito [ADM-0013] [JUR-0009]. Commerce notificó el 14-abr-2025 y el retiro surtió efecto el 14-jul-2025 [ADM-0019] [ADM-0023].\n- Ese derecho de Commerce no estaba en los textos de 1996, 2002 y 2008; apareció en 2013 [ADM-0034] [JUR-0004]. Los abogados de los productores mexicanos admitieron en 2019 que el acuerdo de 2013 lo permitía [JUR-0006], y el Circuito Federal (2022) resolvió que Commerce podía ejercer un retiro contractual en ese caso [JUR-0011] y rechazó el argumento de influencia política [JUR-0012].\n- La Florida Tomato Exchange pidió la terminación el 16-jun-2023 [ADM-0017]. La ley obliga a continuar una investigación suspendida si la industria nacional lo solicita [JUR-0001] y a emitir orden si el acuerdo se viola o deja de cumplir los requisitos [JUR-0002].\n- Commerce dijo que el acuerdo \"has failed to protect U.S. tomato growers\" [ADM-0020] y lo ligó a la política comercial de Trump hacia México [INT-0004].\n\nContradicción registrada: la última revisión administrativa concluida (2021-2022) halló cumplimiento salvo faltas intrascendentes [ADM-0018]. El acervo no resuelve el choque con [ADM-0020].\n\nDeducción: la terminación se apoyó en el derecho contractual de retiro y no en una violación publicada [ADM-0036] [JUR-0037]. Las razones internas de Commerce no están disponibles [JUR-0035].",
+   "used": [
+    "ADM-0013",
+    "ADM-0017",
+    "ADM-0018",
+    "ADM-0019",
+    "ADM-0020",
+    "ADM-0023",
+    "ADM-0034",
+    "ADM-0036",
+    "INT-0004",
+    "JUR-0001",
+    "JUR-0002",
+    "JUR-0004",
+    "JUR-0006",
+    "JUR-0009",
+    "JUR-0011",
+    "JUR-0012",
+    "JUR-0035",
+    "JUR-0037"
+   ]
+  },
+  {
+   "pregunta": "¿Qué argumentos jurídicos de México funcionaron en tribunales?",
+   "respuesta": "Funcionaron los argumentos de justiciabilidad y de método; fracasaron los que atacaban el retiro de Commerce.\n\nFuncionaron:\n- El Circuito Federal (14-abr-2022) resolvió que los exportadores podían impugnar la determinación final de 2019 sin salirse del acuerdo, aplicando MedImmune v. Genentech [JUR-0014].\n- El CIT (17-abr-2024) resolvió que Commerce debía reanudar la investigación con el periodo original (1-mar-1995 a 29-feb-1996) y los seis respondientes originales [JUR-0016]. Tras sostener el CIT la redeterminación, Commerce enmendó su determinación [JUR-0018], y Bioparques, Ceuta y San Enrique quedaron sin margen individual [FIS-0020].\n\nNo funcionaron (Circuito Federal, 2022):\n- Que el § 1673c(i) invalidara el retiro de 2013 [JUR-0011].\n- La influencia política indebida [JUR-0012].\n- La coacción en la firma del acuerdo de 2019 [JUR-0013].\n\nContradicción registrada: el comunicado de abril de 2025 anunció 20.91% [JUR-0021] y la orden de julio fijó 17.09% para \"todos los demás\" [JUR-0023]. El acervo no las resuelve.\n\nDeducción: los triunfos no impidieron la terminación ni la orden, porque los argumentos perdidos eran los que atacaban el retiro [JUR-0038]. Deducción: la diferencia entre 20.91% y 17.09% probablemente refleja la actualización tras la remanda [JUR-0039].\n\nPendiente: una coalición mexicana impugnó ante el CIT la decisión negativa de la USITC; su fundamento no es visible [JUR-0033].",
+   "used": [
+    "FIS-0020",
+    "JUR-0011",
+    "JUR-0012",
+    "JUR-0013",
+    "JUR-0014",
+    "JUR-0016",
+    "JUR-0018",
+    "JUR-0021",
+    "JUR-0023",
+    "JUR-0033",
+    "JUR-0038",
+    "JUR-0039"
+   ]
+  },
+  {
+   "pregunta": "¿Quiénes se opusieron en Estados Unidos a la terminación?",
+   "respuesta": "El acervo documenta oposición de legisladores, estados y gremios, sobre todo de Texas, Arizona y el oeste.\n\n- Los senadores Kelly y Gallego y otros legisladores (22-may-2025) advirtieron menor producción mexicana, pérdida de empleos y presión migratoria [INT-0009]. Gallego había escrito el 16-abr-2025 que los precios podrían subir 50% [INT-0010].\n- Doce representantes de Texas, encabezados por Joaquin Castro (15-ago-2025), dijeron que la decisión dio peso desproporcionado a un solo estado [INT-0011].\n- La Legislatura de Texas aprobó la HCR 108 (Cámara 102-16, Senado 31-0) para pedir mantener el acuerdo [INT-0012].\n- 31 organizaciones, entre ellas la Cámara de Comercio de EE. UU., la National Restaurant Association y la National Retail Federation, pidieron el 10-jul-2025 pausar la salida [INT-0024]. Según AP, ese grupo afirma que el tomate mexicano apoya 50,000 empleos [PER-0007].\n- CSIS describe una división entre productores del sureste (Florida Tomato Exchange) y productores e importadores del oeste [INT-0014]. Tras el fallo de la USITC en 2026, la Texas International Produce Association lo lamentó [PER-0026].\n\nContradicción registrada: un estudio de Richards estimó 50% más en el precio al consumidor [ECO-0021], pero en 2025 el mismo autor habló de cerca de 10% [ECO-0022].\n\nDeducción: los opositores aparecen en cartas separadas, mientras el bloque a favor de terminar fue más cohesivo [INT-0033].",
+   "used": [
+    "ECO-0021",
+    "ECO-0022",
+    "INT-0009",
+    "INT-0010",
+    "INT-0011",
+    "INT-0012",
+    "INT-0014",
+    "INT-0024",
+    "INT-0033",
+    "PER-0007",
+    "PER-0026"
+   ]
+  },
+  {
+   "pregunta": "¿Qué concesiones hizo México en el acuerdo de 2019?",
+   "respuesta": "Precisión: el Gobierno de México no es parte de los acuerdos de suspensión; en 2019 firmaron productores y asociaciones [ADM-0012] [ADM-0033]. El Gobierno presentó comentarios al borrador [JUR-0007]. Las concesiones son, por tanto, de los productores.\n\nCompromisos del texto firmado el 19-sep-2019:\n- Precios de referencia FOB frontera: US$0.31/lb para redondo y roma no orgánico [FIS-0007], US$0.46 para Stem On [FIS-0008] y US$0.50 para racimo [FIS-0009].\n- Según Commerce, vender a precios mínimos y eliminar al menos 85% del dumping hallado en cada entrada [FIS-0016].\n- Frente a 2013, elevó los precios de referencia mínimos, mantuvo el tope de 15% sobre el margen de cada firmante e impuso monitoreo e inspección [JUR-0008].\n- Inspección USDA de calidad y condición cerca de la frontera, y un grupo interinstitucional Commerce-USDA-CBP [ADM-0014] [FIS-0010].\n- Sin fecha de terminación; Commerce, un signatario o los signatarios podían retirarse con 90 días de aviso [ADM-0013], sin penalización [JUR-0008].\n\nContexto (nivel 2): el 10-jul-2019 la titular de la SE dijo que Commerce pedía revisar el 100% de los embarques con plazo de hasta 72 horas [ADM-0029].\n\nEl acervo no documenta la contraoferta mexicana ni las concesiones negociadas antes de firmar [FIS-0038].",
+   "used": [
+    "ADM-0012",
+    "ADM-0013",
+    "ADM-0014",
+    "ADM-0029",
+    "ADM-0033",
+    "FIS-0007",
+    "FIS-0008",
+    "FIS-0009",
+    "FIS-0010",
+    "FIS-0016",
+    "FIS-0038",
+    "JUR-0007",
+    "JUR-0008"
+   ]
+  }
+ ],
+ "redteam": [
+  {
+   "posicion": "México debe pedir un nuevo acuerdo de suspensión con los mismos precios de referencia de 2019.",
+   "respuesta": "## Supuestos que pueden fallar\n- Que Commerce quiera negociar. No hay evidencia de negociación formal entre julio de 2025 y octubre de 2026 [HIS-0040], y la SE y la SADER dijeron que sus propuestas fueron rechazadas por razones políticas [JUR-0025].\n- Que México pueda pedirlo: los acuerdos los firman asociaciones de productores, no el Gobierno [ADM-0033].\n- Que los precios de 2019 sirvan de ancla: US$0.31/lb para redondo y roma [FIS-0007], la misma cifra nominal que el piso de temporada alta de 2013 [FIS-0005]. No hay aviso que los revisara entre 2019 y 2025 [FIS-0039].\n\n## Evidencia en contra\n- La participación de los productores estadounidenses en el consumo bajó de 65.4% (2001) a 39.3% (2018) y 30.3% (2025) [ECO-0005]. La Florida Tomato Exchange afirma que Commerce reconoció el fracaso de cinco acuerdos [INT-0025].\n- Commerce dijo que el acuerdo \"has failed to protect\" a los productores [ADM-0020]; la revisión 2021-2022 halló cumplimiento salvo faltas intrascendentes [ADM-0018]. Las fichas se contradicen y no las resuelvo.\n\n## Cómo respondería Estados Unidos\n- La FTE ya presiona a CBP para vigilar la orden en cada puerto [INT-0029]; tras el acuerdo de 2019 pidió continuar la investigación [ADM-0015].\n- 19 legisladores pidieron no retrasar la terminación [INT-0007], y Lutnick la ligó a la política de Trump hacia México [INT-0004].\n\n## Vulnerabilidades jurídicas\n- La sección XI.B permite a Commerce retirarse con 90 días [ADM-0013]; el Circuito Federal avaló un retiro contractual y rechazó la influencia política como vicio [JUR-0011] [JUR-0012].\n- La ley obliga a continuar la investigación si la industria nacional lo pide [JUR-0001].\n- Deducción: repetir la cláusula repite la exposición [JUR-0037].\n\n## Si la hipótesis principal es falsa\n- La orden de 17.09% sigue [ADM-0023]. Se proyecta que las exportaciones mexicanas bajen 9% [FIS-0032] o 7% [FIS-0033], cifras que el acervo registra como contradictorias.\n- Quedan la impugnación ante el CIT [JUR-0033] y los precios mínimos de exportación del DOF [ADM-0027].\n\n## Lo que la posición resiste\n- Deducción: solo la vía antidumping de 1996 produjo acuerdos duraderos [HIS-0031]. Deducción: en 2019 pasaron unos cuatro meses entre el retiro y el nuevo acuerdo [HIS-0034].\n- Hay una coalición estadounidense que pidió negociar un acuerdo nuevo [INT-0024].\n\n## Preguntas que el acervo no responde\n- Qué contenían las propuestas mexicanas de 2025 [ADM-0037], la contraoferta de 2019 [FIS-0038] y si existe evaluación oficial de lecciones [ADM-0040].",
+   "used": [
+    "ADM-0013",
+    "ADM-0015",
+    "ADM-0018",
+    "ADM-0020",
+    "ADM-0023",
+    "ADM-0027",
+    "ADM-0033",
+    "ADM-0037",
+    "ADM-0040",
+    "ECO-0005",
+    "FIS-0005",
+    "FIS-0007",
+    "FIS-0032",
+    "FIS-0033",
+    "FIS-0038",
+    "FIS-0039",
+    "HIS-0031",
+    "HIS-0034",
+    "HIS-0040",
+    "INT-0004",
+    "INT-0007",
+    "INT-0024",
+    "INT-0025",
+    "INT-0029",
+    "JUR-0001",
+    "JUR-0011",
+    "JUR-0012",
+    "JUR-0025",
+    "JUR-0033",
+    "JUR-0037"
+   ]
+  },
+  {
+   "posicion": "México debe llevar el caso del tomate a la mesa de revisión del T-MEC de 2026.",
+   "respuesta": "## Supuestos que pueden fallar\n- Que el caso sea materia de la revisión. Agri-Pulse solo anticipó que podría entrar, sin vínculo declarado con otros temas [INT-0027].\n- Que el Gobierno tenga vía propia: no es parte de los acuerdos [ADM-0033], y no se halló impugnación de la terminación ni consultas OMC o T-MEC [JUR-0033].\n- Que el vínculo político ayude: no hay declaración oficial que ligue la terminación con migración, fentanilo o seguridad [INT-0039].\n\n## Evidencia en contra\n- En 2019 una coalición de unas 80 entidades advirtió que salir del acuerdo complicaría el T-MEC [INT-0023], y Commerce se retiró igual [HIS-0010].\n- Legisladores republicanos sostuvieron que los derechos antidumping son compatibles con la ley, la OMC y el T-MEC [JUR-0024].\n- Los bienes mexicanos originarios entran libres de arancel bajo el T-MEC [FIS-0026], y la orden se aplicó igualmente [ADM-0023].\n\n## Cómo respondería Estados Unidos\n- CSIS interpreta que la administración ve la relación con México en términos internos [INT-0016]; Lutnick ligó la medida a la política de Trump [INT-0004].\n- La Florida Tomato Exchange y sus aliados son un obstáculo constante para levantar aranceles [INT-0026].\n- Deducción: trasladar el tomate a una mesa más amplia lo vuelve moneda de cambio [INT-0032].\n\n## Vulnerabilidades jurídicas\n- El único antecedente OMC (DS49, 1996) figura como resuelto [JUR-0032], y en el litigio de 2019 nadie pidió panel binacional [JUR-0015].\n- El Circuito Federal rechazó que la influencia política bastara para escrutar el retiro [JUR-0012].\n\n## Si la hipótesis principal es falsa\n- Deducción: la respuesta documentada ha sido negociar con Commerce, precios mínimos internos y litigio ante el CIT [JUR-0040]. México mismo ha vinculado temas: un subsecretario ligó la frontera ganadera con la cuota al jitomate [PER-0029].\n\n## Lo que la posición resiste\n- Hay oposición estadounidense organizada: 31 organizaciones [INT-0024], la Legislatura de Texas [INT-0012] y legisladores de Arizona y Texas [INT-0009] [INT-0011].\n- Deducción: el tomate ya funciona como pieza de una agenda bilateral amplia [INT-0032].\n\n## Preguntas que el acervo no responde\n- Qué prevé la revisión sobre remedios comerciales: no está en el acervo. Tampoco hay lecciones oficiales de los cinco acuerdos [INT-0040].",
+   "used": [
+    "ADM-0023",
+    "ADM-0033",
+    "FIS-0026",
+    "HIS-0010",
+    "INT-0004",
+    "INT-0009",
+    "INT-0011",
+    "INT-0012",
+    "INT-0016",
+    "INT-0023",
+    "INT-0024",
+    "INT-0026",
+    "INT-0027",
+    "INT-0032",
+    "INT-0039",
+    "INT-0040",
+    "JUR-0012",
+    "JUR-0015",
+    "JUR-0024",
+    "JUR-0032",
+    "JUR-0033",
+    "JUR-0040",
+    "PER-0029"
+   ]
+  }
+ ]
+}

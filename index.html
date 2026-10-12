@@ -2,333 +2,756 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Acervo verificado de la disputa del tomate México-Estados Unidos, con niveles de conocimiento, consulta y red team.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Memoria Estratégica México-EE. UU.</title>
+<meta name="description" content="Acervo verificado de la disputa antidumping del tomate fresco entre México y Estados Unidos (1969-2026): 255 fichas con fuente pública, nivel de certeza y fragmento textual. Prueba de concepto.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Memoria Estratégica México-EE. UU. Caso 1: Tomate fresco">
+<meta property="og:description" content="255 fichas verificadas con fuente pública sobre la disputa antidumping del tomate, 1969-2026. Cada afirmación dice qué tan firme es.">
+<meta property="og:locale" content="es_MX">
+<meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14171a" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: expediente de archivo. Una columna de lectura con barra de pestañas fija; las fichas se abren en un panel lateral. */
+/* Expediente público verificado. Un informe que se audita línea por línea:
+   tinta pizarra, filetes finos, una sola pieza gráfica (la franja de acuerdos 1996-2026). */
 :root{
-  --bg:#f3f5f4; --surface:#ffffff; --ink:#18221f; --muted:#5b6862; --line:#d5ddd9;
-  --accent:#0f5c4d; --accent-soft:#e2efeb;
-  --n1:#1f5f8b; --n1-soft:#e3eef6;
-  --n2:#9a6410; --n2-soft:#f6ecdb;
-  --n3:#6b3fa0; --n3-soft:#efe7f8;
-  --vac:#6b7470; --vac-soft:#eceeed;
-  --warn:#a23b2a;
-  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
-  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --paper:#faf9f6; --surface:#ffffff; --ink:#1a1d1f; --muted:#565c60; --line:#dcdad4; --line-soft:#ebe9e4;
+  --accent:#1d3a5f; --accent-soft:#e8edf3; --accent-ink:#ffffff;
+  --n1:#1d3a5f; --n2:#3d5a7d; --n3:#7a4a00; --n3-soft:#f6eedf; --vac:#555d5a;
+  --danger:#a1251b; --danger-soft:#f8e9e7; --mark:#fbe7a6;
+  --f-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  --r:6px;
+  --s1:8px; --s2:16px; --s3:24px; --s4:40px; --s5:64px;
+  --bar:56px; --max:1200px; --r:3px;
+  color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#111816; --surface:#18211e; --ink:#e4ebe8; --muted:#9aa8a2; --line:#2c3833;
-  --accent:#5cc3a8; --accent-soft:#1d332d;
-  --n1:#7db7e0; --n1-soft:#1a2a36; --n2:#e0ad5a; --n2-soft:#33281a;
-  --n3:#b897e6; --n3-soft:#2a2238; --vac:#a3aca8; --vac-soft:#242b28; --warn:#e88a77; color-scheme:dark}}
+  --paper:#14171a; --surface:#1b1f23; --ink:#e8e6e1; --muted:#a3a8ab; --line:#2f353a; --line-soft:#242a2f;
+  --accent:#8fb3e0; --accent-soft:#1f2a37; --accent-ink:#14171a;
+  --n1:#8fb3e0; --n2:#a9bdd6; --n3:#e0b062; --n3-soft:#2b2417; --vac:#b2b7b4;
+  --danger:#ef8a7e; --danger-soft:#2e1d1b; --mark:#5a4a14; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#111816; --surface:#18211e; --ink:#e4ebe8; --muted:#9aa8a2; --line:#2c3833;
-  --accent:#5cc3a8; --accent-soft:#1d332d;
-  --n1:#7db7e0; --n1-soft:#1a2a36; --n2:#e0ad5a; --n2-soft:#33281a;
-  --n3:#b897e6; --n3-soft:#2a2238; --vac:#a3aca8; --vac-soft:#242b28; --warn:#e88a77; color-scheme:dark}
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;margin:0}
-a{color:var(--accent)}
+  --paper:#14171a; --surface:#1b1f23; --ink:#e8e6e1; --muted:#a3a8ab; --line:#2f353a; --line-soft:#242a2f;
+  --accent:#8fb3e0; --accent-soft:#1f2a37; --accent-ink:#14171a;
+  --n1:#8fb3e0; --n2:#a9bdd6; --n3:#e0b062; --n3-soft:#2b2417; --vac:#b2b7b4;
+  --danger:#ef8a7e; --danger-soft:#2e1d1b; --mark:#5a4a14; color-scheme:dark}
+
+[hidden]{display:none!important}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--bar) + 16px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-serif);font-size:17px;line-height:1.6;font-optical-sizing:auto;overflow-x:hidden}
+a{color:var(--accent);text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
 button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.wrap{max-width:960px;margin:0 auto;padding-inline:20px}
-header.top{padding-block:28px 12px}
-.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(30px,5vw,44px);line-height:1.05;margin:.25em 0 .2em;letter-spacing:-.01em;text-wrap:balance}
-h2{font-family:var(--f-display);font-weight:700;font-size:26px;line-height:1.15;margin:0 0 .4em;text-wrap:balance}
-h3{font-family:var(--f-display);font-weight:700;font-size:18px;margin:1.4em 0 .4em}
-.lede{color:var(--muted);max-width:62ch;margin:0}
-nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-nav.tabs .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:thin}
-nav.tabs a{font-family:var(--f-display);font-weight:500;font-size:15px;text-decoration:none;color:var(--muted);padding:12px 12px 10px;border-bottom:3px solid transparent;white-space:nowrap}
-nav.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
-main{padding-block:28px 64px}
-section.view[hidden]{display:none}
-.prose{max-width:66ch}
-.prose p{margin:.6em 0}
-.legend{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
-.lv{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
-.lv.n1{color:var(--n1);background:var(--n1-soft)} .lv.n2{color:var(--n2);background:var(--n2-soft)}
-.lv.n3{color:var(--n3);background:var(--n3-soft);border-style:dashed} .lv.vac{color:var(--vac);background:var(--vac-soft);border-style:dotted}
-.cite{font-family:var(--f-mono);font-size:12.5px;padding:0 5px;border-radius:4px;border:1px solid currentColor;background:none;cursor:pointer;line-height:1.5;white-space:nowrap;vertical-align:1px}
-.cite.n1{color:var(--n1);background:var(--n1-soft)} .cite.n2{color:var(--n2);background:var(--n2-soft)}
-.cite.n3{color:var(--n3);background:var(--n3-soft);border-style:dashed} .cite.vac{color:var(--vac);background:var(--vac-soft);border-style:dotted}
-.cite.miss{color:var(--warn);text-decoration:line-through}
-.block{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin:18px 0}
-.block h3:first-child{margin-top:0}
-.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
-.status div{border-top:3px solid var(--accent);padding-top:8px}
-.status b{display:block;font-family:var(--f-display);font-size:22px}
-.status span{font-size:14px;color:var(--muted)}
-.opt{border-left:3px dashed var(--n3);padding:2px 0 2px 16px;margin:16px 0}
-.opt h4{font-family:var(--f-display);font-size:16px;margin:0 0 4px}
-.opt p{margin:.3em 0}
-ul.clean{padding-left:1.1em;margin:.4em 0} ul.clean li{margin:.35em 0}
-.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
-.tl li{position:relative;padding:4px 0 18px 22px}
-.tl li::before{content:"";position:absolute;left:-7px;top:10px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
-.tl .when{font-family:var(--f-mono);font-size:13px;color:var(--accent);font-weight:500}
-.tl .what{margin:2px 0}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.grid2 .block{margin:0}
-.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 16px}
-.tools input[type=search],.tools select{padding:8px 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);min-width:0}
-.tools input[type=search]{flex:1 1 240px}
-.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-family:var(--f-mono);font-size:12.5px;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.count{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
-.cards{display:grid;gap:10px}
-.card{display:block;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;cursor:pointer}
-.card:hover{border-color:var(--accent)}
-.card .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-bottom:4px}
-.card p{margin:0;font-size:15.5px}
-.more{margin:14px 0;text-align:center}
-.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);border-radius:var(--r);padding:9px 16px;font-family:var(--f-display);font-weight:500;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--accent)}
-.btn:disabled{opacity:.5;cursor:default}
-textarea{width:100%;min-height:96px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);resize:vertical}
-.examples{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
-.answer{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;margin-top:16px;min-height:60px}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+::selection{background:var(--accent-soft)}
+.sans{font-family:var(--f-sans)}
+.mono,.code{font-family:var(--f-mono);font-size:.86em;letter-spacing:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:24px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--surface);padding:8px 12px;font-family:var(--f-sans)}
+.skip:focus{left:8px}
+
+/* ---------- barra institucional ---------- */
+.bar{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--line);height:var(--bar)}
+.bar .wrap{height:100%;display:flex;align-items:center;gap:var(--s3)}
+.brand{display:flex;flex-direction:column;line-height:1.15;text-decoration:none;color:var(--ink);min-width:0}
+.brand b{font-family:var(--f-serif);font-weight:600;font-size:17px;white-space:nowrap}
+.brand span{font-family:var(--f-sans);font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.main{display:flex;gap:2px;margin-left:auto;height:100%}
+nav.main a{display:flex;align-items:center;padding:0 14px;font-family:var(--f-sans);font-weight:500;font-size:15px;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px}
+nav.main a:hover{color:var(--ink)}
+nav.main a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.bar-tools{display:flex;gap:4px;align-items:center}
+.iconbtn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 10px;border:1px solid transparent;background:none;border-radius:var(--r);font-family:var(--f-sans);font-size:14px;color:var(--muted)}
+.iconbtn:hover{color:var(--ink);border-color:var(--line)}
+.iconbtn svg{width:18px;height:18px}
+nav.bottom{display:none}
+
+/* ---------- vistas ---------- */
+main{padding-bottom:var(--s5)}
+.view-head{padding:var(--s4) 0 var(--s3);border-bottom:1px solid var(--line);margin-bottom:var(--s4)}
+.view-head h1{font-family:var(--f-serif);font-weight:600;font-size:33px;line-height:1.15;margin:0 0 6px;letter-spacing:-.005em}
+.view-head p{margin:0;color:var(--muted);max-width:68ch;font-size:17px}
+h2,h3,h4{font-family:var(--f-serif);font-weight:600;text-wrap:balance}
+p{text-wrap:pretty}
+
+/* ---------- portada / informe ---------- */
+.hero{padding:var(--s5) 0 var(--s4)}
+.hero .kicker{font-family:var(--f-sans);font-size:15px;color:var(--muted);margin:0 0 var(--s2)}
+.hero h1{font-family:var(--f-serif);font-weight:600;font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-.012em;margin:0;max-width:30ch}
+.hero h1 .sub{display:block;font-weight:400;color:var(--muted);font-size:.62em;line-height:1.25;margin-top:.35em;letter-spacing:0;max-width:40ch}
+.meta-line{display:flex;flex-wrap:wrap;gap:6px 22px;margin:var(--s3) 0 0;padding:0;list-style:none;font-family:var(--f-sans);font-size:14px;color:var(--muted)}
+.meta-line b{color:var(--ink);font-weight:600}
+
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 32px}
+.col-main{grid-column:1 / span 7}
+.col-side{grid-column:9 / span 4}
+
+.synth{font-size:21px;line-height:1.5;margin:0 0 var(--s3);max-width:62ch}
+.synth p{margin:0 0 .6em}
+.status{display:flex;gap:12px;align-items:flex-start;font-family:var(--f-sans);font-size:15px;line-height:1.5;border-left:3px solid var(--accent);background:var(--accent-soft);padding:12px 16px;margin:0 0 var(--s4)}
+.status b{font-weight:600}
+
+/* franja de acuerdos: la pieza gráfica del sitio */
+.strip{margin:var(--s3) 0 var(--s4)}
+.strip h2{font-size:21px;margin:0 0 4px}
+.strip > p{margin:0 0 var(--s2);color:var(--muted);font-size:15.5px;max-width:68ch;font-family:var(--f-sans)}
+.track{position:relative;height:64px;border-bottom:1px solid var(--ink)}
+.seg{position:absolute;top:10px;height:40px;border:0;padding:0 0 0 6px;background:var(--accent);color:var(--accent-ink);font-family:var(--f-sans);font-size:13px;font-weight:500;text-align:left;overflow:hidden;white-space:nowrap;border-radius:0}
+.seg:hover,.seg:focus-visible{filter:brightness(1.18)}
+.seg.order{background:repeating-linear-gradient(135deg,var(--ink) 0 2px,transparent 2px 7px);color:var(--ink);border:1px solid var(--ink);padding:0}
+.seg .lab{display:block;line-height:40px}
+.gapmark{position:absolute;top:2px;bottom:-1px;width:0;border-left:1px dashed var(--muted)}
+.axis{position:relative;height:28px;font-family:var(--f-sans);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.axis span{position:absolute;top:6px;transform:translateX(-50%)}
+.axis span::before{content:"";position:absolute;left:50%;top:-6px;height:5px;border-left:1px solid var(--ink)}
+.strip-key{display:flex;flex-wrap:wrap;gap:6px 20px;font-family:var(--f-sans);font-size:13.5px;color:var(--muted);margin-top:4px}
+.strip-key i{display:inline-block;width:18px;height:10px;vertical-align:-1px;margin-right:6px;background:var(--accent)}
+.strip-key i.o{background:repeating-linear-gradient(135deg,var(--ink) 0 2px,transparent 2px 6px);border:1px solid var(--ink)}
+.strip-key i.g{background:none;border-left:1px dashed var(--muted);width:1px;height:12px}
+
+/* datos clave */
+.facts{position:sticky;top:calc(var(--bar) + 24px);border-top:2px solid var(--ink);padding-top:var(--s2)}
+.facts h2{font-family:var(--f-sans);font-size:15px;font-weight:600;margin:0 0 var(--s2)}
+.fact{padding:0 0 var(--s2);margin:0 0 var(--s2);border-bottom:1px solid var(--line)}
+.fact:last-of-type{border-bottom:0}
+.fact .n{font-family:var(--f-serif);font-weight:600;font-size:41px;line-height:1;font-variant-numeric:tabular-nums lining-nums;letter-spacing:-.01em}
+.fact .n small{font-size:.5em;font-weight:400;margin-left:2px}
+.fact p{margin:6px 0 4px;font-family:var(--f-sans);font-size:14.5px;line-height:1.45}
+.facts .toc{margin-top:var(--s3);border-top:1px solid var(--line);padding-top:var(--s2);font-family:var(--f-sans);font-size:14.5px}
+.toc h3{font-family:var(--f-sans);font-size:14px;font-weight:600;margin:0 0 6px}
+.toc ol{margin:0;padding-left:1.4em}
+.toc li{margin:3px 0}
+details.toc-m{display:none}
+
+/* secciones del informe */
+.sec{border-top:1px solid var(--line);padding-top:var(--s3);margin-top:var(--s4)}
+.sec > h2{font-size:26px;line-height:1.2;margin:0 0 var(--s2);display:flex;gap:.5em;align-items:baseline}
+.sec > h2 .num{font-family:var(--f-sans);font-weight:500;font-size:15px;color:var(--muted);min-width:1.4em;font-variant-numeric:tabular-nums}
+.prose{max-width:68ch}
+.prose p{margin:0 0 .8em}
+.lessons{list-style:none;padding:0;margin:0}
+.lessons li{margin:0 0 1em;padding-left:0}
+.lessons b{font-weight:600}
+.opts{counter-reset:o;list-style:none;padding:0;margin:var(--s2) 0 0}
+.opts > li{counter-increment:o;position:relative;padding:0 0 var(--s3) 2.2em;margin:0}
+.opts > li::before{content:counter(o);position:absolute;left:0;top:2px;font-family:var(--f-sans);font-weight:600;font-size:14px;width:1.6em;height:1.6em;display:flex;align-items:center;justify-content:center;border:1px solid var(--ink);border-radius:50%}
+.opts h3{font-size:19px;line-height:1.35;margin:0 0 6px}
+.opts p{margin:0 0 .5em}
+.risk{font-family:var(--f-sans);font-size:15px;line-height:1.5;color:var(--muted)}
+.risk b{color:var(--ink);font-weight:600}
+.caveat{display:flex;gap:10px;align-items:flex-start;font-family:var(--f-sans);font-size:15px;line-height:1.5;padding:10px 14px;background:var(--n3-soft);color:var(--ink);border-left:3px solid var(--n3);margin:0 0 var(--s2);max-width:68ch}
+.unknown{list-style:none;padding:0;margin:0}
+.unknown li{position:relative;padding-left:1.6em;margin:0 0 .7em}
+.unknown li::before{content:"";position:absolute;left:2px;top:.55em;width:.62em;height:.62em;border:1.5px solid var(--vac);border-radius:50%}
+
+/* fuentes de sección */
+.sources{margin:var(--s3) 0 0;max-width:68ch;font-family:var(--f-sans);font-size:13.5px;color:var(--muted)}
+.sources summary{cursor:pointer;font-weight:500;color:var(--muted);padding:4px 0;list-style:none}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary::before{content:"+";display:inline-block;width:1em;font-weight:600}
+.sources[open] summary::before{content:"\2212"}
+.sources ol{margin:6px 0 0;padding:0;list-style:none;border-top:1px solid var(--line-soft)}
+.sources li{display:grid;grid-template-columns:2.2em 7.4em 1fr;gap:8px;align-items:baseline;border-bottom:1px solid var(--line-soft)}
+.sources li button{all:unset;cursor:pointer;display:contents}
+.sources li > *{padding:5px 0}
+.sources .t{color:var(--ink);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.sources li:hover .t{text-decoration:underline}
+.sources li:focus-within{outline:2px solid var(--accent)}
+
+/* marcadores de nivel: forma + texto */
+.mk{display:inline-block;width:.62em;height:.62em;flex:none;vertical-align:.04em;border:1.5px solid currentColor}
+.mk.n1{color:var(--n1);background:currentColor}
+.mk.n2{color:var(--n2);background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
+.mk.n3{color:var(--n3);background:transparent}
+.mk.vac{color:var(--vac);border-radius:50%;background:transparent}
+.lv{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-sans);font-size:13.5px;font-weight:500;white-space:nowrap}
+.lv.n1{color:var(--n1)} .lv.n2{color:var(--n2)} .lv.n3{color:var(--n3);font-style:italic} .lv.vac{color:var(--vac)}
+
+/* citas */
+sup.fns{font-family:var(--f-sans);font-size:.62em;line-height:0;vertical-align:.62em;margin-left:1px;white-space:nowrap}
+.fn{border:0;background:none;padding:2px 1px;font:inherit;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:2px}
+.fn .mk{width:.7em;height:.7em;border-width:1.2px}
+.fn:hover{text-decoration:underline}
+.fn.miss,.ref.miss{color:var(--danger);text-decoration:line-through}
+.ref{display:inline-flex;align-items:center;gap:5px;border:0;background:none;padding:2px 2px;font-family:var(--f-mono);font-size:13px;color:var(--muted);white-space:nowrap;border-radius:2px}
+.ref:hover{color:var(--ink);background:var(--line-soft)}
+.refs{display:flex;flex-wrap:wrap;gap:2px 10px;margin-top:6px}
+.answer .ref{font-size:12.5px;color:var(--accent)}
+
+.pop{position:absolute;z-index:40;max-width:340px;background:var(--surface);border:1px solid var(--line);box-shadow:0 6px 24px rgba(20,23,26,.14);padding:12px 14px;font-family:var(--f-sans);font-size:14px;line-height:1.45;pointer-events:none}
+.pop .h{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.pop .h .code{color:var(--muted);font-size:12.5px}
+.pop p{margin:0;font-family:var(--f-serif);font-size:15px}
+.pop small{display:block;margin-top:8px;color:var(--muted)}
+
+/* cronología */
+.eras{margin:0;padding:0;list-style:none}
+.era{margin:0 0 var(--s3)}
+.era > h3{font-family:var(--f-sans);font-size:15px;font-weight:600;margin:0 0 var(--s1);padding:6px 0;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;gap:12px}
+.era > h3 span{font-weight:400;color:var(--muted);font-variant-numeric:tabular-nums}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.tl .when{font-family:var(--f-sans);font-size:14px;font-weight:500;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink);padding-top:2px}
+.tl .what{margin:0}
+
+/* actores */
+.actors{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.side-h{font-family:var(--f-sans);font-size:15px;font-weight:600;border-bottom:1px solid var(--ink);padding:6px 0;margin:0}
+.arb{grid-column:1 / -1;border:1px solid var(--line);background:var(--surface);padding:14px 18px;margin:var(--s2) 0}
+.arb h4,.act h4{font-family:var(--f-sans);font-size:14.5px;font-weight:600;margin:0 0 4px}
+.arb p,.act p{margin:0}
+.act{padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.act .stance{font-family:var(--f-sans);font-size:13px;color:var(--muted);font-weight:500}
+.reading{margin:var(--s3) 0 0;max-width:68ch;font-style:italic}
+
+/* ---------- acervo ---------- */
+.news-line{font-family:var(--f-sans);font-size:14px;color:var(--muted);margin:var(--s2) 0 0}
+.news-line b{color:var(--ink);font-weight:500}
+.newslist{list-style:none;padding:0;margin:var(--s2) 0 0;border-top:1px solid var(--line)}
+.newslist li{padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:15.5px}
+.filters{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:end;margin-bottom:var(--s2)}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label{font-family:var(--f-sans);font-size:13.5px;font-weight:500;color:var(--muted)}
+.input,select.input{height:42px;padding:0 12px;border:1px solid var(--line);background:var(--surface);border-radius:var(--r);font-family:var(--f-sans);font-size:15px;min-width:0;width:100%}
+.input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 var(--s2)}
+.chip{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 12px;border:1px solid var(--line);background:var(--surface);border-radius:999px;font-family:var(--f-sans);font-size:14px;color:var(--ink)}
+.chip .c{color:var(--muted);font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.chip[aria-pressed="true"] .c{color:inherit;opacity:.8}
+.chip[aria-pressed="true"] .mk{color:var(--paper)}
+.chip:hover{border-color:var(--ink)}
+.resultbar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-family:var(--f-sans);font-size:14px;color:var(--muted);padding:8px 0;border-bottom:1px solid var(--ink)}
+.resultbar b{color:var(--ink);font-weight:600}
+.linkbtn{border:0;background:none;padding:4px 0;font-family:var(--f-sans);font-size:14px;color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.legend-mini{display:flex;flex-wrap:wrap;gap:4px 16px}
+.rows{list-style:none;margin:0;padding:0}
+.rowh,.rowb{display:grid;grid-template-columns:118px 120px minmax(0,1fr) 120px 92px;gap:16px;align-items:baseline}
+.rowh{font-family:var(--f-sans);font-size:13px;font-weight:500;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line)}
+.rowb{width:100%;text-align:left;border:0;border-bottom:1px solid var(--line-soft);background:none;padding:12px 10px;font-family:var(--f-sans);font-size:14px;color:var(--ink)}
+.rowb:hover{background:var(--surface)}
+.rowb .d{font-variant-numeric:tabular-nums;color:var(--muted)}
+.rowb .a{font-family:var(--f-serif);font-size:16px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rowb .e{color:var(--muted)}
+.rowb .k{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.rowb .ct{display:inline-block;margin-left:6px;font-size:12.5px;color:var(--danger);font-family:var(--f-sans)}
+mark{background:var(--mark);color:inherit;padding:0 1px}
+.more{display:flex;justify-content:center;padding:var(--s3) 0}
+.empty{padding:var(--s4) 0;max-width:56ch;font-family:var(--f-sans)}
+.empty h3{font-family:var(--f-serif);font-size:21px;margin:0 0 6px}
+.empty p{margin:0 0 var(--s2);color:var(--muted)}
+details.fbox > summary{display:none}
+
+/* ---------- botones ---------- */
+.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:var(--r);font-family:var(--f-sans);font-weight:500;font-size:15px}
+.btn:hover{filter:brightness(1.12)}
+.btn.sec2{background:transparent;color:var(--accent)}
+.btn.quiet{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn:disabled{opacity:.5;cursor:default;filter:none}
+
+/* ---------- herramientas ---------- */
+.modes{display:inline-flex;border:1px solid var(--ink);border-radius:var(--r);overflow:hidden;margin:0 0 var(--s3)}
+.modes button{border:0;background:none;padding:10px 18px;font-family:var(--f-sans);font-size:15px;font-weight:500;min-height:44px}
+.modes button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.tool{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:0 48px}
+.tool-intro{font-size:18px;margin:0 0 var(--s2);max-width:62ch}
+textarea.input{height:auto;min-height:120px;padding:12px 14px;resize:vertical;font-family:var(--f-serif);font-size:17px;line-height:1.5}
+.formrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px}
+.formrow .hint{font-family:var(--f-sans);font-size:13.5px;color:var(--muted)}
+.access{display:flex;gap:10px;align-items:flex-start;font-family:var(--f-sans);font-size:14.5px;line-height:1.5;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:12px 14px;margin:0 0 var(--s2)}
+.access svg{flex:none;width:16px;height:16px;margin-top:3px}
+.access b{color:var(--ink);font-weight:600}
+.exlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.exlist h3{font-family:var(--f-sans)}
+.exlist li{border-bottom:1px solid var(--line-soft)}
+.exlist button{display:block;width:100%;text-align:left;border:0;background:none;padding:12px 0;font-family:var(--f-sans);font-size:15px;line-height:1.45;color:var(--ink)}
+.exlist button:hover{color:var(--accent)}
+.exlist button .tag{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.exlist button[aria-current="true"]{color:var(--accent);font-weight:500}
+.side-title{font-family:var(--f-sans);font-size:15px;font-weight:600;margin:0 0 8px}
+.adv{margin-top:var(--s3);font-family:var(--f-sans);font-size:13.5px;color:var(--muted)}
+
+.answer{margin-top:var(--s3);border-top:2px solid var(--ink);padding-top:var(--s2)}
 .answer:empty{display:none}
-.answer p{margin:.5em 0} .answer ul{padding-left:1.2em}
-.answer h4{font-family:var(--f-display);margin:1em 0 .3em}
-.note{font-size:14px;color:var(--muted)}
-.warnbox{border:1px solid var(--warn);color:var(--warn);border-radius:var(--r);padding:10px 14px;font-size:15px}
-.used{margin-top:10px;font-size:13.5px;color:var(--muted)}
-/* drawer */
-.scrim{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:20}
-aside.drawer{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:var(--surface);border-left:1px solid var(--line);z-index:21;overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + 18px) 22px calc(env(safe-area-inset-bottom,0px) + 28px)}
-.drawer .x{float:right;border:none;background:none;font-size:26px;line-height:1;cursor:pointer;color:var(--muted)}
-.drawer dl{margin:14px 0 0;display:grid;gap:10px}
-.drawer dt{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.drawer dd{margin:0;font-size:15.5px;overflow-wrap:anywhere}
-.frag{font-style:italic;border-left:3px solid var(--line);padding-left:10px}
-dialog{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);max-width:min(520px,calc(100% - 32px));padding:22px}
-dialog::backdrop{background:rgba(0,0,0,.4)}
-dialog label{display:block;font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:12px 0 4px}
-dialog input{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
-.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-footer{border-top:1px solid var(--line);padding-block:20px;font-size:14px;color:var(--muted)}
-table{border-collapse:collapse;font-size:15px;width:100%}
-.tablewrap{overflow-x:auto}
-td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
-th{font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:500}
-td.num{font-variant-numeric:tabular-nums;text-align:right;font-family:var(--f-mono)}
-@media (prefers-reduced-motion:no-preference){.card,.btn{transition:border-color .15s,opacity .15s}}
-@media (max-width:520px){body{font-size:16px}.block{padding:16px}}
+.ans-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:baseline;font-family:var(--f-sans);font-size:13.5px;color:var(--muted);margin-bottom:var(--s2)}
+.ans-head .q{font-family:var(--f-serif);font-size:19px;font-weight:600;color:var(--ink);flex:1 1 100%;margin:0}
+.seal{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-sans);font-size:13.5px;font-weight:500;color:var(--n3);border:1px solid var(--n3);padding:4px 10px;border-radius:var(--r)}
+.seal.ex{color:var(--ink);border-color:var(--line);background:var(--surface)}
+.ans-body{max-width:68ch}
+.ans-body p{margin:0 0 .75em}
+.ans-body ul{padding-left:1.2em;margin:0 0 .9em}
+.ans-body li{margin:0 0 .45em}
+.ans-body h4{font-size:18px;margin:1.3em 0 .35em}
+.used{margin-top:var(--s2);font-family:var(--f-sans);font-size:14px;color:var(--muted)}
+.used summary{cursor:pointer;font-weight:500}
+.used .refs{margin-top:8px}
+.err{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;border-left:3px solid var(--danger);background:var(--danger-soft);padding:12px 16px;font-family:var(--f-sans);font-size:15px}
+.wait{font-family:var(--f-sans);font-size:15px;padding:var(--s2) 0}
+.wait .stage{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.wait .stage b{font-weight:600}
+.wait .t{font-variant-numeric:tabular-nums;color:var(--muted)}
+.wait .meter{position:relative;height:3px;background:var(--line);margin:12px 0 10px;overflow:hidden}
+.wait .meter i{position:absolute;inset:0 auto 0 0;width:30%;background:var(--accent)}
+.wait p{margin:0;color:var(--muted);font-size:14px}
+.wait .steps{list-style:none;padding:0;margin:10px 0 12px;font-size:14px;color:var(--muted)}
+.wait .steps li{padding:2px 0 2px 1.4em;position:relative}
+.wait .steps li::before{content:"";position:absolute;left:2px;top:.6em;width:.55em;height:.55em;border:1.5px solid var(--muted);border-radius:50%}
+.wait .steps li.done{color:var(--ink)}
+.wait .steps li.done::before{background:var(--accent);border-color:var(--accent)}
+.wait .steps li.now{color:var(--ink);font-weight:500}
+.wait .steps li.now::before{border-color:var(--accent)}
+
+/* ---------- método ---------- */
+.levels{list-style:none;padding:0;margin:0 0 var(--s3);border-top:1px solid var(--ink)}
+.levels li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.levels p{margin:0}
+table{border-collapse:collapse;width:100%;max-width:560px;font-family:var(--f-sans);font-size:15px;margin:0 0 var(--s3)}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;color:var(--muted);font-size:13.5px;border-bottom-color:var(--ink)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr.total td{font-weight:600;border-top:1px solid var(--ink)}
+
+/* ---------- panel de ficha ---------- */
+.scrim{position:fixed;inset:0;background:rgba(20,23,26,.42);z-index:50}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--surface);border-left:1px solid var(--line);z-index:51;display:flex;flex-direction:column}
+.drawer .band{height:4px;flex:none;background:var(--n1)}
+.drawer .band.n2{background:linear-gradient(90deg,var(--n2) 50%,var(--line) 50%)}
+.drawer .band.n3{background:var(--n3)}
+.drawer .band.vac{background:var(--vac)}
+.dhead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 24px;border-bottom:1px solid var(--line);flex:none}
+.dhead .code{color:var(--muted)}
+.dbody{overflow-y:auto;padding:20px 24px calc(env(safe-area-inset-bottom,0px) + 24px);flex:1}
+.xbtn{width:44px;height:44px;border:1px solid transparent;background:none;border-radius:var(--r);display:inline-flex;align-items:center;justify-content:center;color:var(--ink)}
+.xbtn:hover{border-color:var(--line)}
+.xbtn svg{width:20px;height:20px}
+.dlevel{font-family:var(--f-sans);font-size:14px;line-height:1.45;margin:0 0 var(--s2)}
+.dlevel .lv{font-size:15px;font-weight:600}
+.dlevel span.def{display:block;color:var(--muted);margin-top:2px}
+.claim{font-family:var(--f-serif);font-size:21px;line-height:1.42;font-weight:600;margin:0 0 var(--s3)}
+blockquote.frag{margin:0 0 var(--s3);padding:2px 0 2px 16px;border-left:2px solid var(--ink);font-style:italic;font-size:16.5px}
+blockquote.frag footer{font-style:normal;font-family:var(--f-sans);font-size:13.5px;color:var(--muted);margin-top:8px;border:0;padding:0}
+dl.fields{margin:0;font-family:var(--f-sans);font-size:15px}
+dl.fields > div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line-soft)}
+dl.fields dt{color:var(--muted);font-size:13.5px;font-weight:500}
+dl.fields dd{margin:0;overflow-wrap:anywhere;line-height:1.5}
+.mini{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--paper);padding:8px 10px;margin:0 0 6px;border-radius:var(--r);font-family:var(--f-sans);font-size:14px;line-height:1.4;color:var(--ink)}
+.mini:hover{border-color:var(--accent)}
+.mini .top{display:flex;gap:10px;align-items:center;margin-bottom:3px}
+.mini .top .code{color:var(--muted);font-size:12px}
+.mini.ct{border-left:3px solid var(--danger)}
+.dactions{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid var(--line)}
+.dnav{display:flex;gap:4px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--paper);font-family:var(--f-sans);font-size:14px;padding:10px 16px;border-radius:var(--r);z-index:80}
+
+dialog{border:1px solid var(--line);background:var(--surface);color:var(--ink);max-width:min(520px,calc(100% - 32px));padding:24px;border-radius:var(--r)}
+dialog::backdrop{background:rgba(20,23,26,.45)}
+dialog h2{font-size:21px;margin:0 0 8px}
+dialog p{font-family:var(--f-sans);font-size:14.5px;color:var(--muted);margin:0 0 12px;line-height:1.5}
+dialog label{font-family:var(--f-sans);font-size:13.5px;font-weight:500;display:block;margin:0 0 4px}
+
+/* ---------- pie ---------- */
+footer.site{border-top:2px solid var(--ink);background:var(--surface);padding:var(--s4) 0;font-family:var(--f-sans);font-size:14.5px;line-height:1.55}
+.fgrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:32px}
+footer.site h2{font-family:var(--f-sans);font-size:14.5px;font-weight:600;margin:0 0 8px}
+footer.site p{margin:0 0 6px;color:var(--muted)}
+footer.site .issuer{font-family:var(--f-serif);font-size:19px;font-weight:600;color:var(--ink);margin-bottom:4px}
+footer.site ul{list-style:none;padding:0;margin:0}
+footer.site li{margin:0 0 6px}
+.citebox{background:var(--paper);border:1px solid var(--line);padding:12px 14px;font-family:var(--f-serif);font-size:15px;line-height:1.5;color:var(--ink);margin:0 0 8px;user-select:all}
+.fine{margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+
+@media (prefers-reduced-motion:no-preference){
+  .wait .meter i{animation:slide 1.6s ease-in-out infinite}
+  @keyframes slide{0%{left:-30%}100%{left:100%}}
+  .drawer{animation:din .18s ease-out}
+  @keyframes din{from{transform:translateX(24px);opacity:.6}to{transform:none;opacity:1}}
+}
+@media (prefers-reduced-motion:reduce){.wait .meter i{width:100%;opacity:.35}}
+
+/* ---------- responsivo ---------- */
+@media (max-width:1020px){
+  .col-main{grid-column:1 / -1}
+  .col-side{grid-column:1 / -1}
+  .facts-slot .facts{margin:0 0 var(--s4)}
+  .facts{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;border-top:2px solid var(--ink)}
+  .facts h2{grid-column:1 / -1}
+  .fact:last-of-type{border-bottom:1px solid var(--line)}
+  .facts .toc{display:none}
+  details.toc-m{display:block}
+  .tool{grid-template-columns:1fr}
+  .tool aside{margin-top:var(--s4)}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .fgrid > :first-child{grid-column:1 / -1}
+  .rowh,.rowb{grid-template-columns:104px 112px minmax(0,1fr) 84px}
+  .rowh .ke,.rowb .k{display:none}
+}
+@media (max-width:760px){
+  :root{--bar:52px}
+  body{font-size:16.5px;padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  .wrap{padding-inline:16px}
+  nav.main{display:none}
+  .brand b{font-size:16px}
+  .bar-tools{margin-left:auto}
+  .bar-tools .cite-link{display:none}
+  nav.bottom{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--paper);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+  nav.bottom a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:60px;font-family:var(--f-sans);font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;border-top:2px solid transparent;margin-top:-1px}
+  nav.bottom a svg{width:20px;height:20px}
+  nav.bottom a[aria-current="page"]{color:var(--ink);border-top-color:var(--accent)}
+  .hero{padding:var(--s4) 0 var(--s3)}
+  .synth{font-size:19px}
+  .view-head{padding:var(--s3) 0 var(--s2);margin-bottom:var(--s3)}
+  .view-head h1{font-size:28px}
+  .facts{grid-template-columns:1fr 1fr;gap:0 16px}
+  .fact .n{font-size:33px}
+  .sec > h2{font-size:23px}
+  .seg .lab{font-size:0}
+  .track{height:52px}.seg{height:32px}.seg .lab{line-height:32px}
+  .tl li{grid-template-columns:1fr;gap:2px}
+  .tl .when{text-align:left}
+  .actors{grid-template-columns:1fr}
+  .actors .us-h{order:1}.actors .us{order:2}.actors .arb{order:3}.actors .mx-h{order:4}.actors .mx{order:5}
+  .filters{grid-template-columns:1fr}
+  details.fbox{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);margin:0 0 var(--s2)}
+  details.fbox > summary{display:flex;justify-content:space-between;align-items:center;padding:0 14px;min-height:44px;font-family:var(--f-sans);font-size:15px;font-weight:500;cursor:pointer;list-style:none}
+  details.fbox > summary::-webkit-details-marker{display:none}
+  details.fbox > .fin{padding:4px 14px 14px}
+  .rowh{display:none}
+  .legend-mini{display:none}
+  .rowb{grid-template-columns:auto 1fr;grid-template-areas:"l d" "a a" "e e";gap:4px 12px;padding:14px 0}
+  .rowb .l{grid-area:l}.rowb .d{grid-area:d;text-align:right}.rowb .a{grid-area:a;-webkit-line-clamp:3}.rowb .e{grid-area:e;font-size:13px}
+  .levels li{grid-template-columns:1fr;gap:4px}
+  .fgrid{grid-template-columns:1fr}
+  dl.fields > div{grid-template-columns:1fr;gap:2px}
+  .dbody{padding:18px 16px 32px}
+  .dhead{padding-left:16px}
+  .modes{display:flex}
+  .modes button{flex:1;padding:10px 8px;font-size:14.5px}
+  .toast{bottom:84px}
+  .sources li{grid-template-columns:2em 6.6em 1fr}
+}
+
+@media print{
+  .bar,nav.bottom,.facts .toc,details.toc-m,.drawer,.scrim,footer.site .dl,#v-acervo,#v-herramientas,#v-metodo{display:none!important}
+  body{background:#fff;color:#000;font-size:11pt}
+  .col-main,.col-side{grid-column:1 / -1}
+  .facts{position:static}
+  .sources{display:block}.sources ol{display:block!important}
+  a{color:#000}
+}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
-
-<header class="top wrap">
-  <div class="eyebrow">Memoria estratégica · Controversias agroalimentarias · Caso 1</div>
-  <h1>Tomate fresco: treinta años de acuerdos sin memoria institucional</h1>
-  <p class="lede">Acervo verificado de la disputa antidumping México-Estados Unidos, 1969-2026. Cada afirmación lleva su fuente y una etiqueta que dice qué tan firme es.</p>
-  <div class="legend" aria-label="Niveles de conocimiento">
-    <span class="lv n1">Nivel 1 · Oficial</span>
-    <span class="lv n2">Nivel 2 · Documentado</span>
-    <span class="lv n3">Nivel 3 · Deducción</span>
-    <span class="lv vac">Vacío</span>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#informe" data-go="informe">
+      <b>Memoria Estratégica México-EE. UU.</b>
+      <span>Caso 1: Tomate fresco. Corte al 11 oct 2026</span>
+    </a>
+    <nav class="main" aria-label="Secciones">
+      <a href="#informe" data-go="informe">Informe</a>
+      <a href="#acervo" data-go="acervo">Acervo</a>
+      <a href="#herramientas" data-go="herramientas">Herramientas</a>
+      <a href="#metodo" data-go="metodo">Método</a>
+    </nav>
+    <div class="bar-tools">
+      <a class="iconbtn cite-link" href="#citar">Cómo citar</a>
+      <button class="iconbtn" id="themeBtn" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
-<nav class="tabs" aria-label="Secciones">
+<main id="main">
+
+<!-- ================= INFORME ================= -->
+<section class="view" id="v-informe" aria-labelledby="t-informe">
   <div class="wrap">
-    <a href="#nota" data-tab="nota">Nota de decisión</a>
-    <a href="#cronologia" data-tab="cronologia">Cronología</a>
-    <a href="#actores" data-tab="actores">Actores</a>
-    <a href="#fichas" data-tab="fichas">Fichas</a>
-    <a href="#consulta" data-tab="consulta">Consulta</a>
-    <a href="#redteam" data-tab="redteam">Red team</a>
-    <a href="#novedades" data-tab="novedades">Novedades</a>
-    <a href="#metodo" data-tab="metodo">Método</a>
-  </div>
-</nav>
+    <div class="hero">
+      <p class="kicker">Controversias agroalimentarias. Nota de decisión al 11 de octubre de 2026</p>
+      <h1 id="t-informe">Caso 1: Tomate fresco<span class="sub">Disputa antidumping México-Estados Unidos, 1969-2026</span></h1>
+      <ul class="meta-line">
+        <li><b>Versión 1</b>, corte 11 oct 2026</li>
+        <li><b>255 fichas</b> verificadas en dos rondas</li>
+        <li>Solo fuentes públicas</li>
+        <li>Planteamiento: OLEUM Consultoría</li>
+      </ul>
+    </div>
 
-<main class="wrap">
+    <div class="grid">
+      <div class="col-main">
+        <div class="synth" id="synth">
+          <p>Desde 1996 la disputa se administró con acuerdos de suspensión firmados por Commerce y productores mexicanos: cada ruptura terminaba en un acuerdo nuevo en días o meses [HIS-0029].</p>
+          <p>En 2025 Commerce usó una cláusula de retiro introducida en 2013, terminó el acuerdo de 2019 e impuso una orden antidumping que la USITC confirmó en junio de 2026 [ADM-0023] [JUR-0030].</p>
+          <p>Es la primera ruptura sin acuerdo de reemplazo [HIS-0034], y no existe una evaluación oficial de por qué los acuerdos anteriores duraron o fallaron: la memoria institucional del caso no está escrita [HIS-0037].</p>
+        </div>
+        <div class="facts-slot" id="factsSlot"></div>
+        <p class="status"><span class="mk n1" aria-hidden="true" style="margin-top:.45em"></span><span><b>Estatus:</b> orden antidumping A-201-820 vigente desde el 14 jul 2025; la USITC rechazó revocarla el 30 jun 2026. Primera revisión administrativa iniciada el 4 sep 2026.</span></p>
 
-<!-- NOTA -->
-<section class="view" id="v-nota">
-  <div class="eyebrow">Nota de decisión · al 11 de octubre de 2026</div>
-  <h2>Dónde estamos y qué se puede hacer</h2>
-  <div class="status">
-    <div><b>17.09%</b><span>Depósito antidumping "all others" vigente desde el 14-jul-2025 [ADM-0023]</span></div>
-    <div><b>Sin acuerdo</b><span>Primera vez desde 1996 que una ruptura no termina en nuevo acuerdo [HIS-0034]</span></div>
-    <div><b>Orden confirmada</b><span>La USITC rechazó revocarla el 30-jun-2026 [JUR-0030]</span></div>
-  </div>
+        <div class="strip" aria-labelledby="t-strip">
+          <h2 id="t-strip">Treinta años de acuerdos, y la ruptura de 2025</h2>
+          <p>Cada barra es un acuerdo de suspensión vigente. Las líneas punteadas son rupturas. Pulse una barra para ver su ficha.</p>
+          <div class="track" id="track"></div>
+          <div class="axis" id="axis" aria-hidden="true"></div>
+          <div class="strip-key"><span><i></i>Acuerdo de suspensión vigente</span><span><i class="g"></i>Ruptura</span><span><i class="o"></i>Orden antidumping, sin acuerdo</span></div>
+        </div>
 
-  <div class="block prose">
-    <h3>Situación</h3>
-    <p>Commerce se retiró del acuerdo de suspensión de 2019 usando la cláusula XI.B, que le permite salir con 90 días de aviso, y emitió la orden antidumping A-201-820 [ADM-0019] [ADM-0023]. No publicó un hallazgo de violación: la última revisión concluida había encontrado cumplimiento [ADM-0018] [ADM-0036].</p>
-    <p>Hay tres frentes abiertos: la primera revisión administrativa de la orden, iniciada el 4-sep-2026 para el periodo jul-2025 a jun-2026 [ADM-0026]; una impugnación ante el CIT de la decisión de la USITC [JUR-0033]; y la revisión del T-MEC de 2026, donde la prensa ya ubica el tema [INT-0027].</p>
-    <p>México respondió con precios mínimos de exportación publicados en el DOF [ADM-0027]. El Gobierno de México no es signatario de estos acuerdos: los firman Commerce y asociaciones de productores, y el gobierno acompaña [ADM-0028] [ADM-0033].</p>
-  </div>
+        <details class="toc-m sources" style="margin-top:0">
+          <summary>En esta nota</summary>
+          <ol class="toclist" style="border:0;padding-left:1.4em;list-style:decimal"></ol>
+        </details>
 
-  <div class="block prose">
-    <h3>Lo que el historial enseña</h3>
-    <ul class="clean">
-      <li><b>La llave de salida fue una cláusula de 2013.</b> Hasta 2008 solo los productores podían retirarse; desde 2013 también Commerce, y esa vía se usó en 2019 y en 2025 [ADM-0003] [ADM-0009] [JUR-0037]. El Circuito Federal la validó en 2022 [JUR-0011].</li>
-      <li><b>En tribunales gana el método, no el ataque al retiro.</b> Prosperaron la justiciabilidad y el periodo de datos 1995-96; fracasaron la influencia política y la coacción [JUR-0038].</li>
-      <li><b>La victoria de método tuvo costo.</b> La tasa general bajó de 20.91% a 17.09%, pero tres empresas perdieron su margen propio y cuatro quedaron en 273.43% [FIS-0020] [FIS-0019] [JUR-0039].</li>
-      <li><b>El bloque de Florida es constante y bipartidista; el opositor, disperso.</b> Importadores, minoristas, restaurantes y la Legislatura de Texas actuaron por separado [INT-0033] [INT-0012].</li>
-      <li><b>Los pisos de precio no frenaron la tendencia.</b> La cuota de productores estadounidenses en el consumo bajó de 68.6% (1995) a 30.3% (2025) [ECO-0005].</li>
-    </ul>
-  </div>
+        <section class="sec" id="situacion" data-sec>
+          <h2><span class="num">1</span>Situación</h2>
+          <div class="prose">
+            <p>Commerce se retiró del acuerdo de suspensión de 2019 usando la cláusula XI.B, que le permite salir con 90 días de aviso, y emitió la orden antidumping A-201-820 [ADM-0019] [ADM-0023]. No publicó un hallazgo de violación: la última revisión concluida había encontrado cumplimiento [ADM-0018] [ADM-0036].</p>
+            <p>Hay tres frentes abiertos: la primera revisión administrativa de la orden, iniciada el 4 sep 2026 para el periodo jul 2025 a jun 2026 [ADM-0026]; una impugnación ante el CIT de la decisión de la USITC [JUR-0033]; y la revisión del T-MEC de 2026, donde la prensa ya ubica el tema [INT-0027].</p>
+            <p>México respondió con precios mínimos de exportación publicados en el DOF [ADM-0027]. El Gobierno de México no es signatario de estos acuerdos: los firman Commerce y asociaciones de productores, y el gobierno acompaña [ADM-0028] [ADM-0033].</p>
+          </div>
+        </section>
 
-  <h3>Opciones abiertas</h3>
-  <p class="note">Las opciones son deducciones del sistema a partir del acervo. No son recomendaciones oficiales; la decisión corresponde a quien negocia.</p>
-  <div class="opt">
-    <h4>1. Buscar un nuevo acuerdo de suspensión con otra cláusula de retiro</h4>
-    <p>Si se reabre la negociación, el punto aprendido es la cláusula: plazos de aviso más largos o causales de retiro para Commerce, en lugar del retiro libre de 90 días [JUR-0009] [JUR-0037].</p>
-    <p class="note">Riesgo: no hay señal pública de que Commerce quiera negociar [HIS-0034], y la FTE se opone a cualquier acuerdo [JUR-0026].</p>
-  </div>
-  <div class="opt">
-    <h4>2. Usar la revisión administrativa para obtener márgenes propios</h4>
-    <p>Las empresas que quedaron en "all others" o en 273.43% tienen en la revisión iniciada en septiembre la vía para pedir una tasa individual; una empresa ya tiene 2.81% [ADM-0026] [JUR-0023] [FIS-0020].</p>
-    <p class="note">Riesgo: el resultado depende de datos de cada empresa y puede subir la tasa.</p>
-  </div>
-  <div class="opt">
-    <h4>3. Ordenar la coalición en Estados Unidos</h4>
-    <p>Los aliados existen (Cámara de Comercio y 30 organizaciones, importadores de Arizona y Texas, la Legislatura de Texas), pero actuaron en cartas separadas frente a un bloque cohesionado [INT-0024] [INT-0012] [INT-0033].</p>
-  </div>
-  <div class="opt">
-    <h4>4. Decidir si el tomate entra o no a la mesa del T-MEC</h4>
-    <p>En 2019 los opositores lo ataron a la ratificación del T-MEC [INT-0023]. Para la revisión de 2026 conviene decidir de forma expresa si se vincula o se aísla [INT-0032].</p>
-    <p class="note">El acervo no documenta ningún uso del panel binacional del T-MEC en este caso [JUR-0015].</p>
-  </div>
+        <section class="sec" id="historial" data-sec>
+          <h2><span class="num">2</span>Lo que el historial enseña</h2>
+          <ul class="lessons prose">
+            <li><b>La llave de salida fue una cláusula de 2013.</b> Hasta 2008 solo los productores podían retirarse; desde 2013 también Commerce, y esa vía se usó en 2019 y en 2025 [ADM-0003] [ADM-0009] [JUR-0037]. El Circuito Federal la validó en 2022 [JUR-0011].</li>
+            <li><b>En tribunales gana el método, no el ataque al retiro.</b> Prosperaron la justiciabilidad y el periodo de datos 1995-96; fracasaron la influencia política y la coacción [JUR-0038].</li>
+            <li><b>La victoria de método tuvo costo.</b> La tasa general bajó de 20.91% a 17.09%, pero tres empresas perdieron su margen propio y cuatro quedaron en 273.43% [FIS-0020] [FIS-0019] [JUR-0039].</li>
+            <li><b>El bloque de Florida es constante y bipartidista; el opositor, disperso.</b> Importadores, minoristas, restaurantes y la Legislatura de Texas actuaron por separado [INT-0033] [INT-0012].</li>
+            <li><b>Los pisos de precio no frenaron la tendencia.</b> La cuota de productores estadounidenses en el consumo bajó de 68.6% (1995) a 30.3% (2025) [ECO-0005].</li>
+          </ul>
+        </section>
 
-  <div class="block prose">
-    <h3>Lo que no sabemos</h3>
-    <ul class="clean">
-      <li>Qué propuso México y qué exigió Commerce en los 90 días de 2025 [JUR-0025].</li>
-      <li>Cuánto se ha recaudado en depósitos desde julio de 2025.</li>
-      <li>Si existe alguna evaluación oficial de por qué los acuerdos duraron o fallaron [HIS-0037].</li>
-      <li>Quién propuso en 2013 la cláusula de retiro de Commerce, y por qué [ADM-0039].</li>
-    </ul>
-    <p class="note">Ver todos los vacíos en la pestaña Fichas, filtro "Vacío".</p>
+        <section class="sec" id="opciones" data-sec>
+          <h2><span class="num">3</span>Opciones abiertas</h2>
+          <p class="caveat"><span class="mk n3" aria-hidden="true" style="margin-top:.45em"></span><span>Estas opciones son deducciones construidas con el acervo. No son recomendaciones oficiales; la decisión corresponde a quien negocia.</span></p>
+          <ol class="opts prose">
+            <li>
+              <h3>Buscar un nuevo acuerdo de suspensión con otra cláusula de retiro</h3>
+              <p>Si se reabre la negociación, el punto aprendido es la cláusula: plazos de aviso más largos o causales de retiro para Commerce, en lugar del retiro libre de 90 días [JUR-0009] [JUR-0037].</p>
+              <p class="risk"><b>Riesgo:</b> no hay señal pública de que Commerce quiera negociar [HIS-0034], y la FTE se opone a cualquier acuerdo [JUR-0026].</p>
+            </li>
+            <li>
+              <h3>Usar la revisión administrativa para obtener márgenes propios</h3>
+              <p>Las empresas que quedaron en "all others" o en 273.43% tienen en la revisión iniciada en septiembre la vía para pedir una tasa individual; una empresa ya tiene 2.81% [ADM-0026] [JUR-0023] [FIS-0020].</p>
+              <p class="risk"><b>Riesgo:</b> el resultado depende de datos de cada empresa y puede subir la tasa.</p>
+            </li>
+            <li>
+              <h3>Ordenar la coalición en Estados Unidos</h3>
+              <p>Los aliados existen (Cámara de Comercio y 30 organizaciones, importadores de Arizona y Texas, la Legislatura de Texas), pero actuaron en cartas separadas frente a un bloque cohesionado [INT-0024] [INT-0012] [INT-0033].</p>
+            </li>
+            <li>
+              <h3>Decidir si el tomate entra o no a la mesa del T-MEC</h3>
+              <p>En 2019 los opositores lo ataron a la ratificación del T-MEC [INT-0023]. Para la revisión de 2026 conviene decidir de forma expresa si se vincula o se aísla [INT-0032].</p>
+              <p class="risk"><b>Nota:</b> el acervo no documenta ningún uso del panel binacional del T-MEC en este caso [JUR-0015].</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="sec" id="vacios" data-sec>
+          <h2><span class="num">4</span>Lo que no sabemos</h2>
+          <ul class="unknown prose">
+            <li>Qué propuso México y qué exigió Commerce en los 90 días de 2025 [JUR-0025].</li>
+            <li>Cuánto se ha recaudado en depósitos desde julio de 2025.</li>
+            <li>Si existe alguna evaluación oficial de por qué los acuerdos duraron o fallaron [HIS-0037].</li>
+            <li>Quién propuso en 2013 la cláusula de retiro de Commerce, y por qué [ADM-0039].</li>
+          </ul>
+          <p class="prose" style="font-family:var(--f-sans);font-size:15px"><a href="#acervo" data-go="acervo" data-nivel-go="VACIO">Ver los 27 vacíos del acervo</a></p>
+        </section>
+
+        <section class="sec" id="cronologia" data-sec>
+          <h2><span class="num">5</span>Cronología</h2>
+          <p class="prose" style="color:var(--muted)">Hitos seleccionados, agrupados por etapa. Cada código abre su ficha.</p>
+          <div id="tl"></div>
+        </section>
+
+        <section class="sec" id="actores" data-sec>
+          <h2><span class="num">6</span>Actores y posiciones</h2>
+          <p class="prose" style="color:var(--muted)">Quién firma, quién presiona y quién decide.</p>
+          <div class="actors" id="actors"></div>
+        </section>
+      </div>
+
+      <aside class="col-side" aria-label="Datos clave">
+        <div class="facts">
+          <h2>Datos clave</h2>
+          <div class="fact"><div class="n">17.09<small>%</small></div><p>Depósito antidumping general ("all others") vigente desde el 14 jul 2025.</p><div class="refs" data-refs="ADM-0023"></div></div>
+          <div class="fact"><div class="n">273.43<small>%</small></div><p>Tasa máxima, aplicada a cuatro empresas con hechos disponibles adversos.</p><div class="refs" data-refs="FIS-0019"></div></div>
+          <div class="fact"><div class="n">30.3<small>%</small></div><p>Cuota de productores de EE. UU. en el consumo de tomate fresco en 2025 (68.6% en 1995).</p><div class="refs" data-refs="ECO-0005"></div></div>
+          <div class="fact"><div class="n">4 sep<small> 2026</small></div><p>Inicio de la primera revisión administrativa de la orden, periodo jul 2025 a jun 2026.</p><div class="refs" data-refs="ADM-0026"></div></div>
+          <nav class="toc" aria-label="En esta nota"><h3>En esta nota</h3><ol class="toclist"></ol></nav>
+        </div>
+      </aside>
+    </div>
   </div>
 </section>
 
-<!-- CRONOLOGIA -->
-<section class="view" id="v-cronologia" hidden>
-  <h2>Cronología</h2>
-  <p class="lede">Hitos seleccionados. Cada uno abre sus fichas.</p>
-  <ol class="tl" id="tl"></ol>
-</section>
+<!-- ================= ACERVO ================= -->
+<section class="view" id="v-acervo" aria-labelledby="t-acervo" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <h1 id="t-acervo">Acervo de fichas</h1>
+      <p>Cada ficha es una afirmación con su fuente pública, su fragmento textual y un nivel que dice qué tan firme es.</p>
+      <p class="news-line" id="newsLine"></p>
+      <ul class="newslist" id="newsList" hidden></ul>
+    </div>
 
-<!-- ACTORES -->
-<section class="view" id="v-actores" hidden>
-  <h2>Actores y posiciones</h2>
-  <p class="lede">Quién firmó, quién presionó y en qué sentido.</p>
-  <div class="grid2" id="actors"></div>
-</section>
+    <details class="fbox" id="fbox" open>
+      <summary><span>Filtros <span id="fcount"></span></span><span aria-hidden="true">+</span></summary>
+      <div class="fin">
+        <div class="filters">
+          <div class="field"><label for="q">Buscar en las fichas</label><input class="input" type="search" id="q" placeholder="cláusula, Florida, 17.09, USITC" autocomplete="off"></div>
+          <div class="field"><label for="fEsp">Especialidad</label><select class="input" id="fEsp"><option value="">Todas</option></select></div>
+          <div class="field"><label for="fOrd">Orden</label><select class="input" id="fOrd"><option value="fecha">Cronológico</option><option value="nivel">Por nivel</option><option value="id">Por código</option></select></div>
+        </div>
+        <div class="chips" role="group" aria-label="Filtrar por nivel" id="chips"></div>
+      </div>
+    </details>
 
-<!-- FICHAS -->
-<section class="view" id="v-fichas" hidden>
-  <h2>Fichas del acervo</h2>
-  <div class="tools">
-    <input type="search" id="q" placeholder="Buscar: cláusula, Florida, 17.09, USITC…" aria-label="Buscar fichas">
-    <select id="fAgente" aria-label="Agente"><option value="">Todas las miradas</option></select>
+    <div class="resultbar" aria-live="polite"><span id="count"></span><span class="legend-mini" id="legendMini"></span></div>
+    <div class="rowh" aria-hidden="true"><span>Fecha</span><span>Nivel</span><span>Afirmación</span><span>Especialidad</span><span class="ke">Código</span></div>
+    <ul class="rows" id="rows"></ul>
+    <div class="empty" id="empty" hidden></div>
+    <div class="more"><button class="btn quiet" id="moreBtn" type="button" hidden>Mostrar 50 más</button></div>
   </div>
-  <div class="tools" role="group" aria-label="Filtrar por nivel">
-    <button class="chip" data-nivel="" aria-pressed="true">Todos</button>
-    <button class="chip" data-nivel="1" aria-pressed="false">Oficial</button>
-    <button class="chip" data-nivel="2" aria-pressed="false">Documentado</button>
-    <button class="chip" data-nivel="3" aria-pressed="false">Deducción</button>
-    <button class="chip" data-nivel="VACIO" aria-pressed="false">Vacío</button>
-    <button class="chip" id="fContra" aria-pressed="false">Con contradicción</button>
-    <span class="count" id="count"></span>
+</section>
+
+<!-- ================= HERRAMIENTAS ================= -->
+<section class="view" id="v-herramientas" aria-labelledby="t-tools" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <h1 id="t-tools">Herramientas de análisis</h1>
+      <p>Preguntas y pruebas de posición respondidas solo con el acervo, con cada afirmación citada. Son material de trabajo: la verificación se hace en las fichas.</p>
+    </div>
+    <div class="modes" role="tablist" aria-label="Modo">
+      <button role="tab" id="m-consulta" aria-selected="true" aria-controls="toolpanel" data-mode="consulta">Preguntar al acervo</button>
+      <button role="tab" id="m-redteam" aria-selected="false" aria-controls="toolpanel" data-mode="redteam">Poner a prueba una posición</button>
+    </div>
+    <div class="tool" id="toolpanel" role="tabpanel">
+      <div>
+        <p class="tool-intro" id="toolIntro"></p>
+        <div class="access" id="access" hidden></div>
+        <label for="tin" class="sans" style="display:block;font-size:13.5px;font-weight:500;color:var(--muted);margin-bottom:4px" id="tinLabel">Pregunta</label>
+        <textarea class="input" id="tin" maxlength="1500"></textarea>
+        <div class="formrow">
+          <button class="btn" id="go" type="button">Consultar</button>
+          <span class="hint" id="hint"></span>
+        </div>
+        <div class="answer" id="out" aria-live="polite"></div>
+      </div>
+      <aside aria-labelledby="t-ex">
+        <h2 class="side-title" id="t-ex">Respuestas de ejemplo</h2>
+        <p class="sans" style="font-size:14px;color:var(--muted);margin:0 0 10px">Generadas con este acervo. Se abren al instante.</p>
+        <ul class="exlist" id="exlist"></ul>
+        <p class="adv"><button class="linkbtn" id="keyBtn" type="button">Usar una llave de API propia</button><span id="keyState"></span></p>
+      </aside>
+    </div>
   </div>
-  <div class="cards" id="cards"></div>
-  <div class="more"><button class="btn ghost" id="moreBtn" hidden>Mostrar más</button></div>
 </section>
 
-<!-- CONSULTA -->
-<section class="view" id="v-consulta" hidden>
-  <h2>Consulta al acervo</h2>
-  <p class="lede">Claude responde solo con las fichas del acervo y cita cada una. Si algo no está documentado, lo dice.</p>
-  <div class="aiwarn" data-aiwarn></div>
-  <textarea id="cq" placeholder="Escribe una pregunta sobre el caso…" aria-label="Pregunta"></textarea>
-  <div class="examples" id="cqEx"></div>
-  <div class="row"><button class="btn" id="cqGo">Consultar</button><button class="btn ghost" data-settings>Configurar llave</button></div>
-  <div class="answer" id="cqOut" aria-live="polite"></div>
-</section>
-
-<!-- RED TEAM -->
-<section class="view" id="v-redteam" hidden>
-  <h2>Red team de una posición</h2>
-  <p class="lede">Escribe la posición que se piensa llevar a la mesa. Un agente la ataca con el acervo: supuestos débiles, evidencia en contra, la respuesta probable de Estados Unidos y lo que quedaría en pie.</p>
-  <div class="aiwarn" data-aiwarn></div>
-  <textarea id="rt" placeholder="Ej.: México debe pedir un nuevo acuerdo de suspensión con precios de referencia iguales a los de 2019." aria-label="Posición a evaluar"></textarea>
-  <div class="examples" id="rtEx"></div>
-  <div class="row"><button class="btn" id="rtGo">Atacar la posición</button><button class="btn ghost" data-settings>Configurar llave</button></div>
-  <div class="answer" id="rtOut" aria-live="polite"></div>
-</section>
-
-<!-- NOVEDADES -->
-<section class="view" id="v-novedades" hidden>
-  <h2>Novedades</h2>
-  <p class="lede">Seguimiento semanal del Federal Register, el DOF y la USITC sobre la orden A-201-820. Lo nuevo entra aquí con su fuente antes de pasar por evaluación.</p>
-  <div id="news"></div>
-</section>
-
-<!-- METODO -->
-<section class="view" id="v-metodo" hidden>
-  <h2>Método</h2>
-  <div class="prose">
-    <p>Siete agentes especialistas (jurídico, administrativo, fiscal, internacionalista, historiador, periodista y economista) recolectaron afirmaciones con fuente pública y fragmento textual. Un evaluador independiente, que no vio la recolección, abrió cada fuente y dictaminó en dos rondas con motivos codificados. Nada entra al acervo sin ese dictamen.</p>
-    <h3>Niveles</h3>
-    <ul class="clean">
-      <li><span class="lv n1">Oficial</span> Lo que un Estado firmó, publicó o resolvió. Significa "dicho por el Estado", no "verdadero".</li>
-      <li><span class="lv n2">Documentado</span> Terceros identificables: academia, prensa con fuentes, informes técnicos, gremios (con su sesgo anotado).</li>
-      <li><span class="lv n3">Deducción</span> Inferencia construida con premisas que son otras fichas, con grado de confianza y qué la refutaría.</li>
-      <li><span class="lv vac">Vacío</span> Pregunta relevante que el acervo público no responde, con la búsqueda realizada.</li>
-    </ul>
-    <h3>Resultado del caso Tomate</h3>
-  </div>
-  <div class="tablewrap"><table>
-    <thead><tr><th>Etapa</th><th class="num">Fichas</th></tr></thead>
-    <tbody>
-      <tr><td>Recolectadas</td><td class="num">279</td></tr>
-      <tr><td>Aprobadas en ronda 1</td><td class="num">203</td></tr>
-      <tr><td>Devueltas y corregidas, aprobadas en ronda 2</td><td class="num">55</td></tr>
-      <tr><td>Rechazadas (duplicados y deducciones con premisas incompletas)</td><td class="num">21</td></tr>
-      <tr><td>Retiradas por su autor</td><td class="num">3</td></tr>
-      <tr><td><b>En el acervo</b></td><td class="num"><b>255</b></td></tr>
-    </tbody>
-  </table></div>
-  <div class="prose">
-    <h3>Límites</h3>
-    <p>Solo fuentes públicas. No hay minutas, posiciones negociadoras ni archivo diplomático reservado. La prensa con muro de pago no pudo leerse. La consulta y el red team usan Claude: responden con el acervo, pero sus respuestas son material de trabajo y deben verificarse en las fichas citadas.</p>
-    <h3>Origen</h3>
-    <p>Inspirado en la columna "La nueva asimetría" de Javier Treviño (SDP Noticias, 10-oct-2026) y en <i>A Conceptual Framework for AI-Augmented Statecraft</i> de Charlie Pozniak (Belfer Center, 2026). Planteamiento: Raúl Gabino Quilantán, OLEUM Consultoría.</p>
+<!-- ================= MÉTODO ================= -->
+<section class="view" id="v-metodo" aria-labelledby="t-metodo" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <h1 id="t-metodo">Método</h1>
+      <p>Cómo se recolectó, verificó y clasificó cada ficha, y qué no cubre el acervo.</p>
+    </div>
+    <div class="grid">
+      <div class="col-main prose">
+        <p>Siete especialistas automatizados (jurídico, administrativo, fiscal, internacionalista, historiador, periodista y economista), construidos con Claude, recolectaron afirmaciones con fuente pública y fragmento textual. Un evaluador independiente, que no vio la recolección, abrió cada fuente y dictaminó en dos rondas con motivos codificados. Nada entra al acervo sin ese dictamen.</p>
+        <h2 style="font-size:23px;margin:1.6em 0 .5em">Niveles</h2>
+        <ul class="levels">
+          <li><span class="lv n1"><span class="mk n1"></span>Oficial</span><p>Lo que un Estado firmó, publicó o resolvió. Significa "dicho por el Estado", no "verdadero".</p></li>
+          <li><span class="lv n2"><span class="mk n2"></span>Documentado</span><p>Terceros identificables: academia, prensa con fuentes, informes técnicos, gremios (con su sesgo anotado).</p></li>
+          <li><span class="lv n3"><span class="mk n3"></span>Deducción</span><p>Inferencia construida con premisas que son otras fichas, con grado de confianza y qué la refutaría.</p></li>
+          <li><span class="lv vac"><span class="mk vac"></span>Vacío</span><p>Pregunta relevante que el acervo público no responde, con la búsqueda realizada.</p></li>
+        </ul>
+        <h2 style="font-size:23px;margin:1.6em 0 .5em">Resultado del caso Tomate</h2>
+        <table>
+          <thead><tr><th>Etapa</th><th class="num">Fichas</th></tr></thead>
+          <tbody>
+            <tr><td>Recolectadas</td><td class="num">279</td></tr>
+            <tr><td>Aprobadas en ronda 1</td><td class="num">203</td></tr>
+            <tr><td>Devueltas y corregidas, aprobadas en ronda 2</td><td class="num">55</td></tr>
+            <tr><td>Rechazadas (duplicados y deducciones con premisas incompletas)</td><td class="num">21</td></tr>
+            <tr><td>Retiradas por su autor</td><td class="num">3</td></tr>
+            <tr class="total"><td>En el acervo</td><td class="num">255</td></tr>
+          </tbody>
+        </table>
+        <h2 style="font-size:23px;margin:1.6em 0 .5em">Límites</h2>
+        <p>Solo fuentes públicas. No hay minutas, posiciones negociadoras ni archivo diplomático reservado. La prensa con muro de pago no pudo leerse. Las herramientas de consulta y prueba de posición usan Claude: responden con el acervo, pero sus respuestas son material de trabajo y deben verificarse en las fichas citadas.</p>
+        <h2 style="font-size:23px;margin:1.6em 0 .5em">Origen</h2>
+        <p>Inspirado en la columna "La nueva asimetría" de Javier Treviño (SDP Noticias, 10 oct 2026) y en <i>A Conceptual Framework for AI-Augmented Statecraft</i> de Charlie Pozniak (Belfer Center, 2026). Planteamiento: Raúl Gabino Quilantán, OLEUM Consultoría.</p>
+        <p>Documentos completos del caso: <a href="casos/tomate/informe_caso_tomate.md">informe</a>, <a href="casos/tomate/vacios.md">vacíos</a>, <a href="casos/tomate/contradicciones.md">contradicciones</a>, <a href="casos/tomate/bitacora_evaluacion.md">bitácora de evaluación</a>, <a href="casos/tomate/fichas_rechazadas.csv">fichas rechazadas</a> y <a href="metodologia.md">metodología</a>.</p>
+      </div>
+    </div>
   </div>
 </section>
 </main>
 
-<footer><div class="wrap">Acervo actualizado al <span id="upd">11-oct-2026</span> · Fuentes públicas · Las citas son fragmentos breves de sus fuentes.</div></footer>
+<footer class="site" id="citar">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <p class="issuer">Memoria Estratégica México-Estados Unidos</p>
+        <p>Prueba de concepto. Planteamiento: Raúl Gabino Quilantán, OLEUM Consultoría.</p>
+        <p>Versión: v1 · 11-oct-2026 (fecha de corte del acervo).</p>
+        <h2 style="margin-top:var(--s3)">Cómo citar</h2>
+        <div class="citebox" id="citeText">Gabino Quilantán, R. (2026). <i>Memoria Estratégica México-Estados Unidos. Caso 1: Tomate fresco, disputa antidumping 1969-2026</i> (v1, corte al 11 de octubre de 2026). OLEUM Consultoría. https://github.com/raulgabino/memoria-estrategica-mx-eua</div>
+        <button class="btn quiet" type="button" id="copyCite">Copiar cita</button>
+      </div>
+      <div class="dl">
+        <h2>Descargar el acervo</h2>
+        <ul>
+          <li><a href="casos/tomate/fichas_aprobadas.csv" download>Fichas aprobadas (CSV)</a></li>
+          <li><a href="data/fichas.json" download>Fichas con estructura completa (JSON)</a></li>
+          <li><a href="casos/tomate/informe_caso_tomate.md">Informe del caso (Markdown)</a></li>
+        </ul>
+        <h2 style="margin-top:var(--s3)">Código y datos</h2>
+        <ul><li><a href="https://github.com/raulgabino/memoria-estrategica-mx-eua" rel="noopener">Repositorio en GitHub</a></li></ul>
+      </div>
+      <div>
+        <h2>Secciones</h2>
+        <ul>
+          <li><a href="#informe" data-go="informe">Informe</a></li>
+          <li><a href="#acervo" data-go="acervo">Acervo</a></li>
+          <li><a href="#herramientas" data-go="herramientas">Herramientas</a></li>
+          <li><a href="#metodo" data-go="metodo">Método</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Fuentes públicas. Los fragmentos citados son extractos breves de sus fuentes originales. "Oficial" significa dicho por el Estado, no necesariamente verdadero.</p>
+  </div>
+</footer>
+
+<nav class="bottom" aria-label="Secciones">
+  <a href="#informe" data-go="informe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/></svg>Informe</a>
+  <a href="#acervo" data-go="acervo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="4" width="16" height="5"/><rect x="4" y="11" width="16" height="4"/><rect x="4" y="17" width="16" height="3"/></svg>Acervo</a>
+  <a href="#herramientas" data-go="herramientas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>Herramientas</a>
+  <a href="#metodo" data-go="metodo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v6M12 7.5v.5"/></svg>Método</a>
+</nav>
 
 <div class="scrim" id="scrim" hidden></div>
-<aside class="drawer" id="drawer" hidden aria-label="Detalle de ficha"></aside>
+<aside class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="dTitle"></aside>
+<div class="pop" id="pop" hidden role="tooltip"></div>
+<div class="toast" id="toast" hidden role="status"></div>
 
-<dialog id="settings">
-  <h2>Llave de la API de Claude</h2>
-  <p class="note">La llave se guarda solo en este navegador y se envía directamente a la API de Anthropic. No uses esta opción en computadoras compartidas. Conviene una llave exclusiva con límite de gasto.</p>
+<dialog id="keyDlg" aria-labelledby="kTitle">
+  <h2 id="kTitle">Llave de API propia</h2>
+  <p>Opción avanzada. La llave se guarda solo en este navegador y se envía directamente a la API de Anthropic, no a este sitio. No la use en computadoras compartidas; conviene una llave exclusiva con límite de gasto.</p>
   <label for="kKey">Llave (sk-ant-…)</label>
-  <input id="kKey" type="password" autocomplete="off" spellcheck="false">
-  <label for="kModel">Modelo</label>
-  <input id="kModel" type="text" value="claude-sonnet-5-5" spellcheck="false">
-  <div class="row">
-    <button class="btn" id="kSave">Guardar</button>
-    <button class="btn ghost" id="kDel">Borrar llave</button>
-    <button class="btn ghost" id="kClose">Cerrar</button>
+  <input class="input" id="kKey" type="password" autocomplete="off" spellcheck="false">
+  <div class="formrow">
+    <button class="btn" id="kSave" type="button">Guardar llave</button>
+    <button class="btn quiet" id="kDel" type="button">Borrar llave</button>
+    <button class="btn quiet" id="kClose" type="button">Cerrar</button>
   </div>
 </dialog>
 
@@ -336,124 +759,384 @@ td.num{font-variant-numeric:tabular-nums;text-align:right;font-family:var(--f-mo
 (function(){
 "use strict";
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-let F=[], byId={}, PREFIX="AGR-TOM-";
-const LV={ "1":["n1","Oficial"], "2":["n2","Documentado"], "3":["n3","Deducción"], "VACIO":["vac","Vacío"] };
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+const MODEL="claude-sonnet-5-5";
+const VERSION="v1, corte 11-oct-2026";
+let F=[], byId={}, PREFIX="AGR-TOM-";
+const LV={"1":["n1","Oficial","Nivel 1","Lo que un Estado firmó, publicó o resolvió. Dicho por el Estado, no necesariamente verdadero."],
+          "2":["n2","Documentado","Nivel 2","Terceros identificables: academia, prensa con fuentes, informes técnicos o gremios."],
+          "3":["n3","Deducción","Nivel 3","Inferencia construida con otras fichas como premisas. Tiene grado de confianza y condición de refutación."],
+          "VACIO":["vac","Vacío","Vacío","Pregunta relevante que el acervo público no responde."]};
+const ESP={"Jurídico":"Jurídica","Administrativo":"Administrativa","Fiscal":"Fiscal","Internacionalista":"Internacional","Historiador":"Histórica","Periodista":"Periodística","Economista":"Económica"};
+const esp=a=>ESP[a]||a||"";
+const mk=n=>`<span class="mk ${(LV[n]||LV.VACIO)[0]}" aria-hidden="true"></span>`;
+const lvTag=n=>{const l=LV[n]||LV.VACIO;return `<span class="lv ${l[0]}">${mk(n)}${l[1]}</span>`;};
+const siteURL=()=>/^https?:/.test(location.protocol)?location.origin+location.pathname:"https://github.com/raulgabino/memoria-estrategica-mx-eua";
+
+/* ---------- fechas ---------- */
+const MES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+function fd(s){
+  if(!s) return "";
+  const m=String(s).match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/); if(!m) return String(s);
+  const [_,y,mo,d]=m;
+  if(!mo) return y;
+  if(mo==="01"&&d==="01") return y;
+  return (d?(+d)+" ":"")+MES[+mo-1]+" "+y;
+}
+function fdr(s){
+  if(!s) return "s/f";
+  const p=String(s).split("/");
+  if(p.length===2){
+    let a=p[0],b=p[1];
+    if(/-01-01$/.test(a)&&/-12-31$/.test(b)){a=a.slice(0,4);b=b.slice(0,4);}
+    const A=fd(a),B=fd(b); return A===B?A:A+" a "+B;
+  }
+  return fd(s);
+}
 
 /* ---------- citas ---------- */
-const CITE=/\[((?:AGR-TOM-)?[A-Z]{3}-\d{4})\]/g;
-function citeHTML(id){
-  id=id.replace(PREFIX,"");
-  const f=byId[id];
-  if(!f) return `<span class="cite miss" title="No está en el acervo">${esc(id)}</span>`;
-  const [c,l]=LV[f.nivel]||["vac",""];
-  return `<button class="cite ${c}" data-id="${id}" title="${l}">${id}</button>`;
+const ONE=/\[((?:AGR-TOM-)?[A-Z]{3}-\d{4})\]/g;
+const GROUP=/\s*(?:\[(?:AGR-TOM-)?[A-Z]{3}-\d{4}\]\s*)*\[(?:AGR-TOM-)?[A-Z]{3}-\d{4}\]/g;
+const clean=id=>id.replace(PREFIX,"");
+function refHTML(id){
+  id=clean(id); const f=byId[id];
+  if(!f) return `<span class="ref miss" title="Este código no está en el acervo">${esc(id)}</span>`;
+  return `<button type="button" class="ref" data-id="${id}" aria-label="Ficha ${id}, ${LV[f.nivel][1]}">${mk(f.nivel)}${id}</button>`;
 }
-function linkCites(root){
+/* reemplaza [ID] en nodos de texto; mode "ref" (código visible) o "sup" (superíndice numerado) */
+function linkCites(root,mode,ctx){
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
-  const nodes=[];let n;while(n=walker.nextNode()){ if(CITE.test(n.nodeValue)) nodes.push(n); CITE.lastIndex=0; }
+  const nodes=[];let n;
+  while(n=walker.nextNode()){ ONE.lastIndex=0; if(ONE.test(n.nodeValue)) nodes.push(n); }
   nodes.forEach(t=>{
-    const span=document.createElement("span");
-    span.innerHTML=esc(t.nodeValue).replace(CITE,(m,id)=>citeHTML(id));
-    t.replaceWith(...span.childNodes);
+    const span=document.createElement("span"); const txt=t.nodeValue;
+    let html="",last=0; GROUP.lastIndex=0; let m;
+    while(m=GROUP.exec(txt)){
+      html+=esc(txt.slice(last,m.index));
+      const ids=(m[0].match(/(?:AGR-TOM-)?[A-Z]{3}-\d{4}/g)||[]).map(clean);
+      if(mode==="sup"){
+        html+=`<sup class="fns">`+ids.map((id,i)=>{
+          const f=byId[id]; if(!ctx.num[id]) ctx.num[id]=++ctx.n; if(!ctx.sec.includes(id)) ctx.sec.push(id);
+          const k=ctx.num[id];
+          if(!f) return `<span class="fn miss" title="No está en el acervo">${k}</span>`;
+          return (i?`<span aria-hidden="true">,</span>`:"")+`<button type="button" class="fn" data-id="${id}" aria-label="Fuente ${k}: ficha ${id}, ${LV[f.nivel][1]}">${mk(f.nivel)}${k}</button>`;
+        }).join("")+`</sup>`;
+      } else {
+        html+=" "+ids.map(refHTML).join(" ");
+      }
+      last=m.index+m[0].length;
+    }
+    html+=esc(txt.slice(last));
+    span.innerHTML=html; t.replaceWith(...span.childNodes);
   });
 }
+function sourcesList(ids,ctx){
+  if(!ids.length) return "";
+  return `<details class="sources"><summary>Fuentes de esta sección (${ids.length})</summary><ol>${ids.map(id=>{
+    const f=byId[id]; const k=ctx.num[id];
+    if(!f) return `<li><span>${k}</span><span class="code">${esc(id)}</span><span class="t">No está en el acervo</span></li>`;
+    return `<li><button type="button" data-id="${id}"><span>${k}.</span><span class="code" style="display:inline-flex;gap:5px;align-items:center">${mk(f.nivel)}${PREFIX}${id}</span><span class="t">${esc(f.afirmacion)}</span></button></li>`;
+  }).join("")}</ol></details>`;
+}
+
+/* tarjeta emergente */
+const pop=$("#pop"); let popT=null;
+function showPop(el){
+  const f=byId[el.dataset.id]; if(!f) return;
+  pop.innerHTML=`<div class="h">${lvTag(f.nivel)}<span class="code">${PREFIX}${f.id}</span></div><p>${esc(f.afirmacion.length>240?f.afirmacion.slice(0,237)+"…":f.afirmacion)}</p><small>${esc(f.fuente.length>110?f.fuente.slice(0,107)+"…":f.fuente)}</small>`;
+  pop.hidden=false;
+  const r=el.getBoundingClientRect(), w=Math.min(340,innerWidth-24);
+  let left=r.left+scrollX-20; left=Math.max(12+scrollX,Math.min(left,scrollX+innerWidth-w-12));
+  pop.style.width=w+"px"; pop.style.left=left+"px";
+  const h=pop.offsetHeight; let top=r.bottom+scrollY+8;
+  if(r.bottom+h+16>innerHeight) top=r.top+scrollY-h-8;
+  pop.style.top=top+"px";
+}
+function hidePop(){pop.hidden=true;}
+const hoverable=matchMedia("(hover:hover)").matches;
+document.addEventListener("mouseover",e=>{if(!hoverable)return;const b=e.target.closest(".fn[data-id],.ref[data-id]");if(b){clearTimeout(popT);popT=setTimeout(()=>showPop(b),120);}});
+document.addEventListener("mouseout",e=>{if(e.target.closest(".fn[data-id],.ref[data-id]")){clearTimeout(popT);hidePop();}});
+document.addEventListener("focusin",e=>{const b=e.target.closest(".fn[data-id]");if(b&&b.matches(":focus-visible"))showPop(b);else hidePop();});
 document.addEventListener("click",e=>{
-  const b=e.target.closest(".cite[data-id]"); if(b){ openCard(b.dataset.id); }
+  const b=e.target.closest("[data-id]");
+  if(b&&!b.closest(".drawer .dhead")){ hidePop(); openCard(b.dataset.id,b); }
 });
 
-/* ---------- drawer ---------- */
-function openCard(id){
+/* ---------- panel de ficha ---------- */
+let lastFocus=null, curList=null, curId=null;
+function openCard(id,opener,list){
   const f=byId[id]; if(!f) return;
-  const [c,l]=LV[f.nivel];
+  if(opener) lastFocus=opener;
+  curList=list||curList||F.map(x=>x.id); if(!curList.includes(id)) curList=F.map(x=>x.id);
+  curId=id;
+  const l=LV[f.nivel]||LV.VACIO;
+  const mini=(ids,ct)=>ids&&ids.length?ids.map(x=>{const g=byId[x];return g?`<button type="button" class="mini${ct?" ct":""}" data-id="${x}"><span class="top">${lvTag(g.nivel)}<span class="code">${x}</span></span>${esc(g.afirmacion.length>180?g.afirmacion.slice(0,177)+"…":g.afirmacion)}</button>`:`<span class="ref miss">${esc(x)}</span>`;}).join(""):"";
   const row=(k,v)=>v?`<div><dt>${k}</dt><dd>${v}</dd></div>`:"";
-  const ids=a=>a&&a.length?a.map(citeHTML).join(" "):"";
-  const url=f.url&&/^https?:\/\//.test(f.url)?`<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.url)}</a>`:esc(f.url);
-  $("#drawer").innerHTML=`<button class="x" aria-label="Cerrar" id="dx">×</button>
-   <div class="eyebrow">${PREFIX}${id} · ${esc(f.agente)}</div>
-   <p style="margin:.6em 0"><span class="lv ${c}">${l}</span> ${f.tipo?`<span class="note">${esc(f.tipo)}</span>`:""}</p>
-   <h3 style="margin-top:.4em;font-family:var(--f-body);font-weight:600;font-size:19px;line-height:1.4">${esc(f.afirmacion)}</h3>
-   <dl>${row("Fuente",esc(f.fuente))}${row("Enlace o referencia",url)}${row("Fragmento",f.fragmento?`<span class="frag">${esc(f.fragmento)}</span>`:"")}
-   ${row("Fecha del hecho",esc(f.fecha))}${row("Premisas",ids(f.premisas))}${row("Confianza",esc(f.confianza))}
-   ${row("La refutaría",esc(f.refutable))}${row("Sesgo de la fuente",esc(f.sesgo))}${row("Contradice a",ids(f.contradice))}${row("Nota del orquestador",esc(f.nota))}</dl>`;
-  $("#drawer").hidden=false;$("#scrim").hidden=false;$("#dx").focus();
+  let link="";
+  if(f.url&&/^https?:\/\//.test(f.url)){let host="";try{host=new URL(f.url).hostname.replace(/^www\./,"")}catch(e){} link=`<a href="${esc(f.url)}" target="_blank" rel="noopener">Abrir en ${esc(host||"la fuente")}</a>`;}
+  else if(f.url) link=esc(f.url);
+  const i=curList.indexOf(id);
+  $("#drawer").innerHTML=`<div class="band ${l[0]}"></div>
+   <div class="dhead"><span class="code">${PREFIX}${id}</span>
+     <span class="dnav"><button class="xbtn" type="button" id="dPrev" aria-label="Ficha anterior" ${i<=0?"disabled":""}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg></button><button class="xbtn" type="button" id="dNext" aria-label="Ficha siguiente" ${i>=curList.length-1?"disabled":""}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg></button><button class="xbtn" type="button" id="dx" aria-label="Cerrar ficha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button></span></div>
+   <div class="dbody">
+     <p class="dlevel">${l[2]==="Vacío"?"":l[2]+": "}${lvTag(f.nivel)}<span class="def">${l[3]}</span></p>
+     <h2 class="claim" id="dTitle">${esc(f.afirmacion)}</h2>
+     ${f.fragmento?`<blockquote class="frag">“${esc(f.fragmento)}”<footer>${esc(f.fuente)}</footer></blockquote>`:""}
+     <dl class="fields">
+       ${f.fragmento?"":row("Fuente",esc(f.fuente))}
+       ${row("Enlace",link)}
+       ${row("Fecha",esc(fdr(f.fecha)))}
+       ${row("Tipo",esc(f.tipo?f.tipo[0].toUpperCase()+f.tipo.slice(1):""))}
+       ${row("Especialidad",esc(esp(f.agente)))}
+       ${row("Premisas",mini(f.premisas))}
+       ${row("Confianza",esc(f.confianza))}
+       ${row("La refutaría",esc(f.refutable))}
+       ${row("Sesgo de la fuente",esc(f.sesgo))}
+       ${row("Contradice a",mini(f.contradice,true))}
+       ${row("Nota editorial",esc(f.nota))}
+     </dl>
+     <div class="dactions"><button class="btn quiet" type="button" id="dCite">Copiar cita</button><button class="btn quiet" type="button" id="dLink">Copiar enlace a esta ficha</button></div>
+   </div>`;
+  $("#drawer").hidden=false; $("#scrim").hidden=false; document.body.style.overflow="hidden";
+  $("#dx").focus();
   $("#dx").onclick=closeCard;
+  $("#dPrev").onclick=()=>openCard(curList[i-1]);
+  $("#dNext").onclick=()=>openCard(curList[i+1]);
+  $("#dCite").onclick=()=>copy(`${f.afirmacion} Fuente: ${f.fuente}. En: Memoria Estratégica México-Estados Unidos, ficha ${PREFIX}${id} (${VERSION}). ${siteURL()}#ficha-${id}`,"Cita copiada");
+  $("#dLink").onclick=()=>copy(`${siteURL()}#ficha-${id}`,"Enlace copiado");
+  try{history.replaceState(null,"","#ficha-"+id)}catch(e){}
 }
-function closeCard(){$("#drawer").hidden=true;$("#scrim").hidden=true;}
+function closeCard(){
+  if($("#drawer").hidden) return;
+  $("#drawer").hidden=true;$("#scrim").hidden=true;document.body.style.overflow="";
+  try{history.replaceState(null,"","#"+cur)}catch(e){}
+  if(lastFocus&&document.contains(lastFocus)) lastFocus.focus();
+}
 $("#scrim").onclick=closeCard;
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCard();});
-
-/* ---------- pestañas ---------- */
-const TABS=["nota","cronologia","actores","fichas","consulta","redteam","novedades","metodo"];
-function show(t){
-  if(!TABS.includes(t)) t="nota";
-  TABS.forEach(x=>{$("#v-"+x).hidden=(x!==t)});
-  $$("nav.tabs a").forEach(a=>{ if(a.dataset.tab===t) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+document.addEventListener("keydown",e=>{
+  if($("#drawer").hidden) return;
+  if(e.key==="Escape"){closeCard();return;}
+  if(e.key==="Tab"){
+    const fs=[...$("#drawer").querySelectorAll("button:not([disabled]),a[href]")]; if(!fs.length) return;
+    const a=fs[0], z=fs[fs.length-1];
+    if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}
+    else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}
+  }
+});
+let toastT;
+function toast(msg){const t=$("#toast");t.textContent=msg;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,2200);}
+async function copy(txt,msg){
+  try{await navigator.clipboard.writeText(txt);toast(msg);}
+  catch(e){const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast(msg)}catch(_){toast("No se pudo copiar")}ta.remove();}
 }
-$$("nav.tabs a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();show(a.dataset.tab);try{history.replaceState(null,"","#"+a.dataset.tab)}catch(_){location.hash=a.dataset.tab}window.scrollTo({top:0});}));
-window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
 
-/* ---------- cronología y actores ---------- */
+/* ---------- navegación ---------- */
+const VIEWS=["informe","acervo","herramientas","metodo"];
+const ALIAS={nota:"informe",fichas:"acervo",consulta:"herramientas",redteam:"herramientas",novedades:"acervo",cronologia:"informe",actores:"informe",situacion:"informe",historial:"informe",opciones:"informe",vacios:"informe"};
+let cur="informe";
+function show(v,{scroll=true}={}){
+  if(!VIEWS.includes(v)) v="informe";
+  const changed=v!==cur; cur=v;
+  VIEWS.forEach(x=>{$("#v-"+x).hidden=(x!==v)});
+  $$("[data-go]").forEach(a=>{ if(a.closest("nav")){ if(a.dataset.go===v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); }});
+  document.title=(v==="informe"?"":({acervo:"Acervo",herramientas:"Herramientas",metodo:"Método"}[v]+". "))+"Memoria Estratégica México-EE. UU.";
+  if(scroll&&changed) window.scrollTo({top:0});
+}
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1));
+  const m=h.match(/^ficha[-/]((?:AGR-TOM-)?[A-Z]{3}-\d{4})$/);
+  if(m){ if(!$("#drawer").hidden&&curId===clean(m[1])) return; if(cur==="informe"&&!document.body.dataset.booted) show("acervo",{scroll:false}); openCard(clean(m[1])); return; }
+  if(!$("#drawer").hidden){ $("#drawer").hidden=true;$("#scrim").hidden=true;document.body.style.overflow=""; }
+  if(VIEWS.includes(h)){ show(h); return; }
+  if(ALIAS[h]){
+    show(ALIAS[h],{scroll:false});
+    if(h==="consulta"||h==="redteam") setMode(h);
+    const el=document.getElementById(h); if(el&&ALIAS[h]==="informe") requestAnimationFrame(()=>el.scrollIntoView());
+    else window.scrollTo({top:0});
+    return;
+  }
+  if(h==="citar"){ return; }
+  show("informe",{scroll:false});
+}
+document.addEventListener("click",e=>{
+  const a=e.target.closest("a[data-go]"); if(!a) return;
+  e.preventDefault(); const v=a.dataset.go;
+  if(a.dataset.nivelGo){ fNivel=a.dataset.nivelGo; shown=50; paintChips(); renderRows(); }
+  try{history.pushState(null,"","#"+v)}catch(_){location.hash=v}
+  show(v); if(cur===v) window.scrollTo({top:0});
+  if(v==="acervo"&&a.dataset.nivelGo) window.scrollTo({top:0});
+});
+window.addEventListener("hashchange",route);
+window.addEventListener("popstate",route);
+
+/* tema */
+function paintTheme(){
+  const t=document.documentElement.dataset.theme;
+  const dark=t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  $("#themeBtn").setAttribute("aria-label",dark?"Cambiar a modo claro":"Cambiar a modo oscuro");
+}
+(function(){const t=store.get("mx_theme"); if(t==="dark"||t==="light") document.documentElement.dataset.theme=t;})();
+$("#themeBtn").addEventListener("click",()=>{
+  const t=document.documentElement.dataset.theme;
+  const dark=t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  const nt=dark?"light":"dark"; document.documentElement.dataset.theme=nt; store.set("mx_theme",nt); paintTheme();
+});
+paintTheme();
+$("#copyCite").addEventListener("click",()=>copy($("#citeText").textContent.trim(),"Cita copiada"));
+
+/* ---------- informe: franja, cronología, actores ---------- */
+const AGREE=[
+ ["1996-10-28","2002-07-30","Acuerdo de 1996","ADM-0002"],
+ ["2002-12-04","2008-01-18","Acuerdo de 2002","ADM-0005"],
+ ["2008-01-22","2013-03-01","Acuerdo de 2008","ADM-0007"],
+ ["2013-03-04","2019-05-07","Acuerdo de 2013","ADM-0008"],
+ ["2019-09-19","2025-07-14","Acuerdo de 2019","ADM-0012"]
+];
+const ORDER=["2025-07-14","2026-10-11","Orden antidumping","ADM-0023"];
+function renderStrip(){
+  const t0=Date.parse("1995-07-01"), t1=Date.parse("2026-12-31"), pct=d=>((Date.parse(d)-t0)/(t1-t0)*100);
+  let h=AGREE.map(a=>{const l=pct(a[0]),w=pct(a[1])-l;return `<button type="button" class="seg" style="left:${l}%;width:${w}%" data-id="${a[3]}" aria-label="${a[2]}, ${fd(a[0])} a ${fd(a[1])}" title="${a[2]}: ${fd(a[0])} a ${fd(a[1])}"><span class="lab">${a[0].slice(0,4)}</span></button>`;}).join("");
+  h+=AGREE.slice(1).map((a,i)=>`<span class="gapmark" style="left:${(pct(AGREE[i][1])+pct(a[0]))/2}%"></span>`).join("");
+  h+=`<span class="gapmark" style="left:${pct("2025-07-14")}%"></span>`;
+  const l=pct(ORDER[0]),w=pct(ORDER[1])-l;
+  h+=`<button type="button" class="seg order" style="left:${l}%;width:${w}%" data-id="${ORDER[3]}" aria-label="Orden antidumping desde ${fd(ORDER[0])}" title="Orden antidumping desde ${fd(ORDER[0])}"></button>`;
+  $("#track").innerHTML=h;
+  $("#axis").innerHTML=[1996,2000,2005,2010,2015,2020,2025].map(y=>`<span style="left:${pct(y+"-01-01")}%">${y}</span>`).join("");
+}
 const HITOS=[
- ["1969","El Departamento de Estado plantea a México un reparto de mercado; el embajador McBride advierte riesgo de reacción antiestadounidense.","HIS-0001 HIS-0002"],
- ["1970-1980","Florida intenta órdenes de comercialización y una acción antidumping; en 1980 Commerce no halla dumping.","HIS-0017 HIS-0018 HIS-0019"],
- ["1979","El tomate llega a la reunión Carter-López Portillo.","HIS-0003"],
- ["abr 1996","Petición antidumping de productores de Florida; México pide consultas en la OMC.","ADM-0001 JUR-0032"],
- ["28 oct 1996","Primer acuerdo de suspensión, el día de la determinación preliminar. Solo los productores pueden retirarse.","ADM-0002 ADM-0003 FIS-0001"],
- ["2002 · 2008 · 2013","Exportadores mexicanos se retiran para renegociar; en cada caso hay nuevo acuerdo en días o meses.","ADM-0004 ADM-0007 HIS-0009 HIS-0029"],
- ["4 mar 2013","Primer acuerdo con derecho de retiro para Commerce. Pisos de precio suben 43% (campo) y 89% (invernadero).","ADM-0009 JUR-0004 HIS-0024"],
- ["nov 2018 · may 2019","La Florida Tomato Exchange pide terminar; Commerce se retira del acuerdo de 2013.","ADM-0011 INT-0020"],
- ["19 sep 2019","Nuevo acuerdo con inspección USDA en frontera y precio de 0.31 USD/lb.","ADM-0012 ADM-0014 FIS-0007"],
- ["oct 2019","Determinación final de dumping: 20.91% para \"all others\".","FIS-0012 ADM-0015"],
- ["abr 2022","El Circuito Federal valida el derecho contractual de retiro de Commerce.","JUR-0011 JUR-0012"],
- ["jun 2023","La FTE pide terminar el acuerdo de 2019.","ADM-0017"],
- ["dic 2024","Última revisión concluida: cumplimiento salvo faltas intrascendentes.","ADM-0018"],
- ["14 abr 2025","Commerce anuncia su retiro con 90 días de aviso.","ADM-0019 ADM-0020"],
- ["1 may 2025","Tras sentencia del CIT, márgenes recalculados con datos de 1995-96: 17.09%.","ADM-0021 JUR-0018"],
- ["14 jul 2025","Terminación y orden antidumping A-201-820.","ADM-0023 JUR-0023 ADM-0032"],
- ["8 ago 2025","México fija precios mínimos de exportación en el DOF.","ADM-0027 FIS-0024"],
- ["30 jun 2026","La USITC rechaza revocar la orden.","JUR-0030 HIS-0016"],
- ["ago · sep 2026","Impugnación ante el CIT; Commerce inicia la primera revisión administrativa.","JUR-0033 ADM-0026"]
+ ["1969","El Departamento de Estado plantea a México un reparto de mercado; el embajador McBride advierte riesgo de reacción antiestadounidense.","HIS-0001 HIS-0002",0],
+ ["1970-1980","Florida intenta órdenes de comercialización y una acción antidumping; en 1980 Commerce no halla dumping.","HIS-0017 HIS-0018 HIS-0019",0],
+ ["1979","El tomate llega a la reunión Carter-López Portillo.","HIS-0003",0],
+ ["abr 1996","Petición antidumping de productores de Florida; México pide consultas en la OMC.","ADM-0001 JUR-0032",1],
+ ["28 oct 1996","Primer acuerdo de suspensión, el día de la determinación preliminar. Solo los productores pueden retirarse.","ADM-0002 ADM-0003 FIS-0001",1],
+ ["2002, 2008, 2013","Exportadores mexicanos se retiran para renegociar; en cada caso hay nuevo acuerdo en días o meses.","ADM-0004 ADM-0007 HIS-0009 HIS-0029",1],
+ ["4 mar 2013","Primer acuerdo con derecho de retiro para Commerce. Pisos de precio suben 43% (campo) y 89% (invernadero).","ADM-0009 JUR-0004 HIS-0024",2],
+ ["nov 2018 a may 2019","La Florida Tomato Exchange pide terminar; Commerce se retira del acuerdo de 2013.","ADM-0011 INT-0020",2],
+ ["19 sep 2019","Nuevo acuerdo con inspección USDA en frontera y precio de 0.31 USD/lb.","ADM-0012 ADM-0014 FIS-0007",2],
+ ["oct 2019","Determinación final de dumping: 20.91% para \"all others\".","FIS-0012 ADM-0015",2],
+ ["abr 2022","El Circuito Federal valida el derecho contractual de retiro de Commerce.","JUR-0011 JUR-0012",2],
+ ["jun 2023","La FTE pide terminar el acuerdo de 2019.","ADM-0017",2],
+ ["dic 2024","Última revisión concluida: cumplimiento salvo faltas intrascendentes.","ADM-0018",2],
+ ["14 abr 2025","Commerce anuncia su retiro con 90 días de aviso.","ADM-0019 ADM-0020",3],
+ ["1 may 2025","Tras sentencia del CIT, márgenes recalculados con datos de 1995-96: 17.09%.","ADM-0021 JUR-0018",3],
+ ["14 jul 2025","Terminación y orden antidumping A-201-820.","ADM-0023 JUR-0023 ADM-0032",3],
+ ["8 ago 2025","México fija precios mínimos de exportación en el DOF.","ADM-0027 FIS-0024",3],
+ ["30 jun 2026","La USITC rechaza revocar la orden.","JUR-0030 HIS-0016",3],
+ ["ago y sep 2026","Impugnación ante el CIT; Commerce inicia la primera revisión administrativa.","JUR-0033 ADM-0026",3]
 ];
-const ACTORES=[
- ["A favor de terminar los acuerdos","Florida Tomato Exchange y legisladores de Florida, de forma bipartidista en 2019 y con una carta de 19 legisladores en 2025.","INT-0020 INT-0021 INT-0007 JUR-0026"],
- ["En contra en Estados Unidos","Importadores de Arizona y Texas, Cámara de Comercio y 30 organizaciones, restaurantes y minoristas, legisladores de Arizona y Texas, y la Legislatura de Texas.","INT-0023 INT-0024 INT-0012 INT-0009 INT-0011"],
- ["Autoridades de Estados Unidos","Commerce negocia, firma y retira; la USITC determina daño y revisa la orden; los tribunales (CIT y Circuito Federal) resuelven impugnaciones.","ADM-0023 JUR-0030 JUR-0011"],
- ["Firmantes mexicanos","Asociaciones de productores: CAADES, CNPH, Consejo Agrícola de Baja California, AMHPAC y otras. Son la parte formal de cada acuerdo.","ADM-0002 ADM-0005 ADM-0008 ADM-0012"],
- ["Gobierno de México","No es signatario. Acompaña, comenta borradores, integra un grupo de trabajo desde 2013 y en 2025 fijó precios mínimos de exportación.","ADM-0028 JUR-0007 ADM-0010 ADM-0027"],
- ["Lectura estructural","CSIS describe una división sureste contra oeste; el bloque de Florida es más cohesivo que el opositor.","INT-0014 INT-0033"]
-];
-function cites(s){return s.split(" ").map(citeHTML).join(" ");}
+const ERAS=[["Antecedentes","1969-1995"],["Acuerdos con retiro solo de productores","1996-2012"],["Acuerdos con retiro de Commerce","2013-2024"],["Orden antidumping","2025-2026"]];
+const refs=s=>`<span class="refs">${s.split(" ").map(refHTML).join("")}</span>`;
 function renderStatic(){
-  $("#tl").innerHTML=HITOS.map(h=>`<li><div class="when">${esc(h[0])}</div><p class="what">${esc(h[1])}</p><div>${cites(h[2])}</div></li>`).join("");
-  $("#actors").innerHTML=ACTORES.map(a=>`<div class="block"><h3>${esc(a[0])}</h3><p style="margin:.3em 0 .6em">${esc(a[1])}</p><div>${cites(a[2])}</div></div>`).join("");
-  linkCites($("#v-nota"));
+  $("#tl").innerHTML=`<ol class="eras">`+ERAS.map((e,i)=>`<li class="era"><h3>${e[0]}<span>${e[1]}</span></h3><ol class="tl">${HITOS.filter(h=>h[3]===i).map(h=>`<li><span class="when">${esc(h[0])}</span><div><p class="what">${esc(h[1])}</p>${refs(h[2])}</div></li>`).join("")}</ol></li>`).join("")+`</ol>`;
+  const act=(t,s,d,ids)=>`<div class="act"><h4>${t}</h4>${s?`<div class="stance">${s}</div>`:""}<p>${d}</p>${refs(ids)}</div>`;
+  $("#actors").innerHTML=
+   `<h3 class="side-h us-h">Estados Unidos</h3><h3 class="side-h mx-h">México</h3>
+    <div class="us">${act("Florida Tomato Exchange y legisladores de Florida","Promueven terminar los acuerdos","De forma bipartidista en 2019 y con una carta de 19 legisladores en 2025.","INT-0020 INT-0021 INT-0007 JUR-0026")}
+    ${act("Importadores, comercio y Texas","Se oponen a la terminación","Importadores de Arizona y Texas, Cámara de Comercio y 30 organizaciones, restaurantes y minoristas, legisladores de Arizona y Texas, y la Legislatura de Texas.","INT-0023 INT-0024 INT-0012 INT-0009 INT-0011")}</div>
+    <div class="mx">${act("Asociaciones de productores","Firman cada acuerdo","CAADES, CNPH, Consejo Agrícola de Baja California, AMHPAC y otras. Son la parte formal de cada acuerdo.","ADM-0002 ADM-0005 ADM-0008 ADM-0012")}
+    ${act("Gobierno de México","Acompaña; no es signatario","Comenta borradores, integra un grupo de trabajo desde 2013 y en 2025 fijó precios mínimos de exportación.","ADM-0028 JUR-0007 ADM-0010 ADM-0027")}</div>
+    <div class="arb"><h4>Deciden: autoridades de Estados Unidos</h4><p>Commerce negocia, firma y retira; la USITC determina daño y revisa la orden; los tribunales (CIT y Circuito Federal) resuelven impugnaciones.</p>${refs("ADM-0023 JUR-0030 JUR-0011")}</div>`;
+  $("#actors").insertAdjacentHTML("afterend",`<p class="reading">Lectura estructural: CSIS describe una división sureste contra oeste, y el bloque de Florida es más cohesivo que el opositor. ${refs("INT-0014 INT-0033")}</p>`);
+  $$("[data-refs]").forEach(el=>el.innerHTML=el.dataset.refs.split(" ").map(refHTML).join(""));
+  // citas en superíndice para el texto del informe
+  const ctx={n:0,num:{},sec:[]};
+  ctx.sec=[]; linkCites($("#synth"),"sup",ctx); linkCites($(".status"),"sup",ctx);
+  $("#synth").insertAdjacentHTML("afterend",""); // la síntesis comparte numeración
+  const synthIds=ctx.sec.slice();
+  $$("[data-sec]").forEach(sec=>{
+    if(sec.id==="cronologia"||sec.id==="actores") return;
+    ctx.sec=[]; linkCites(sec,"sup",ctx);
+    sec.insertAdjacentHTML("beforeend",sourcesList(ctx.sec,ctx));
+  });
+  $(".status").insertAdjacentHTML("afterend",sourcesList(synthIds,ctx).replace("Fuentes de esta sección","Fuentes de la síntesis"));
+  const toc=$$("[data-sec]").map(s=>`<li><a href="#${s.id}">${esc(s.querySelector("h2").lastChild.textContent)}</a></li>`).join("");
+  $$(".toclist").forEach(o=>o.innerHTML=toc);
+  renderStrip();
 }
+document.addEventListener("click",e=>{
+  const a=e.target.closest(".toclist a"); if(!a) return;
+  e.preventDefault(); const el=document.getElementById(a.getAttribute("href").slice(1));
+  if(el){el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}); el.querySelector("h2").setAttribute("tabindex","-1"); el.querySelector("h2").focus({preventScroll:true});}
+  const d=a.closest("details"); if(d) d.open=false;
+});
 
-/* ---------- explorador ---------- */
+/* ---------- acervo ---------- */
 const norm=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
-let fNivel="", fContra=false, shown=40;
+let fNivel="", fContra=false, shown=50, lastRes=[];
+const ORDN={"1":0,"2":1,"3":2,"VACIO":3};
+function paintChips(){
+  const c={"":F.length}; F.forEach(f=>c[f.nivel]=(c[f.nivel]||0)+1);
+  const nc=F.filter(f=>f.contradice&&f.contradice.length).length;
+  $("#chips").innerHTML=[["","Todos"],["1","Oficial"],["2","Documentado"],["3","Deducción"],["VACIO","Vacío"]].map(([k,l])=>
+    `<button type="button" class="chip" data-nivel="${k}" aria-pressed="${fNivel===k}">${k?mk(k):""}${l}<span class="c">${c[k]||0}</span></button>`).join("")+
+    `<button type="button" class="chip" id="fContra" aria-pressed="${fContra}">Con contradicción<span class="c">${nc}</span></button>`;
+}
+$("#chips").addEventListener("click",e=>{
+  const b=e.target.closest(".chip"); if(!b) return;
+  if(b.id==="fContra") fContra=!fContra; else fNivel=b.dataset.nivel;
+  shown=50; paintChips(); renderRows();
+});
+function qTerms(){return norm($("#q").value).split(/\s+/).filter(Boolean);}
 function filtered(){
-  const q=norm($("#q").value).split(/\s+/).filter(Boolean), ag=$("#fAgente").value;
-  return F.filter(f=>(!fNivel||f.nivel===fNivel)&&(!ag||f.agente===ag)&&(!fContra||(f.contradice&&f.contradice.length))&&
-    q.every(w=>f._t.includes(w)));
+  const q=qTerms(), ag=$("#fEsp").value, o=$("#fOrd").value;
+  const r=F.filter(f=>(!fNivel||f.nivel===fNivel)&&(!ag||f.agente===ag)&&(!fContra||(f.contradice&&f.contradice.length))&&q.every(w=>f._t.includes(w)));
+  const fk=f=>f.fecha?String(f.fecha).slice(0,10):"9999";
+  if(o==="fecha") r.sort((a,b)=>fk(a).localeCompare(fk(b))||a.id.localeCompare(b.id));
+  else if(o==="nivel") r.sort((a,b)=>ORDN[a.nivel]-ORDN[b.nivel]||fk(a).localeCompare(fk(b)));
+  else r.sort((a,b)=>a.id.localeCompare(b.id));
+  return r;
 }
-function renderCards(){
-  const r=filtered(); $("#count").textContent=r.length+" fichas";
-  $("#cards").innerHTML=r.slice(0,shown).map(f=>{const[c,l]=LV[f.nivel];return `<button class="card" data-open="${f.id}">
-    <div class="meta"><span class="lv ${c}">${l}</span><span>${f.id}</span><span>${esc(f.agente)}</span><span>${esc(f.fecha)}</span></div>
-    <p>${esc(f.afirmacion)}</p></button>`}).join("");
+function hl(text,q){
+  let h=esc(text); if(!q.length) return h;
+  // resalta sin depender de acentos: busca en versión normalizada y mapea índices
+  const n=norm(text); const marks=[];
+  q.forEach(w=>{let i=0;while((i=n.indexOf(w,i))>-1){marks.push([i,i+w.length]);i+=w.length;}});
+  if(!marks.length) return h;
+  marks.sort((a,b)=>a[0]-b[0]); const mg=[]; marks.forEach(m=>{const l=mg[mg.length-1]; if(l&&m[0]<=l[1]) l[1]=Math.max(l[1],m[1]); else mg.push(m.slice());});
+  let out="",last=0; mg.forEach(([a,b])=>{out+=esc(text.slice(last,a))+"<mark>"+esc(text.slice(a,b))+"</mark>";last=b;}); out+=esc(text.slice(last));
+  return out;
+}
+function renderRows(){
+  const r=filtered(); lastRes=r; const q=qTerms();
+  const nf=(fNivel?1:0)+(fContra?1:0)+($("#fEsp").value?1:0)+(q.length?1:0);
+  $("#fcount").textContent=nf?`(${nf})`:"";
+  $("#count").innerHTML=`<b>${r.length}</b> de ${F.length} fichas`+(nf?` <button class="linkbtn" type="button" id="clearF" style="margin-left:10px">Quitar filtros</button>`:"");
+  $("#rows").innerHTML=r.slice(0,shown).map(f=>`<li><button type="button" class="rowb" data-open="${f.id}">
+    <span class="d">${esc(fdr(f.fecha))}</span><span class="l">${lvTag(f.nivel)}</span>
+    <span class="a">${hl(f.afirmacion,q)}</span>
+    <span class="e">${esc(esp(f.agente))}${f.contradice&&f.contradice.length?`<span class="ct">con contradicción</span>`:""}</span><span class="k">${f.id}</span></button></li>`).join("");
   $("#moreBtn").hidden=r.length<=shown;
+  const em=$("#empty");
+  if(!r.length){
+    const term=$("#q").value.trim();
+    em.innerHTML=`<h3>${term?`Ninguna ficha contiene «${esc(term)}»`:"Ninguna ficha cumple estos filtros"}</h3><p>Pruebe con otra palabra o quite los filtros. Si lo que tiene es una pregunta, la herramienta de consulta la responde con citas.</p><div class="formrow"><button class="btn quiet" type="button" data-clear>Quitar filtros</button><a class="btn sec2" href="#herramientas" data-go="herramientas" id="toAsk">Preguntar al acervo</a></div>`;
+    em.hidden=false;
+  } else em.hidden=true;
+  $(".rowh").hidden=!r.length;
 }
-$("#cards").addEventListener("click",e=>{const c=e.target.closest("[data-open]");if(c)openCard(c.dataset.open);});
-$("#q").addEventListener("input",()=>{shown=40;renderCards();});
-$("#fAgente").addEventListener("change",()=>{shown=40;renderCards();});
-$$(".chip[data-nivel]").forEach(b=>b.addEventListener("click",()=>{fNivel=b.dataset.nivel;$$(".chip[data-nivel]").forEach(x=>x.setAttribute("aria-pressed",x===b));shown=40;renderCards();}));
-$("#fContra").addEventListener("click",()=>{fContra=!fContra;$("#fContra").setAttribute("aria-pressed",fContra);shown=40;renderCards();});
-$("#moreBtn").addEventListener("click",()=>{shown+=40;renderCards();});
+function clearFilters(){fNivel="";fContra=false;$("#q").value="";$("#fEsp").value="";shown=50;paintChips();renderRows();}
+document.addEventListener("click",e=>{
+  if(e.target.closest("#clearF,[data-clear]")) clearFilters();
+  const ta=e.target.closest("#toAsk"); if(ta){ setMode("consulta"); const t=$("#q").value.trim(); if(t) $("#tin").value=t; }
+});
+$("#rows").addEventListener("click",e=>{const c=e.target.closest("[data-open]");if(c)openCard(c.dataset.open,c,lastRes.map(f=>f.id));});
+let qT; $("#q").addEventListener("input",()=>{clearTimeout(qT);qT=setTimeout(()=>{shown=50;renderRows();},120);});
+$("#fEsp").addEventListener("change",()=>{shown=50;renderRows();});
+$("#fOrd").addEventListener("change",()=>{shown=50;renderRows();});
+$("#moreBtn").addEventListener("click",()=>{shown+=50;renderRows();});
+if(matchMedia("(max-width:760px)").matches) $("#fbox").open=false;
 
-/* ---------- búsqueda para la IA ---------- */
+function renderNews(d){
+  const list=(d&&d.novedades)||[]; const up=d&&d.actualizado?fd(d.actualizado):"11 oct 2026";
+  if(!list.length){ $("#newsLine").innerHTML=`Sin avisos nuevos desde el <b>${esc(up)}</b>. Revisión semanal del Federal Register, el DOF y la USITC.`; return; }
+  $("#newsLine").innerHTML=`<b>${list.length} aviso${list.length>1?"s":""} nuevo${list.length>1?"s":""}</b> desde el corte, pendientes de evaluación. Última revisión: ${esc(up)}.`;
+  $("#newsList").innerHTML=list.slice().reverse().map(n=>`<li>${lvTag(n.nivel==="1"?"1":"2")} <span class="sans" style="color:var(--muted);font-size:14px;margin:0 8px">${esc(fd(n.fecha))}, ${esc(n.fuente)}${n.estado==="evaluada"?"":", pendiente de evaluación"}</span><br>${esc(n.resumen)} ${n.url&&/^https?:/.test(n.url)?`<a href="${esc(n.url)}" target="_blank" rel="noopener">Ver fuente</a>`:""}</li>`).join("");
+  $("#newsList").hidden=false;
+}
+
+/* ---------- búsqueda local (para llave propia) ---------- */
 const STOP=new Set("de la el los las y o a en que por para con del al se su sus un una es como mas pero sin sobre entre lo le les fue ha han si no mexico estados unidos ee uu eeuu cual cuales que quien quienes cuando donde porque".split(" "));
 function terms(s){return norm(s).replace(/[^a-z0-9.%\s-]/g," ").split(/\s+/).filter(w=>w.length>2&&!STOP.has(w));}
 function search(q,k){
@@ -471,78 +1154,6 @@ function compact(f){
 }
 
 /* ---------- capa de IA ---------- */
-let SAMPLE=null, sampleTried=false;
-async function getSample(){
-  if(sampleTried) return SAMPLE; sampleTried=true;
-  try{ if(window.claude&&typeof window.claude.use==="function"){ SAMPLE=await window.claude.use("sample"); } }catch(e){SAMPLE=null}
-  return SAMPLE;
-}
-function aiMode(){ return SAMPLE?"claude":(store.get("mx_key")?"api":null); }
-function paintAiWarn(){
-  const m=aiMode();
-  $$("[data-aiwarn]").forEach(el=>{
-    el.innerHTML = m ? "" : `<p class="warnbox">Para usar esta función se necesita una llave de la API de Claude. Pulsa "Configurar llave". Sin llave, el resto del sitio funciona igual.</p>`;
-  });
-  $$("[data-settings]").forEach(b=>b.hidden = !!SAMPLE);
-}
-async function apiCall(body){
-  const key=store.get("mx_key"); if(!key) throw new Error("Falta la llave de la API.");
-  const r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{
-    "content-type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},
-    body:JSON.stringify(body)});
-  const j=await r.json().catch(()=>({}));
-  if(!r.ok) throw new Error((j.error&&j.error.message)||("Error "+r.status));
-  return j;
-}
-/* ask: system + user, opcionalmente herramientas; devuelve texto */
-async function ask(system,user,{tools=[],maxTokens=1600,onText}={}){
-  if(SAMPLE){
-    const opts={modelTier:"default",cache:false};
-    if(onText) opts.onText=({text})=>onText(text);
-    if(tools.length) opts.tools=tools.map(t=>({name:t.name,description:t.description,inputSchema:t.schema,execute:t.run}));
-    const r=await SAMPLE(system+"\n\n---\n\n"+user,opts);
-    return r.text;
-  }
-  const model=store.get("mx_model")||"claude-sonnet-5-5";
-  const msgs=[{role:"user",content:user}];
-  const apiTools=tools.map(t=>({name:t.name,description:t.description,input_schema:t.schema}));
-  for(let i=0;i<8;i++){
-    const body={model,max_tokens:maxTokens,system,messages:msgs}; if(apiTools.length) body.tools=apiTools;
-    const j=await apiCall(body);
-    const text=(j.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n");
-    if(j.stop_reason!=="tool_use"){ return text; }
-    if(onText&&text) onText(text+"\n\n_Buscando en el acervo…_");
-    msgs.push({role:"assistant",content:j.content});
-    const results=[];
-    for(const b of j.content.filter(b=>b.type==="tool_use")){
-      const t=tools.find(x=>x.name===b.name); let out;
-      try{ out=t?await t.run(b.input):"Herramienta desconocida"; }catch(e){ out="Error: "+e.message; }
-      results.push({type:"tool_result",tool_use_id:b.id,content:typeof out==="string"?out:JSON.stringify(out)});
-    }
-    msgs.push({role:"user",content:results});
-  }
-  throw new Error("El agente no terminó en el número de pasos permitido.");
-}
-
-/* render de markdown mínimo y seguro */
-function md(s){
-  const lines=esc(s).split(/\n/); let h="", inList=false;
-  const inline=t=>t.replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/(^|[^*])\*(?!\s)(.+?)\*(?!\*)/g,"$1<i>$2</i>").replace(/_(.+?)_/g,"<i>$1</i>");
-  for(let l of lines){
-    if(/^\s*[-*•]\s+/.test(l)){ if(!inList){h+="<ul>";inList=true;} h+="<li>"+inline(l.replace(/^\s*[-*•]\s+/,""))+"</li>"; continue; }
-    if(inList){h+="</ul>";inList=false;}
-    if(/^#{1,4}\s+/.test(l)) h+="<h4>"+inline(l.replace(/^#{1,4}\s+/,""))+"</h4>";
-    else if(l.trim()) h+="<p>"+inline(l)+"</p>";
-  }
-  if(inList) h+="</ul>";
-  return h;
-}
-function showAnswer(el,text,used){
-  el.innerHTML=md(text)+(used?`<div class="used">Fichas enviadas a Claude: ${used.map(f=>f.id).join(", ")}</div>`:"");
-  linkCites(el);
-}
-
-/* ---------- consulta ---------- */
 const SYS_Q=`Eres el módulo de consulta de la "Memoria Estratégica México-Estados Unidos", caso Tomate (disputa antidumping 1969-2026).
 Reglas obligatorias:
 1. Responde SOLO con la información de las fichas que se te entregan. No uses conocimiento propio para afirmar hechos.
@@ -550,25 +1161,8 @@ Reglas obligatorias:
 3. Distingue el nivel: oficial (1), documentado por terceros (2), deducción del acervo (3), vacío. Si dos fichas chocan, muéstralo sin resolverlo.
 4. Si las fichas no permiten responder, dilo claramente ("El acervo no lo documenta") y sugiere qué habría que buscar.
 5. Si haces una inferencia propia, preséntala en una línea que empiece con "Deducción de esta consulta:" y cita las fichas en que se apoya.
+6. Si la pregunta no trata del caso, responde que esta herramienta solo cubre el acervo del caso Tomate.
 Estilo: español, tono sobrio y directo, sin guiones largos, máximo 250 palabras, párrafos cortos o viñetas.`;
-const EX_Q=["¿Por qué Commerce pudo terminar el acuerdo en 2025?","¿Qué argumentos jurídicos de México funcionaron en tribunales?","¿Quiénes se opusieron en Estados Unidos a la terminación?","¿Qué concesiones hizo México en el acuerdo de 2019?"];
-$("#cqEx").innerHTML=EX_Q.map(q=>`<button class="chip" type="button">${esc(q)}</button>`).join("");
-$("#cqEx").addEventListener("click",e=>{const b=e.target.closest(".chip");if(b){$("#cq").value=b.textContent;}});
-$("#cqGo").addEventListener("click",async()=>{
-  const q=$("#cq").value.trim(); if(!q) return;
-  await getSample(); paintAiWarn();
-  if(!aiMode()){ $("#settings").showModal(); return; }
-  const used=search(q,30), out=$("#cqOut"), btn=$("#cqGo");
-  btn.disabled=true; out.innerHTML="<p class='note'>Consultando el acervo…</p>";
-  try{
-    const user=`Pregunta: ${q}\n\nFichas relevantes del acervo (${used.length}):\n\n${used.map(compact).join("\n\n")}`;
-    const t=await ask(SYS_Q,user,{maxTokens:1200,onText:t=>{out.innerHTML=md(t);}});
-    showAnswer(out,t,used);
-  }catch(e){ out.innerHTML=`<p class="warnbox">${esc(e.message||String(e))}</p>`; }
-  btn.disabled=false;
-});
-
-/* ---------- red team ---------- */
 const SYS_R=`Eres el red team de la "Memoria Estratégica México-Estados Unidos", caso Tomate (disputa antidumping 1969-2026). Tu tarea es atacar una posición negociadora mexicana con el acervo verificado, para que quien negocia escuche lo que preferiría no escuchar.
 Dispones de la herramienta buscar_fichas. Úsala varias veces con términos distintos (cláusulas, actores, cifras, tribunales, precedentes) antes de concluir.
 Estructura tu respuesta con estos encabezados:
@@ -579,64 +1173,214 @@ Estructura tu respuesta con estos encabezados:
 ## Si la hipótesis principal es falsa
 ## Lo que la posición resiste
 ## Preguntas que el acervo no responde
-Reglas: cada punto cita las fichas entre corchetes, por ejemplo [JUR-0011]; nunca inventes IDs. Si un punto es inferencia tuya, márcalo con "Deducción:". No resuelvas contradicciones, muéstralas. Español sobrio, sin guiones largos, máximo 450 palabras.`;
-const EX_R=["México debe pedir un nuevo acuerdo de suspensión con los mismos precios de referencia de 2019.","México debe llevar el caso del tomate a la mesa de revisión del T-MEC de 2026.","Los productores deben concentrarse en el litigio ante el CIT y no negociar."];
-$("#rtEx").innerHTML=EX_R.map(q=>`<button class="chip" type="button">${esc(q)}</button>`).join("");
-$("#rtEx").addEventListener("click",e=>{const b=e.target.closest(".chip");if(b){$("#rt").value=b.textContent;}});
+Reglas: cada punto cita las fichas entre corchetes, por ejemplo [JUR-0011]; nunca inventes IDs. Si un punto es inferencia tuya, márcalo con "Deducción:". No resuelvas contradicciones, muéstralas. Si el texto no es una posición sobre el caso, dilo y no continúes. Español sobrio, sin guiones largos, máximo 450 palabras.`;
+let usedRT=[];
 const TOOL_SEARCH={name:"buscar_fichas",description:"Busca fichas verificadas del acervo del caso Tomate por palabras clave en español. Devuelve hasta 12 fichas con ID, nivel, afirmación y fuente.",
   schema:{type:"object",properties:{consulta:{type:"string",description:"Palabras clave, por ejemplo: cláusula retiro Commerce 2013"}},required:["consulta"]},
   run:async(inp)=>{const r=search((inp&&inp.consulta)||"",12); usedRT.push(...r); return r.length?r.map(compact).join("\n\n"):"Sin resultados para esa búsqueda.";}};
-let usedRT=[];
-$("#rtGo").addEventListener("click",async()=>{
-  const p=$("#rt").value.trim(); if(!p) return;
-  await getSample(); paintAiWarn();
-  if(!aiMode()){ $("#settings").showModal(); return; }
-  const out=$("#rtOut"), btn=$("#rtGo"); usedRT=[];
-  btn.disabled=true; out.innerHTML="<p class='note'>El agente está revisando el acervo…</p>";
-  try{
-    const seed=search(p,10);
-    const user=`Posición a atacar: "${p}"\n\nFichas iniciales relacionadas:\n\n${seed.map(compact).join("\n\n")}\n\nBusca más con buscar_fichas antes de responder.`;
-    usedRT.push(...seed);
-    const t=await ask(SYS_R,user,{tools:[TOOL_SEARCH],maxTokens:2200,onText:t=>{out.innerHTML=md(t);}});
-    const uniq=[...new Map(usedRT.map(f=>[f.id,f])).values()];
-    showAnswer(out,t,uniq);
-  }catch(e){ out.innerHTML=`<p class="warnbox">${esc(e.message||String(e))}</p>`; }
-  btn.disabled=false;
-});
 
-/* ---------- ajustes ---------- */
-$$("[data-settings]").forEach(b=>b.addEventListener("click",()=>{$("#kKey").value=store.get("mx_key")||"";$("#kModel").value=store.get("mx_model")||"claude-sonnet-5-5";$("#settings").showModal();}));
-$("#kSave").addEventListener("click",()=>{const k=$("#kKey").value.trim();if(k)store.set("mx_key",k);store.set("mx_model",$("#kModel").value.trim()||"claude-sonnet-5-5");$("#settings").close();paintAiWarn();});
-$("#kDel").addEventListener("click",()=>{store.del("mx_key");$("#kKey").value="";paintAiWarn();});
-$("#kClose").addEventListener("click",()=>$("#settings").close());
-
-/* ---------- novedades ---------- */
-function renderNews(d){
-  const list=(d&&d.novedades)||[];
-  if(!list.length){ $("#news").innerHTML=`<div class="block"><p style="margin:0">Sin novedades registradas desde el corte del ${esc(d&&d.actualizado||"11-oct-2026")}. La revisión es semanal; cuando aparezca un aviso nuevo se listará aquí con su fuente.</p></div>`; return; }
-  $("#news").innerHTML=`<div class="cards">${list.slice().reverse().map(n=>`<div class="card" style="cursor:default">
-    <div class="meta"><span class="lv ${n.nivel==="1"?"n1":"n2"}">${n.nivel==="1"?"Oficial":"Documentado"}</span><span>${esc(n.fecha)}</span><span>${esc(n.fuente)}</span><span>${n.estado==="evaluada"?"evaluada":"pendiente de evaluación"}</span></div>
-    <p>${esc(n.resumen)}</p>${n.url?`<p class="note"><a href="${esc(n.url)}" target="_blank" rel="noopener">Ver fuente</a></p>`:""}</div>`).join("")}</div>
-    <p class="note">Última revisión: ${esc(d.actualizado)}</p>`;
+async function apiCall(body,signal){
+  const key=store.get("mx_key"); if(!key) throw new Error("Falta la llave de la API.");
+  const r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",signal,headers:{
+    "content-type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},
+    body:JSON.stringify(body)});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok){ const e=new Error(r.status===401?"La llave no es válida. Revísela o bórrela.":((j.error&&j.error.message)||("Error "+r.status))); e.status=r.status; throw e; }
+  return j;
 }
+/* bucle de herramientas con llave propia */
+async function ask(system,user,{tools=[],maxTokens=1600,signal}={}){
+  const msgs=[{role:"user",content:user}];
+  const apiTools=tools.map(t=>({name:t.name,description:t.description,input_schema:t.schema}));
+  for(let i=0;i<8;i++){
+    const body={model:MODEL,max_tokens:maxTokens,system,messages:msgs}; if(apiTools.length) body.tools=apiTools;
+    const j=await apiCall(body,signal);
+    const text=(j.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n");
+    if(j.stop_reason!=="tool_use") return text;
+    msgs.push({role:"assistant",content:j.content});
+    const results=[];
+    for(const b of j.content.filter(b=>b.type==="tool_use")){
+      const t=tools.find(x=>x.name===b.name); let out;
+      try{ out=t?await t.run(b.input):"Herramienta desconocida"; }catch(e){ out="Error: "+e.message; }
+      results.push({type:"tool_result",tool_use_id:b.id,content:typeof out==="string"?out:JSON.stringify(out)});
+    }
+    msgs.push({role:"user",content:results});
+  }
+  throw new Error("El análisis no terminó en el número de pasos permitido.");
+}
+async function askOwnKey(mode,text,signal){
+  if(mode==="consulta"){
+    const used=search(text,30);
+    const t=await ask(SYS_Q,`Pregunta: ${text}\n\nFichas relevantes del acervo (${used.length}):\n\n${used.map(compact).join("\n\n")}`,{maxTokens:1200,signal});
+    return {text:t,used:used.map(f=>f.id)};
+  }
+  usedRT=[]; const seed=search(text,10); usedRT.push(...seed);
+  const t=await ask(SYS_R,`Posición a atacar: "${text}"\n\nFichas iniciales relacionadas:\n\n${seed.map(compact).join("\n\n")}\n\nBusca más con buscar_fichas antes de responder.`,{tools:[TOOL_SEARCH],maxTokens:2200,signal});
+  return {text:t,used:[...new Set(usedRT.map(f=>f.id))]};
+}
+
+/* markdown mínimo y seguro */
+function md(s){
+  const lines=esc(s).split(/\n/); let h="", inList=false;
+  const inline=t=>t.replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/(^|[^*])\*(?!\s)(.+?)\*(?!\*)/g,"$1<i>$2</i>").replace(/(^|\s)_(\S.*?)_(?=\s|$|[.,;:])/g,"$1<i>$2</i>");
+  for(let l of lines){
+    if(/^\s*[-*•]\s+/.test(l)){ if(!inList){h+="<ul>";inList=true;} h+="<li>"+inline(l.replace(/^\s*[-*•]\s+/,""))+"</li>"; continue; }
+    if(inList){h+="</ul>";inList=false;}
+    if(/^#{1,4}\s+/.test(l)) h+="<h4>"+inline(l.replace(/^#{1,4}\s+/,""))+"</h4>";
+    else if(l.trim()) h+="<p>"+inline(l)+"</p>";
+  }
+  if(inList) h+="</ul>";
+  return h;
+}
+
+let MODE="consulta", SERVER=null, EX=null;
+const TXT={
+  consulta:{intro:"Escriba una pregunta sobre el caso. La respuesta usa solo fichas del acervo, cita cada una y dice cuando algo no está documentado.",label:"Pregunta",ph:"Por ejemplo: ¿qué cambió en la cláusula de retiro entre 2008 y 2013?",go:"Consultar",hint:"Suele tardar entre 5 y 30 segundos.",ex:"consulta",exKey:"pregunta"},
+  redteam:{intro:"Escriba la posición que se piensa llevar a la mesa. El análisis la ataca con el acervo: supuestos débiles, evidencia en contra, la respuesta probable de Estados Unidos y lo que quedaría en pie.",label:"Posición a evaluar",ph:"Por ejemplo: México debe pedir un nuevo acuerdo de suspensión con los mismos precios de referencia de 2019.",go:"Poner a prueba",hint:"Suele tardar entre 20 y 60 segundos; revisa el acervo desde varios ángulos.",ex:"redteam",exKey:"posicion"}
+};
+const draft={consulta:"",redteam:""};
+function setMode(m){
+  if(!TXT[m]) return; if(m!==MODE){ draft[MODE]=$("#tin").value; }
+  MODE=m; const t=TXT[m];
+  $$(".modes button").forEach(b=>b.setAttribute("aria-selected",b.dataset.mode===m));
+  $("#toolIntro").textContent=t.intro; $("#tinLabel").textContent=t.label; $("#tin").placeholder=t.ph; $("#go").textContent=t.go; $("#hint").textContent=t.hint;
+  $("#tin").value=draft[m]||""; $("#out").innerHTML="";
+  paintExamples(); paintAccess();
+}
+$$(".modes button").forEach(b=>b.addEventListener("click",()=>setMode(b.dataset.mode)));
+$(".modes").addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=MODE==="consulta"?"redteam":"consulta";setMode(n);$("#m-"+n).focus();}});
+
+function backend(){ if(SERVER&&SERVER.configured) return "server"; if(store.get("mx_key")) return "key"; return "examples"; }
+function paintAccess(){
+  const b=backend(), el=$("#access");
+  const lock=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="9"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>`;
+  if(b==="examples"){ el.innerHTML=`${lock}<span><b>Las consultas libres no están activas en este sitio.</b> Mientras tanto puede revisar las respuestas de ejemplo, generadas con este mismo acervo y con sus citas navegables.</span>`; el.hidden=false; }
+  else if(b==="key"&&!(SERVER&&SERVER.configured)){ el.innerHTML=`${lock}<span>Las consultas se harán con <b>su llave de API</b>, guardada en este navegador.</span>`; el.hidden=false; }
+  else el.hidden=true;
+  $("#keyState").textContent=store.get("mx_key")?" (llave guardada en este navegador)":"";
+}
+function paintExamples(){
+  const list=(EX&&EX[TXT[MODE].ex])||[];
+  $("#exlist").innerHTML=list.length?list.map((e,i)=>`<li><button type="button" data-ex="${i}">${esc(e[TXT[MODE].exKey]||"")}<span class="tag">${(e.used||[]).length} fichas consultadas</span></button></li>`).join(""):`<li><p class="sans" style="font-size:14px;color:var(--muted);margin:10px 0">Los ejemplos no se pudieron cargar.</p></li>`;
+}
+$("#exlist").addEventListener("click",e=>{
+  const b=e.target.closest("[data-ex]"); if(!b) return;
+  const ex=EX[TXT[MODE].ex][+b.dataset.ex];
+  $$("#exlist [data-ex]").forEach(x=>x.setAttribute("aria-current",x===b));
+  $("#tin").value=ex[TXT[MODE].exKey]||"";
+  showAnswer({text:ex.respuesta,used:ex.used||[],q:ex[TXT[MODE].exKey],example:true});
+  $("#out").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
+});
+function stamp(){const d=new Date();return d.getDate()+" "+MES[d.getMonth()]+" "+d.getFullYear()+", "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0");}
+function showAnswer({text,used,q,example,notice}){
+  const out=$("#out");
+  const seal=example?`<span class="seal ex">Respuesta de ejemplo, generada con este acervo</span>`:"";
+  out.innerHTML=`${notice?`<div class="access" style="margin-bottom:var(--s2)">${notice}</div>`:""}
+    <div class="ans-head"><p class="q">${esc(q)}</p>${seal}<span class="seal">${mk("3")}Material de trabajo: verificar en las fichas citadas</span><span>${example?"Generada el "+esc(fd(EX&&EX.generado||"2026-10-11")):"Generada el "+stamp()}</span></div>
+    <div class="ans-body">${md(text||"")}</div>
+    ${used&&used.length?`<details class="used"><summary>Fichas consultadas para esta respuesta (${used.length})</summary><div class="refs">${used.map(refHTML).join("")}</div></details>`:""}`;
+  linkCites(out.querySelector(".ans-body"),"ref");
+}
+const STAGES={
+  consulta:[[0,"Buscando fichas relevantes"],[3,"Redactando la respuesta con citas"],[25,"Sigue trabajando; algunas respuestas tardan hasta un minuto"]],
+  redteam:[[0,"Leyendo la posición"],[3,"Buscando evidencia en el acervo desde varios ángulos"],[20,"Contrastando con lo que respondería Estados Unidos"],[45,"Redactando; el análisis completo puede tardar hasta 90 segundos"]]
+};
+let ctrl=null, timer=null;
+function waiting(q){
+  const st=STAGES[MODE], t0=Date.now(), out=$("#out");
+  out.innerHTML=`<div class="ans-head"><p class="q">${esc(q)}</p></div><div class="wait" role="status"><div class="stage"><b id="wStage">${st[0][1]}</b><span class="t" id="wT">0 s</span></div><div class="meter"><i></i></div><ol class="steps" id="wSteps">${st.map((s,i)=>`<li${i===0?' class="now"':""}>${s[1]}</li>`).join("")}</ol><div class="formrow" style="margin-top:0"><button class="btn quiet" type="button" id="cancel">Cancelar</button><span class="hint">${esc(TXT[MODE].hint)}</span></div></div>`;
+  $("#cancel").onclick=()=>{ if(ctrl) ctrl.abort(); };
+  clearInterval(timer);
+  timer=setInterval(()=>{
+    const s=Math.floor((Date.now()-t0)/1000); const tt=$("#wT"); if(!tt){clearInterval(timer);return;}
+    tt.textContent=s+" s"; let k=0; st.forEach((x,i)=>{if(s>=x[0])k=i;});
+    $("#wStage").textContent=st[k][1];
+    $$("#wSteps li").forEach((li,i)=>li.className=i<k?"done":i===k?"now":"");
+  },500);
+}
+function showError(msg,retry){
+  $("#out").innerHTML=`<div class="err"><span>${esc(msg)}</span>${retry?`<button class="btn quiet" type="button" id="retry">Intentar de nuevo</button>`:""}</div>`;
+  if(retry) $("#retry").onclick=run;
+}
+function fallbackExample(text,why){
+  const list=(EX&&EX[TXT[MODE].ex])||[];
+  if(!list.length){ showError("Las consultas libres no están activas y no se pudieron cargar los ejemplos.",false); return; }
+  // ejemplo más cercano por palabras compartidas
+  const ts=new Set(terms(text)); let best=list[0],bs=-1;
+  list.forEach(e=>{const s=terms(e[TXT[MODE].exKey]||"").filter(w=>ts.has(w)).length; if(s>bs){bs=s;best=e;}});
+  showAnswer({text:best.respuesta,used:best.used||[],q:best[TXT[MODE].exKey],example:true,
+    notice:`${esc(why)} Se muestra la respuesta de ejemplo más cercana a su texto.`});
+}
+async function run(){
+  const text=$("#tin").value.trim();
+  if(!text){ $("#tin").focus(); $("#hint").textContent=MODE==="consulta"?"Escriba una pregunta o elija un ejemplo.":"Escriba una posición o elija un ejemplo."; return; }
+  $$("#exlist [data-ex]").forEach(x=>x.setAttribute("aria-current","false"));
+  const b=backend();
+  if(b==="examples"){ fallbackExample(text,"Las consultas libres no están activas en este sitio."); return; }
+  ctrl=new AbortController(); const to=setTimeout(()=>ctrl.abort("timeout"),110000);
+  $("#go").disabled=true; waiting(text);
+  try{
+    let res;
+    if(b==="server"){
+      let r;
+      try{ r=await fetch("api/claude",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({mode:MODE,text}),signal:ctrl.signal}); }
+      catch(e){ if(ctrl.signal.aborted) throw e; throw Object.assign(new Error("No hay conexión con el servicio de consulta."),{status:0}); }
+      const j=await r.json().catch(()=>({}));
+      if(r.status===503||r.status===404||r.status===501){
+        SERVER={configured:false}; paintAccess();
+        if(store.get("mx_key")){ res=await askOwnKey(MODE,text,ctrl.signal); }
+        else { fallbackExample(text,j.error||"El servicio de consulta no está activado."); return; }
+      } else if(!r.ok){ throw Object.assign(new Error(j.error||("El servicio respondió con un error ("+r.status+").")),{status:r.status}); }
+      else res={text:j.text,used:j.used||[]};
+    } else res=await askOwnKey(MODE,text,ctrl.signal);
+    showAnswer({text:res.text,used:res.used,q:text});
+  }catch(e){
+    if(ctrl&&ctrl.signal.aborted){ showError(ctrl.signal.reason==="timeout"?"La respuesta tardó demasiado y se detuvo. Puede intentarlo de nuevo o acortar el texto.":"Consulta cancelada.",true); }
+    else showError(e.message||String(e), e.status!==400);
+  }finally{ clearTimeout(to); clearInterval(timer); $("#go").disabled=false; ctrl=null; }
+}
+$("#go").addEventListener("click",run);
+$("#tin").addEventListener("keydown",e=>{if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){e.preventDefault();run();}});
+
+/* llave propia */
+$("#keyBtn").addEventListener("click",()=>{$("#kKey").value=store.get("mx_key")||"";$("#keyDlg").showModal();});
+$("#kSave").addEventListener("click",()=>{const k=$("#kKey").value.trim();if(k)store.set("mx_key",k);$("#keyDlg").close();paintAccess();toast(k?"Llave guardada en este navegador":"Sin cambios");});
+$("#kDel").addEventListener("click",()=>{store.del("mx_key");$("#kKey").value="";paintAccess();toast("Llave borrada");});
+$("#kClose").addEventListener("click",()=>$("#keyDlg").close());
+
+/* en pantallas angostas, los datos clave van después de la síntesis */
+const narrow=matchMedia("(max-width:1020px)");
+function placeFacts(){
+  const f=$(".facts"); if(!f) return;
+  if(narrow.matches){ if(f.parentElement.id!=="factsSlot") $("#factsSlot").appendChild(f); }
+  else if(f.parentElement.id==="factsSlot") $(".col-side").appendChild(f);
+}
+try{narrow.addEventListener("change",placeFacts)}catch(e){}
+placeFacts();
 
 /* ---------- arranque ---------- */
 async function boot(){
-  show(location.hash.slice(1)||"nota");
+  setMode("consulta");
+  route();
+  const pData=fetch("data/fichas.json").then(r=>{if(!r.ok)throw 0;return r.json();});
+  const pEx=fetch("data/ejemplos.json").then(r=>r.ok?r.json():null).catch(()=>null);
+  const pNews=fetch("data/novedades.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const pSrv=fetch("api/claude",{cache:"no-store"}).then(async r=>{ if(!r.ok) return {configured:false}; const j=await r.json().catch(()=>null); return {configured:!!(j&&j.configured===true)}; }).catch(()=>({configured:false}));
   try{
-    const d=await (await fetch("data/fichas.json")).json();
-    PREFIX=d.prefijo||PREFIX; F=d.fichas;
-    F.forEach(f=>{byId[f.id]=f; f._a=norm(f.afirmacion); f._t=norm([f.id,f.agente,f.afirmacion,f.fuente,f.fecha,f.tipo].join(" "));});
-    $("#fAgente").innerHTML+=[...new Set(F.map(f=>f.agente))].sort().map(a=>`<option>${esc(a)}</option>`).join("");
-    renderStatic(); renderCards();
-  }catch(e){ $("#cards").innerHTML=`<p class="warnbox">No se pudo cargar el acervo (data/fichas.json).</p>`; }
-  try{ renderNews(await (await fetch("data/novedades.json",{cache:"no-store"})).json()); }catch(e){ renderNews(null); }
-  paintAiWarn();
-  getSample().then(paintAiWarn);
+    const d=await pData; PREFIX=d.prefijo||PREFIX; F=d.fichas;
+    F.forEach(f=>{byId[f.id]=f; f._a=norm(f.afirmacion); f._t=norm([f.id,f.agente,esp(f.agente),f.afirmacion,f.fuente,f.fecha,f.tipo].join(" "));});
+    $("#fEsp").innerHTML+=[...new Set(F.map(f=>f.agente))].sort((a,b)=>esp(a).localeCompare(esp(b))).map(a=>`<option value="${esc(a)}">${esc(esp(a))}</option>`).join("");
+    $("#legendMini").innerHTML=["1","2","3","VACIO"].map(lvTag).join("");
+    renderStatic(); paintChips(); renderRows();
+  }catch(e){ $("#rows").innerHTML=`<li class="err">No se pudo cargar el acervo (data/fichas.json). Recargue la página.</li>`; }
+  EX=await pEx; paintExamples();
+  renderNews(await pNews);
+  SERVER=await pSrv; paintAccess();
+  document.body.dataset.booted="1";
+  route();
 }
 boot();
 })();
 </script>
-
 </body>
 </html>

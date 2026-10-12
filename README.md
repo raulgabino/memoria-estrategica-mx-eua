@@ -9,7 +9,7 @@ Acervo verificado de la relación bilateral, organizado por niveles de conocimie
 
 ## Consulta y red team
 
-Usan la API de Claude directamente desde el navegador. Cada usuario pone su propia llave en "Configurar llave"; se guarda solo en su navegador. Recomendación: una llave exclusiva con límite de gasto mensual.
+Pasan por una función de servidor (`api/claude.js`) que guarda la llave de la API de Claude en la variable de entorno `ANTHROPIC_API_KEY` de Vercel; la llave nunca llega al navegador. El servidor fija las instrucciones, el modelo y la búsqueda en el acervo, y aplica topes por visitante y por día. Si el servicio no está activado, el sitio muestra respuestas de ejemplo (`data/ejemplos.json`) y ofrece, como opción avanzada, usar una llave propia guardada solo en el navegador.
 
 ## Cómo se construyó
 
