@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Acervo verificado de la disputa del tomate México-Estados Unidos, con niveles de conocimiento, consulta y red team.">
+<title>Memoria Estratégica México-EE. UU.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: expediente de archivo. Una columna de lectura con barra de pestañas fija; las fichas se abren en un panel lateral. */
+:root{
+  --bg:#f3f5f4; --surface:#ffffff; --ink:#18221f; --muted:#5b6862; --line:#d5ddd9;
+  --accent:#0f5c4d; --accent-soft:#e2efeb;
+  --n1:#1f5f8b; --n1-soft:#e3eef6;
+  --n2:#9a6410; --n2-soft:#f6ecdb;
+  --n3:#6b3fa0; --n3-soft:#efe7f8;
+  --vac:#6b7470; --vac-soft:#eceeed;
+  --warn:#a23b2a;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111816; --surface:#18211e; --ink:#e4ebe8; --muted:#9aa8a2; --line:#2c3833;
+  --accent:#5cc3a8; --accent-soft:#1d332d;
+  --n1:#7db7e0; --n1-soft:#1a2a36; --n2:#e0ad5a; --n2-soft:#33281a;
+  --n3:#b897e6; --n3-soft:#2a2238; --vac:#a3aca8; --vac-soft:#242b28; --warn:#e88a77; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111816; --surface:#18211e; --ink:#e4ebe8; --muted:#9aa8a2; --line:#2c3833;
+  --accent:#5cc3a8; --accent-soft:#1d332d;
+  --n1:#7db7e0; --n1-soft:#1a2a36; --n2:#e0ad5a; --n2-soft:#33281a;
+  --n3:#b897e6; --n3-soft:#2a2238; --vac:#a3aca8; --vac-soft:#242b28; --warn:#e88a77; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;margin:0}
+a{color:var(--accent)}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding-inline:20px}
+header.top{padding-block:28px 12px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(30px,5vw,44px);line-height:1.05;margin:.25em 0 .2em;letter-spacing:-.01em;text-wrap:balance}
+h2{font-family:var(--f-display);font-weight:700;font-size:26px;line-height:1.15;margin:0 0 .4em;text-wrap:balance}
+h3{font-family:var(--f-display);font-weight:700;font-size:18px;margin:1.4em 0 .4em}
+.lede{color:var(--muted);max-width:62ch;margin:0}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:thin}
+nav.tabs a{font-family:var(--f-display);font-weight:500;font-size:15px;text-decoration:none;color:var(--muted);padding:12px 12px 10px;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+main{padding-block:28px 64px}
+section.view[hidden]{display:none}
+.prose{max-width:66ch}
+.prose p{margin:.6em 0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.lv{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.lv.n1{color:var(--n1);background:var(--n1-soft)} .lv.n2{color:var(--n2);background:var(--n2-soft)}
+.lv.n3{color:var(--n3);background:var(--n3-soft);border-style:dashed} .lv.vac{color:var(--vac);background:var(--vac-soft);border-style:dotted}
+.cite{font-family:var(--f-mono);font-size:12.5px;padding:0 5px;border-radius:4px;border:1px solid currentColor;background:none;cursor:pointer;line-height:1.5;white-space:nowrap;vertical-align:1px}
+.cite.n1{color:var(--n1);background:var(--n1-soft)} .cite.n2{color:var(--n2);background:var(--n2-soft)}
+.cite.n3{color:var(--n3);background:var(--n3-soft);border-style:dashed} .cite.vac{color:var(--vac);background:var(--vac-soft);border-style:dotted}
+.cite.miss{color:var(--warn);text-decoration:line-through}
+.block{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin:18px 0}
+.block h3:first-child{margin-top:0}
+.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.status div{border-top:3px solid var(--accent);padding-top:8px}
+.status b{display:block;font-family:var(--f-display);font-size:22px}
+.status span{font-size:14px;color:var(--muted)}
+.opt{border-left:3px dashed var(--n3);padding:2px 0 2px 16px;margin:16px 0}
+.opt h4{font-family:var(--f-display);font-size:16px;margin:0 0 4px}
+.opt p{margin:.3em 0}
+ul.clean{padding-left:1.1em;margin:.4em 0} ul.clean li{margin:.35em 0}
+.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:4px 0 18px 22px}
+.tl li::before{content:"";position:absolute;left:-7px;top:10px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.tl .when{font-family:var(--f-mono);font-size:13px;color:var(--accent);font-weight:500}
+.tl .what{margin:2px 0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.grid2 .block{margin:0}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 16px}
+.tools input[type=search],.tools select{padding:8px 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);min-width:0}
+.tools input[type=search]{flex:1 1 240px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-family:var(--f-mono);font-size:12.5px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.count{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.cards{display:grid;gap:10px}
+.card{display:block;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;cursor:pointer}
+.card:hover{border-color:var(--accent)}
+.card .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-bottom:4px}
+.card p{margin:0;font-size:15.5px}
+.more{margin:14px 0;text-align:center}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);border-radius:var(--r);padding:9px 16px;font-family:var(--f-display);font-weight:500;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:disabled{opacity:.5;cursor:default}
+textarea{width:100%;min-height:96px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);resize:vertical}
+.examples{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.answer{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;margin-top:16px;min-height:60px}
+.answer:empty{display:none}
+.answer p{margin:.5em 0} .answer ul{padding-left:1.2em}
+.answer h4{font-family:var(--f-display);margin:1em 0 .3em}
+.note{font-size:14px;color:var(--muted)}
+.warnbox{border:1px solid var(--warn);color:var(--warn);border-radius:var(--r);padding:10px 14px;font-size:15px}
+.used{margin-top:10px;font-size:13.5px;color:var(--muted)}
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:20}
+aside.drawer{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:var(--surface);border-left:1px solid var(--line);z-index:21;overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + 18px) 22px calc(env(safe-area-inset-bottom,0px) + 28px)}
+.drawer .x{float:right;border:none;background:none;font-size:26px;line-height:1;cursor:pointer;color:var(--muted)}
+.drawer dl{margin:14px 0 0;display:grid;gap:10px}
+.drawer dt{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.drawer dd{margin:0;font-size:15.5px;overflow-wrap:anywhere}
+.frag{font-style:italic;border-left:3px solid var(--line);padding-left:10px}
+dialog{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);max-width:min(520px,calc(100% - 32px));padding:22px}
+dialog::backdrop{background:rgba(0,0,0,.4)}
+dialog label{display:block;font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:12px 0 4px}
+dialog input{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+footer{border-top:1px solid var(--line);padding-block:20px;font-size:14px;color:var(--muted)}
+table{border-collapse:collapse;font-size:15px;width:100%}
+.tablewrap{overflow-x:auto}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:500}
+td.num{font-variant-numeric:tabular-nums;text-align:right;font-family:var(--f-mono)}
+@media (prefers-reduced-motion:no-preference){.card,.btn{transition:border-color .15s,opacity .15s}}
+@media (max-width:520px){body{font-size:16px}.block{padding:16px}}
+</style>
+</head>
+<body>
+
+
+<header class="top wrap">
+  <div class="eyebrow">Memoria estratégica · Controversias agroalimentarias · Caso 1</div>
+  <h1>Tomate fresco: treinta años de acuerdos sin memoria institucional</h1>
+  <p class="lede">Acervo verificado de la disputa antidumping México-Estados Unidos, 1969-2026. Cada afirmación lleva su fuente y una etiqueta que dice qué tan firme es.</p>
+  <div class="legend" aria-label="Niveles de conocimiento">
+    <span class="lv n1">Nivel 1 · Oficial</span>
+    <span class="lv n2">Nivel 2 · Documentado</span>
+    <span class="lv n3">Nivel 3 · Deducción</span>
+    <span class="lv vac">Vacío</span>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Secciones">
+  <div class="wrap">
+    <a href="#nota" data-tab="nota">Nota de decisión</a>
+    <a href="#cronologia" data-tab="cronologia">Cronología</a>
+    <a href="#actores" data-tab="actores">Actores</a>
+    <a href="#fichas" data-tab="fichas">Fichas</a>
+    <a href="#consulta" data-tab="consulta">Consulta</a>
+    <a href="#redteam" data-tab="redteam">Red team</a>
+    <a href="#novedades" data-tab="novedades">Novedades</a>
+    <a href="#metodo" data-tab="metodo">Método</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- NOTA -->
+<section class="view" id="v-nota">
+  <div class="eyebrow">Nota de decisión · al 11 de octubre de 2026</div>
+  <h2>Dónde estamos y qué se puede hacer</h2>
+  <div class="status">
+    <div><b>17.09%</b><span>Depósito antidumping "all others" vigente desde el 14-jul-2025 [ADM-0023]</span></div>
+    <div><b>Sin acuerdo</b><span>Primera vez desde 1996 que una ruptura no termina en nuevo acuerdo [HIS-0034]</span></div>
+    <div><b>Orden confirmada</b><span>La USITC rechazó revocarla el 30-jun-2026 [JUR-0030]</span></div>
+  </div>
+
+  <div class="block prose">
+    <h3>Situación</h3>
+    <p>Commerce se retiró del acuerdo de suspensión de 2019 usando la cláusula XI.B, que le permite salir con 90 días de aviso, y emitió la orden antidumping A-201-820 [ADM-0019] [ADM-0023]. No publicó un hallazgo de violación: la última revisión concluida había encontrado cumplimiento [ADM-0018] [ADM-0036].</p>
+    <p>Hay tres frentes abiertos: la primera revisión administrativa de la orden, iniciada el 4-sep-2026 para el periodo jul-2025 a jun-2026 [ADM-0026]; una impugnación ante el CIT de la decisión de la USITC [JUR-0033]; y la revisión del T-MEC de 2026, donde la prensa ya ubica el tema [INT-0027].</p>
+    <p>México respondió con precios mínimos de exportación publicados en el DOF [ADM-0027]. El Gobierno de México no es signatario de estos acuerdos: los firman Commerce y asociaciones de productores, y el gobierno acompaña [ADM-0028] [ADM-0033].</p>
+  </div>
+
+  <div class="block prose">
+    <h3>Lo que el historial enseña</h3>
+    <ul class="clean">
+      <li><b>La llave de salida fue una cláusula de 2013.</b> Hasta 2008 solo los productores podían retirarse; desde 2013 también Commerce, y esa vía se usó en 2019 y en 2025 [ADM-0003] [ADM-0009] [JUR-0037]. El Circuito Federal la validó en 2022 [JUR-0011].</li>
+      <li><b>En tribunales gana el método, no el ataque al retiro.</b> Prosperaron la justiciabilidad y el periodo de datos 1995-96; fracasaron la influencia política y la coacción [JUR-0038].</li>
+      <li><b>La victoria de método tuvo costo.</b> La tasa general bajó de 20.91% a 17.09%, pero tres empresas perdieron su margen propio y cuatro quedaron en 273.43% [FIS-0020] [FIS-0019] [JUR-0039].</li>
+      <li><b>El bloque de Florida es constante y bipartidista; el opositor, disperso.</b> Importadores, minoristas, restaurantes y la Legislatura de Texas actuaron por separado [INT-0033] [INT-0012].</li>
+      <li><b>Los pisos de precio no frenaron la tendencia.</b> La cuota de productores estadounidenses en el consumo bajó de 68.6% (1995) a 30.3% (2025) [ECO-0005].</li>
+    </ul>
+  </div>
+
+  <h3>Opciones abiertas</h3>
+  <p class="note">Las opciones son deducciones del sistema a partir del acervo. No son recomendaciones oficiales; la decisión corresponde a quien negocia.</p>
+  <div class="opt">
+    <h4>1. Buscar un nuevo acuerdo de suspensión con otra cláusula de retiro</h4>
+    <p>Si se reabre la negociación, el punto aprendido es la cláusula: plazos de aviso más largos o causales de retiro para Commerce, en lugar del retiro libre de 90 días [JUR-0009] [JUR-0037].</p>
+    <p class="note">Riesgo: no hay señal pública de que Commerce quiera negociar [HIS-0034], y la FTE se opone a cualquier acuerdo [JUR-0026].</p>
+  </div>
+  <div class="opt">
+    <h4>2. Usar la revisión administrativa para obtener márgenes propios</h4>
+    <p>Las empresas que quedaron en "all others" o en 273.43% tienen en la revisión iniciada en septiembre la vía para pedir una tasa individual; una empresa ya tiene 2.81% [ADM-0026] [JUR-0023] [FIS-0020].</p>
+    <p class="note">Riesgo: el resultado depende de datos de cada empresa y puede subir la tasa.</p>
+  </div>
+  <div class="opt">
+    <h4>3. Ordenar la coalición en Estados Unidos</h4>
+    <p>Los aliados existen (Cámara de Comercio y 30 organizaciones, importadores de Arizona y Texas, la Legislatura de Texas), pero actuaron en cartas separadas frente a un bloque cohesionado [INT-0024] [INT-0012] [INT-0033].</p>
+  </div>
+  <div class="opt">
+    <h4>4. Decidir si el tomate entra o no a la mesa del T-MEC</h4>
+    <p>En 2019 los opositores lo ataron a la ratificación del T-MEC [INT-0023]. Para la revisión de 2026 conviene decidir de forma expresa si se vincula o se aísla [INT-0032].</p>
+    <p class="note">El acervo no documenta ningún uso del panel binacional del T-MEC en este caso [JUR-0015].</p>
+  </div>
+
+  <div class="block prose">
+    <h3>Lo que no sabemos</h3>
+    <ul class="clean">
+      <li>Qué propuso México y qué exigió Commerce en los 90 días de 2025 [JUR-0025].</li>
+      <li>Cuánto se ha recaudado en depósitos desde julio de 2025.</li>
+      <li>Si existe alguna evaluación oficial de por qué los acuerdos duraron o fallaron [HIS-0037].</li>
+      <li>Quién propuso en 2013 la cláusula de retiro de Commerce, y por qué [ADM-0039].</li>
+    </ul>
+    <p class="note">Ver todos los vacíos en la pestaña Fichas, filtro "Vacío".</p>
+  </div>
+</section>
+
+<!-- CRONOLOGIA -->
+<section class="view" id="v-cronologia" hidden>
+  <h2>Cronología</h2>
+  <p class="lede">Hitos seleccionados. Cada uno abre sus fichas.</p>
+  <ol class="tl" id="tl"></ol>
+</section>
+
+<!-- ACTORES -->
+<section class="view" id="v-actores" hidden>
+  <h2>Actores y posiciones</h2>
+  <p class="lede">Quién firmó, quién presionó y en qué sentido.</p>
+  <div class="grid2" id="actors"></div>
+</section>
+
+<!-- FICHAS -->
+<section class="view" id="v-fichas" hidden>
+  <h2>Fichas del acervo</h2>
+  <div class="tools">
+    <input type="search" id="q" placeholder="Buscar: cláusula, Florida, 17.09, USITC…" aria-label="Buscar fichas">
+    <select id="fAgente" aria-label="Agente"><option value="">Todas las miradas</option></select>
+  </div>
+  <div class="tools" role="group" aria-label="Filtrar por nivel">
+    <button class="chip" data-nivel="" aria-pressed="true">Todos</button>
+    <button class="chip" data-nivel="1" aria-pressed="false">Oficial</button>
+    <button class="chip" data-nivel="2" aria-pressed="false">Documentado</button>
+    <button class="chip" data-nivel="3" aria-pressed="false">Deducción</button>
+    <button class="chip" data-nivel="VACIO" aria-pressed="false">Vacío</button>
+    <button class="chip" id="fContra" aria-pressed="false">Con contradicción</button>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="cards" id="cards"></div>
+  <div class="more"><button class="btn ghost" id="moreBtn" hidden>Mostrar más</button></div>
+</section>
+
+<!-- CONSULTA -->
+<section class="view" id="v-consulta" hidden>
+  <h2>Consulta al acervo</h2>
+  <p class="lede">Claude responde solo con las fichas del acervo y cita cada una. Si algo no está documentado, lo dice.</p>
+  <div class="aiwarn" data-aiwarn></div>
+  <textarea id="cq" placeholder="Escribe una pregunta sobre el caso…" aria-label="Pregunta"></textarea>
+  <div class="examples" id="cqEx"></div>
+  <div class="row"><button class="btn" id="cqGo">Consultar</button><button class="btn ghost" data-settings>Configurar llave</button></div>
+  <div class="answer" id="cqOut" aria-live="polite"></div>
+</section>
+
+<!-- RED TEAM -->
+<section class="view" id="v-redteam" hidden>
+  <h2>Red team de una posición</h2>
+  <p class="lede">Escribe la posición que se piensa llevar a la mesa. Un agente la ataca con el acervo: supuestos débiles, evidencia en contra, la respuesta probable de Estados Unidos y lo que quedaría en pie.</p>
+  <div class="aiwarn" data-aiwarn></div>
+  <textarea id="rt" placeholder="Ej.: México debe pedir un nuevo acuerdo de suspensión con precios de referencia iguales a los de 2019." aria-label="Posición a evaluar"></textarea>
+  <div class="examples" id="rtEx"></div>
+  <div class="row"><button class="btn" id="rtGo">Atacar la posición</button><button class="btn ghost" data-settings>Configurar llave</button></div>
+  <div class="answer" id="rtOut" aria-live="polite"></div>
+</section>
+
+<!-- NOVEDADES -->
+<section class="view" id="v-novedades" hidden>
+  <h2>Novedades</h2>
+  <p class="lede">Seguimiento semanal del Federal Register, el DOF y la USITC sobre la orden A-201-820. Lo nuevo entra aquí con su fuente antes de pasar por evaluación.</p>
+  <div id="news"></div>
+</section>
+
+<!-- METODO -->
+<section class="view" id="v-metodo" hidden>
+  <h2>Método</h2>
+  <div class="prose">
+    <p>Siete agentes especialistas (jurídico, administrativo, fiscal, internacionalista, historiador, periodista y economista) recolectaron afirmaciones con fuente pública y fragmento textual. Un evaluador independiente, que no vio la recolección, abrió cada fuente y dictaminó en dos rondas con motivos codificados. Nada entra al acervo sin ese dictamen.</p>
+    <h3>Niveles</h3>
+    <ul class="clean">
+      <li><span class="lv n1">Oficial</span> Lo que un Estado firmó, publicó o resolvió. Significa "dicho por el Estado", no "verdadero".</li>
+      <li><span class="lv n2">Documentado</span> Terceros identificables: academia, prensa con fuentes, informes técnicos, gremios (con su sesgo anotado).</li>
+      <li><span class="lv n3">Deducción</span> Inferencia construida con premisas que son otras fichas, con grado de confianza y qué la refutaría.</li>
+      <li><span class="lv vac">Vacío</span> Pregunta relevante que el acervo público no responde, con la búsqueda realizada.</li>
+    </ul>
+    <h3>Resultado del caso Tomate</h3>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Etapa</th><th class="num">Fichas</th></tr></thead>
+    <tbody>
+      <tr><td>Recolectadas</td><td class="num">279</td></tr>
+      <tr><td>Aprobadas en ronda 1</td><td class="num">203</td></tr>
+      <tr><td>Devueltas y corregidas, aprobadas en ronda 2</td><td class="num">55</td></tr>
+      <tr><td>Rechazadas (duplicados y deducciones con premisas incompletas)</td><td class="num">21</td></tr>
+      <tr><td>Retiradas por su autor</td><td class="num">3</td></tr>
+      <tr><td><b>En el acervo</b></td><td class="num"><b>255</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="prose">
+    <h3>Límites</h3>
+    <p>Solo fuentes públicas. No hay minutas, posiciones negociadoras ni archivo diplomático reservado. La prensa con muro de pago no pudo leerse. La consulta y el red team usan Claude: responden con el acervo, pero sus respuestas son material de trabajo y deben verificarse en las fichas citadas.</p>
+    <h3>Origen</h3>
+    <p>Inspirado en la columna "La nueva asimetría" de Javier Treviño (SDP Noticias, 10-oct-2026) y en <i>A Conceptual Framework for AI-Augmented Statecraft</i> de Charlie Pozniak (Belfer Center, 2026). Planteamiento: Raúl Gabino Quilantán, OLEUM Consultoría.</p>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Acervo actualizado al <span id="upd">11-oct-2026</span> · Fuentes públicas · Las citas son fragmentos breves de sus fuentes.</div></footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="Detalle de ficha"></aside>
+
+<dialog id="settings">
+  <h2>Llave de la API de Claude</h2>
+  <p class="note">La llave se guarda solo en este navegador y se envía directamente a la API de Anthropic. No uses esta opción en computadoras compartidas. Conviene una llave exclusiva con límite de gasto.</p>
+  <label for="kKey">Llave (sk-ant-…)</label>
+  <input id="kKey" type="password" autocomplete="off" spellcheck="false">
+  <label for="kModel">Modelo</label>
+  <input id="kModel" type="text" value="claude-sonnet-5-5" spellcheck="false">
+  <div class="row">
+    <button class="btn" id="kSave">Guardar</button>
+    <button class="btn ghost" id="kDel">Borrar llave</button>
+    <button class="btn ghost" id="kClose">Cerrar</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+let F=[], byId={}, PREFIX="AGR-TOM-";
+const LV={ "1":["n1","Oficial"], "2":["n2","Documentado"], "3":["n3","Deducción"], "VACIO":["vac","Vacío"] };
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+
+/* ---------- citas ---------- */
+const CITE=/\[((?:AGR-TOM-)?[A-Z]{3}-\d{4})\]/g;
+function citeHTML(id){
+  id=id.replace(PREFIX,"");
+  const f=byId[id];
+  if(!f) return `<span class="cite miss" title="No está en el acervo">${esc(id)}</span>`;
+  const [c,l]=LV[f.nivel]||["vac",""];
+  return `<button class="cite ${c}" data-id="${id}" title="${l}">${id}</button>`;
+}
+function linkCites(root){
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+  const nodes=[];let n;while(n=walker.nextNode()){ if(CITE.test(n.nodeValue)) nodes.push(n); CITE.lastIndex=0; }
+  nodes.forEach(t=>{
+    const span=document.createElement("span");
+    span.innerHTML=esc(t.nodeValue).replace(CITE,(m,id)=>citeHTML(id));
+    t.replaceWith(...span.childNodes);
+  });
+}
+document.addEventListener("click",e=>{
+  const b=e.target.closest(".cite[data-id]"); if(b){ openCard(b.dataset.id); }
+});
+
+/* ---------- drawer ---------- */
+function openCard(id){
+  const f=byId[id]; if(!f) return;
+  const [c,l]=LV[f.nivel];
+  const row=(k,v)=>v?`<div><dt>${k}</dt><dd>${v}</dd></div>`:"";
+  const ids=a=>a&&a.length?a.map(citeHTML).join(" "):"";
+  const url=f.url&&/^https?:\/\//.test(f.url)?`<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.url)}</a>`:esc(f.url);
+  $("#drawer").innerHTML=`<button class="x" aria-label="Cerrar" id="dx">×</button>
+   <div class="eyebrow">${PREFIX}${id} · ${esc(f.agente)}</div>
+   <p style="margin:.6em 0"><span class="lv ${c}">${l}</span> ${f.tipo?`<span class="note">${esc(f.tipo)}</span>`:""}</p>
+   <h3 style="margin-top:.4em;font-family:var(--f-body);font-weight:600;font-size:19px;line-height:1.4">${esc(f.afirmacion)}</h3>
+   <dl>${row("Fuente",esc(f.fuente))}${row("Enlace o referencia",url)}${row("Fragmento",f.fragmento?`<span class="frag">${esc(f.fragmento)}</span>`:"")}
+   ${row("Fecha del hecho",esc(f.fecha))}${row("Premisas",ids(f.premisas))}${row("Confianza",esc(f.confianza))}
+   ${row("La refutaría",esc(f.refutable))}${row("Sesgo de la fuente",esc(f.sesgo))}${row("Contradice a",ids(f.contradice))}${row("Nota del orquestador",esc(f.nota))}</dl>`;
+  $("#drawer").hidden=false;$("#scrim").hidden=false;$("#dx").focus();
+  $("#dx").onclick=closeCard;
+}
+function closeCard(){$("#drawer").hidden=true;$("#scrim").hidden=true;}
+$("#scrim").onclick=closeCard;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCard();});
+
+/* ---------- pestañas ---------- */
+const TABS=["nota","cronologia","actores","fichas","consulta","redteam","novedades","metodo"];
+function show(t){
+  if(!TABS.includes(t)) t="nota";
+  TABS.forEach(x=>{$("#v-"+x).hidden=(x!==t)});
+  $$("nav.tabs a").forEach(a=>{ if(a.dataset.tab===t) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+}
+$$("nav.tabs a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();show(a.dataset.tab);try{history.replaceState(null,"","#"+a.dataset.tab)}catch(_){location.hash=a.dataset.tab}window.scrollTo({top:0});}));
+window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
+
+/* ---------- cronología y actores ---------- */
+const HITOS=[
+ ["1969","El Departamento de Estado plantea a México un reparto de mercado; el embajador McBride advierte riesgo de reacción antiestadounidense.","HIS-0001 HIS-0002"],
+ ["1970-1980","Florida intenta órdenes de comercialización y una acción antidumping; en 1980 Commerce no halla dumping.","HIS-0017 HIS-0018 HIS-0019"],
+ ["1979","El tomate llega a la reunión Carter-López Portillo.","HIS-0003"],
+ ["abr 1996","Petición antidumping de productores de Florida; México pide consultas en la OMC.","ADM-0001 JUR-0032"],
+ ["28 oct 1996","Primer acuerdo de suspensión, el día de la determinación preliminar. Solo los productores pueden retirarse.","ADM-0002 ADM-0003 FIS-0001"],
+ ["2002 · 2008 · 2013","Exportadores mexicanos se retiran para renegociar; en cada caso hay nuevo acuerdo en días o meses.","ADM-0004 ADM-0007 HIS-0009 HIS-0029"],
+ ["4 mar 2013","Primer acuerdo con derecho de retiro para Commerce. Pisos de precio suben 43% (campo) y 89% (invernadero).","ADM-0009 JUR-0004 HIS-0024"],
+ ["nov 2018 · may 2019","La Florida Tomato Exchange pide terminar; Commerce se retira del acuerdo de 2013.","ADM-0011 INT-0020"],
+ ["19 sep 2019","Nuevo acuerdo con inspección USDA en frontera y precio de 0.31 USD/lb.","ADM-0012 ADM-0014 FIS-0007"],
+ ["oct 2019","Determinación final de dumping: 20.91% para \"all others\".","FIS-0012 ADM-0015"],
+ ["abr 2022","El Circuito Federal valida el derecho contractual de retiro de Commerce.","JUR-0011 JUR-0012"],
+ ["jun 2023","La FTE pide terminar el acuerdo de 2019.","ADM-0017"],
+ ["dic 2024","Última revisión concluida: cumplimiento salvo faltas intrascendentes.","ADM-0018"],
+ ["14 abr 2025","Commerce anuncia su retiro con 90 días de aviso.","ADM-0019 ADM-0020"],
+ ["1 may 2025","Tras sentencia del CIT, márgenes recalculados con datos de 1995-96: 17.09%.","ADM-0021 JUR-0018"],
+ ["14 jul 2025","Terminación y orden antidumping A-201-820.","ADM-0023 JUR-0023 ADM-0032"],
+ ["8 ago 2025","México fija precios mínimos de exportación en el DOF.","ADM-0027 FIS-0024"],
+ ["30 jun 2026","La USITC rechaza revocar la orden.","JUR-0030 HIS-0016"],
+ ["ago · sep 2026","Impugnación ante el CIT; Commerce inicia la primera revisión administrativa.","JUR-0033 ADM-0026"]
+];
+const ACTORES=[
+ ["A favor de terminar los acuerdos","Florida Tomato Exchange y legisladores de Florida, de forma bipartidista en 2019 y con una carta de 19 legisladores en 2025.","INT-0020 INT-0021 INT-0007 JUR-0026"],
+ ["En contra en Estados Unidos","Importadores de Arizona y Texas, Cámara de Comercio y 30 organizaciones, restaurantes y minoristas, legisladores de Arizona y Texas, y la Legislatura de Texas.","INT-0023 INT-0024 INT-0012 INT-0009 INT-0011"],
+ ["Autoridades de Estados Unidos","Commerce negocia, firma y retira; la USITC determina daño y revisa la orden; los tribunales (CIT y Circuito Federal) resuelven impugnaciones.","ADM-0023 JUR-0030 JUR-0011"],
+ ["Firmantes mexicanos","Asociaciones de productores: CAADES, CNPH, Consejo Agrícola de Baja California, AMHPAC y otras. Son la parte formal de cada acuerdo.","ADM-0002 ADM-0005 ADM-0008 ADM-0012"],
+ ["Gobierno de México","No es signatario. Acompaña, comenta borradores, integra un grupo de trabajo desde 2013 y en 2025 fijó precios mínimos de exportación.","ADM-0028 JUR-0007 ADM-0010 ADM-0027"],
+ ["Lectura estructural","CSIS describe una división sureste contra oeste; el bloque de Florida es más cohesivo que el opositor.","INT-0014 INT-0033"]
+];
+function cites(s){return s.split(" ").map(citeHTML).join(" ");}
+function renderStatic(){
+  $("#tl").innerHTML=HITOS.map(h=>`<li><div class="when">${esc(h[0])}</div><p class="what">${esc(h[1])}</p><div>${cites(h[2])}</div></li>`).join("");
+  $("#actors").innerHTML=ACTORES.map(a=>`<div class="block"><h3>${esc(a[0])}</h3><p style="margin:.3em 0 .6em">${esc(a[1])}</p><div>${cites(a[2])}</div></div>`).join("");
+  linkCites($("#v-nota"));
+}
+
+/* ---------- explorador ---------- */
+const norm=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+let fNivel="", fContra=false, shown=40;
+function filtered(){
+  const q=norm($("#q").value).split(/\s+/).filter(Boolean), ag=$("#fAgente").value;
+  return F.filter(f=>(!fNivel||f.nivel===fNivel)&&(!ag||f.agente===ag)&&(!fContra||(f.contradice&&f.contradice.length))&&
+    q.every(w=>f._t.includes(w)));
+}
+function renderCards(){
+  const r=filtered(); $("#count").textContent=r.length+" fichas";
+  $("#cards").innerHTML=r.slice(0,shown).map(f=>{const[c,l]=LV[f.nivel];return `<button class="card" data-open="${f.id}">
+    <div class="meta"><span class="lv ${c}">${l}</span><span>${f.id}</span><span>${esc(f.agente)}</span><span>${esc(f.fecha)}</span></div>
+    <p>${esc(f.afirmacion)}</p></button>`}).join("");
+  $("#moreBtn").hidden=r.length<=shown;
+}
+$("#cards").addEventListener("click",e=>{const c=e.target.closest("[data-open]");if(c)openCard(c.dataset.open);});
+$("#q").addEventListener("input",()=>{shown=40;renderCards();});
+$("#fAgente").addEventListener("change",()=>{shown=40;renderCards();});
+$$(".chip[data-nivel]").forEach(b=>b.addEventListener("click",()=>{fNivel=b.dataset.nivel;$$(".chip[data-nivel]").forEach(x=>x.setAttribute("aria-pressed",x===b));shown=40;renderCards();}));
+$("#fContra").addEventListener("click",()=>{fContra=!fContra;$("#fContra").setAttribute("aria-pressed",fContra);shown=40;renderCards();});
+$("#moreBtn").addEventListener("click",()=>{shown+=40;renderCards();});
+
+/* ---------- búsqueda para la IA ---------- */
+const STOP=new Set("de la el los las y o a en que por para con del al se su sus un una es como mas pero sin sobre entre lo le les fue ha han si no mexico estados unidos ee uu eeuu cual cuales que quien quienes cuando donde porque".split(" "));
+function terms(s){return norm(s).replace(/[^a-z0-9.%\s-]/g," ").split(/\s+/).filter(w=>w.length>2&&!STOP.has(w));}
+function search(q,k){
+  const ts=terms(q); if(!ts.length) return F.slice(0,k);
+  const N=F.length, df={}; ts.forEach(t=>{df[t]=F.filter(f=>f._t.includes(t)).length;});
+  return F.map(f=>{let s=0;ts.forEach(t=>{if(df[t]&&f._t.includes(t)) s+=Math.log(1+N/df[t])*(f._a.includes(t)?1.6:1);});return [s,f];})
+    .filter(x=>x[0]>0).sort((a,b)=>b[0]-a[0]).slice(0,k).map(x=>x[1]);
+}
+function compact(f){
+  const p=[`[${f.id}] nivel=${f.nivel==="VACIO"?"VACÍO":f.nivel} (${LV[f.nivel][1]}) · ${f.agente} · fecha ${f.fecha||"s/f"}`, `Afirmación: ${f.afirmacion}`, `Fuente: ${f.fuente}`];
+  if(f.premisas) p.push(`Premisas: ${f.premisas.join(", ")} · confianza ${f.confianza||"?"}`);
+  if(f.sesgo) p.push(`Sesgo: ${f.sesgo}`);
+  if(f.contradice) p.push(`Contradice a: ${f.contradice.join(", ")}`);
+  return p.join("\n");
+}
+
+/* ---------- capa de IA ---------- */
+let SAMPLE=null, sampleTried=false;
+async function getSample(){
+  if(sampleTried) return SAMPLE; sampleTried=true;
+  try{ if(window.claude&&typeof window.claude.use==="function"){ SAMPLE=await window.claude.use("sample"); } }catch(e){SAMPLE=null}
+  return SAMPLE;
+}
+function aiMode(){ return SAMPLE?"claude":(store.get("mx_key")?"api":null); }
+function paintAiWarn(){
+  const m=aiMode();
+  $$("[data-aiwarn]").forEach(el=>{
+    el.innerHTML = m ? "" : `<p class="warnbox">Para usar esta función se necesita una llave de la API de Claude. Pulsa "Configurar llave". Sin llave, el resto del sitio funciona igual.</p>`;
+  });
+  $$("[data-settings]").forEach(b=>b.hidden = !!SAMPLE);
+}
+async function apiCall(body){
+  const key=store.get("mx_key"); if(!key) throw new Error("Falta la llave de la API.");
+  const r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{
+    "content-type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},
+    body:JSON.stringify(body)});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok) throw new Error((j.error&&j.error.message)||("Error "+r.status));
+  return j;
+}
+/* ask: system + user, opcionalmente herramientas; devuelve texto */
+async function ask(system,user,{tools=[],maxTokens=1600,onText}={}){
+  if(SAMPLE){
+    const opts={modelTier:"default",cache:false};
+    if(onText) opts.onText=({text})=>onText(text);
+    if(tools.length) opts.tools=tools.map(t=>({name:t.name,description:t.description,inputSchema:t.schema,execute:t.run}));
+    const r=await SAMPLE(system+"\n\n---\n\n"+user,opts);
+    return r.text;
+  }
+  const model=store.get("mx_model")||"claude-sonnet-5-5";
+  const msgs=[{role:"user",content:user}];
+  const apiTools=tools.map(t=>({name:t.name,description:t.description,input_schema:t.schema}));
+  for(let i=0;i<8;i++){
+    const body={model,max_tokens:maxTokens,system,messages:msgs}; if(apiTools.length) body.tools=apiTools;
+    const j=await apiCall(body);
+    const text=(j.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n");
+    if(j.stop_reason!=="tool_use"){ return text; }
+    if(onText&&text) onText(text+"\n\n_Buscando en el acervo…_");
+    msgs.push({role:"assistant",content:j.content});
+    const results=[];
+    for(const b of j.content.filter(b=>b.type==="tool_use")){
+      const t=tools.find(x=>x.name===b.name); let out;
+      try{ out=t?await t.run(b.input):"Herramienta desconocida"; }catch(e){ out="Error: "+e.message; }
+      results.push({type:"tool_result",tool_use_id:b.id,content:typeof out==="string"?out:JSON.stringify(out)});
+    }
+    msgs.push({role:"user",content:results});
+  }
+  throw new Error("El agente no terminó en el número de pasos permitido.");
+}
+
+/* render de markdown mínimo y seguro */
+function md(s){
+  const lines=esc(s).split(/\n/); let h="", inList=false;
+  const inline=t=>t.replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/(^|[^*])\*(?!\s)(.+?)\*(?!\*)/g,"$1<i>$2</i>").replace(/_(.+?)_/g,"<i>$1</i>");
+  for(let l of lines){
+    if(/^\s*[-*•]\s+/.test(l)){ if(!inList){h+="<ul>";inList=true;} h+="<li>"+inline(l.replace(/^\s*[-*•]\s+/,""))+"</li>"; continue; }
+    if(inList){h+="</ul>";inList=false;}
+    if(/^#{1,4}\s+/.test(l)) h+="<h4>"+inline(l.replace(/^#{1,4}\s+/,""))+"</h4>";
+    else if(l.trim()) h+="<p>"+inline(l)+"</p>";
+  }
+  if(inList) h+="</ul>";
+  return h;
+}
+function showAnswer(el,text,used){
+  el.innerHTML=md(text)+(used?`<div class="used">Fichas enviadas a Claude: ${used.map(f=>f.id).join(", ")}</div>`:"");
+  linkCites(el);
+}
+
+/* ---------- consulta ---------- */
+const SYS_Q=`Eres el módulo de consulta de la "Memoria Estratégica México-Estados Unidos", caso Tomate (disputa antidumping 1969-2026).
+Reglas obligatorias:
+1. Responde SOLO con la información de las fichas que se te entregan. No uses conocimiento propio para afirmar hechos.
+2. Cita cada afirmación con el ID de la ficha entre corchetes, por ejemplo [ADM-0023]. Nunca inventes IDs.
+3. Distingue el nivel: oficial (1), documentado por terceros (2), deducción del acervo (3), vacío. Si dos fichas chocan, muéstralo sin resolverlo.
+4. Si las fichas no permiten responder, dilo claramente ("El acervo no lo documenta") y sugiere qué habría que buscar.
+5. Si haces una inferencia propia, preséntala en una línea que empiece con "Deducción de esta consulta:" y cita las fichas en que se apoya.
+Estilo: español, tono sobrio y directo, sin guiones largos, máximo 250 palabras, párrafos cortos o viñetas.`;
+const EX_Q=["¿Por qué Commerce pudo terminar el acuerdo en 2025?","¿Qué argumentos jurídicos de México funcionaron en tribunales?","¿Quiénes se opusieron en Estados Unidos a la terminación?","¿Qué concesiones hizo México en el acuerdo de 2019?"];
+$("#cqEx").innerHTML=EX_Q.map(q=>`<button class="chip" type="button">${esc(q)}</button>`).join("");
+$("#cqEx").addEventListener("click",e=>{const b=e.target.closest(".chip");if(b){$("#cq").value=b.textContent;}});
+$("#cqGo").addEventListener("click",async()=>{
+  const q=$("#cq").value.trim(); if(!q) return;
+  await getSample(); paintAiWarn();
+  if(!aiMode()){ $("#settings").showModal(); return; }
+  const used=search(q,30), out=$("#cqOut"), btn=$("#cqGo");
+  btn.disabled=true; out.innerHTML="<p class='note'>Consultando el acervo…</p>";
+  try{
+    const user=`Pregunta: ${q}\n\nFichas relevantes del acervo (${used.length}):\n\n${used.map(compact).join("\n\n")}`;
+    const t=await ask(SYS_Q,user,{maxTokens:1200,onText:t=>{out.innerHTML=md(t);}});
+    showAnswer(out,t,used);
+  }catch(e){ out.innerHTML=`<p class="warnbox">${esc(e.message||String(e))}</p>`; }
+  btn.disabled=false;
+});
+
+/* ---------- red team ---------- */
+const SYS_R=`Eres el red team de la "Memoria Estratégica México-Estados Unidos", caso Tomate (disputa antidumping 1969-2026). Tu tarea es atacar una posición negociadora mexicana con el acervo verificado, para que quien negocia escuche lo que preferiría no escuchar.
+Dispones de la herramienta buscar_fichas. Úsala varias veces con términos distintos (cláusulas, actores, cifras, tribunales, precedentes) antes de concluir.
+Estructura tu respuesta con estos encabezados:
+## Supuestos que pueden fallar
+## Evidencia en contra
+## Cómo respondería Estados Unidos
+## Vulnerabilidades jurídicas
+## Si la hipótesis principal es falsa
+## Lo que la posición resiste
+## Preguntas que el acervo no responde
+Reglas: cada punto cita las fichas entre corchetes, por ejemplo [JUR-0011]; nunca inventes IDs. Si un punto es inferencia tuya, márcalo con "Deducción:". No resuelvas contradicciones, muéstralas. Español sobrio, sin guiones largos, máximo 450 palabras.`;
+const EX_R=["México debe pedir un nuevo acuerdo de suspensión con los mismos precios de referencia de 2019.","México debe llevar el caso del tomate a la mesa de revisión del T-MEC de 2026.","Los productores deben concentrarse en el litigio ante el CIT y no negociar."];
+$("#rtEx").innerHTML=EX_R.map(q=>`<button class="chip" type="button">${esc(q)}</button>`).join("");
+$("#rtEx").addEventListener("click",e=>{const b=e.target.closest(".chip");if(b){$("#rt").value=b.textContent;}});
+const TOOL_SEARCH={name:"buscar_fichas",description:"Busca fichas verificadas del acervo del caso Tomate por palabras clave en español. Devuelve hasta 12 fichas con ID, nivel, afirmación y fuente.",
+  schema:{type:"object",properties:{consulta:{type:"string",description:"Palabras clave, por ejemplo: cláusula retiro Commerce 2013"}},required:["consulta"]},
+  run:async(inp)=>{const r=search((inp&&inp.consulta)||"",12); usedRT.push(...r); return r.length?r.map(compact).join("\n\n"):"Sin resultados para esa búsqueda.";}};
+let usedRT=[];
+$("#rtGo").addEventListener("click",async()=>{
+  const p=$("#rt").value.trim(); if(!p) return;
+  await getSample(); paintAiWarn();
+  if(!aiMode()){ $("#settings").showModal(); return; }
+  const out=$("#rtOut"), btn=$("#rtGo"); usedRT=[];
+  btn.disabled=true; out.innerHTML="<p class='note'>El agente está revisando el acervo…</p>";
+  try{
+    const seed=search(p,10);
+    const user=`Posición a atacar: "${p}"\n\nFichas iniciales relacionadas:\n\n${seed.map(compact).join("\n\n")}\n\nBusca más con buscar_fichas antes de responder.`;
+    usedRT.push(...seed);
+    const t=await ask(SYS_R,user,{tools:[TOOL_SEARCH],maxTokens:2200,onText:t=>{out.innerHTML=md(t);}});
+    const uniq=[...new Map(usedRT.map(f=>[f.id,f])).values()];
+    showAnswer(out,t,uniq);
+  }catch(e){ out.innerHTML=`<p class="warnbox">${esc(e.message||String(e))}</p>`; }
+  btn.disabled=false;
+});
+
+/* ---------- ajustes ---------- */
+$$("[data-settings]").forEach(b=>b.addEventListener("click",()=>{$("#kKey").value=store.get("mx_key")||"";$("#kModel").value=store.get("mx_model")||"claude-sonnet-5-5";$("#settings").showModal();}));
+$("#kSave").addEventListener("click",()=>{const k=$("#kKey").value.trim();if(k)store.set("mx_key",k);store.set("mx_model",$("#kModel").value.trim()||"claude-sonnet-5-5");$("#settings").close();paintAiWarn();});
+$("#kDel").addEventListener("click",()=>{store.del("mx_key");$("#kKey").value="";paintAiWarn();});
+$("#kClose").addEventListener("click",()=>$("#settings").close());
+
+/* ---------- novedades ---------- */
+function renderNews(d){
+  const list=(d&&d.novedades)||[];
+  if(!list.length){ $("#news").innerHTML=`<div class="block"><p style="margin:0">Sin novedades registradas desde el corte del ${esc(d&&d.actualizado||"11-oct-2026")}. La revisión es semanal; cuando aparezca un aviso nuevo se listará aquí con su fuente.</p></div>`; return; }
+  $("#news").innerHTML=`<div class="cards">${list.slice().reverse().map(n=>`<div class="card" style="cursor:default">
+    <div class="meta"><span class="lv ${n.nivel==="1"?"n1":"n2"}">${n.nivel==="1"?"Oficial":"Documentado"}</span><span>${esc(n.fecha)}</span><span>${esc(n.fuente)}</span><span>${n.estado==="evaluada"?"evaluada":"pendiente de evaluación"}</span></div>
+    <p>${esc(n.resumen)}</p>${n.url?`<p class="note"><a href="${esc(n.url)}" target="_blank" rel="noopener">Ver fuente</a></p>`:""}</div>`).join("")}</div>
+    <p class="note">Última revisión: ${esc(d.actualizado)}</p>`;
+}
+
+/* ---------- arranque ---------- */
+async function boot(){
+  show(location.hash.slice(1)||"nota");
+  try{
+    const d=await (await fetch("data/fichas.json")).json();
+    PREFIX=d.prefijo||PREFIX; F=d.fichas;
+    F.forEach(f=>{byId[f.id]=f; f._a=norm(f.afirmacion); f._t=norm([f.id,f.agente,f.afirmacion,f.fuente,f.fecha,f.tipo].join(" "));});
+    $("#fAgente").innerHTML+=[...new Set(F.map(f=>f.agente))].sort().map(a=>`<option>${esc(a)}</option>`).join("");
+    renderStatic(); renderCards();
+  }catch(e){ $("#cards").innerHTML=`<p class="warnbox">No se pudo cargar el acervo (data/fichas.json).</p>`; }
+  try{ renderNews(await (await fetch("data/novedades.json",{cache:"no-store"})).json()); }catch(e){ renderNews(null); }
+  paintAiWarn();
+  getSample().then(paintAiWarn);
+}
+boot();
+})();
+</script>
+
+</body>
+</html>
