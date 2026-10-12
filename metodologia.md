@@ -1,7 +1,7 @@
 # Memoria Estratégica México-Estados Unidos
 ## Metodología de extracción de datos con agentes (v0.2, 11-10-2026)
 
-Autor del planteamiento: Raúl Gabino Quilantán (OLEUM Consultoría).
+Autor del planteamiento: Raúl Gabino Quilantán (proyecto personal). Contacto: raulgabino@gmail.com.
 Origen de la idea: columna "La nueva asimetría", Javier Treviño, SDP Noticias, 10-10-2026, sección "La memoria que perdemos".
 
 ---

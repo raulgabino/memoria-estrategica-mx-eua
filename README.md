@@ -15,6 +15,6 @@ Pasan por una función de servidor (`api/claude.js`) que guarda la llave de la A
 
 Siete agentes especialistas (Claude Sonnet 5.5) recolectaron afirmaciones con fuente pública y fragmento textual. Un evaluador independiente (Claude Opus 5.5) abrió cada fuente y dictaminó en dos rondas. 279 fichas recolectadas, 255 aprobadas.
 
-Inspirado en "La nueva asimetría", Javier Treviño (SDP Noticias, 10-oct-2026), y en *A Conceptual Framework for AI-Augmented Statecraft*, Charlie Pozniak (Belfer Center, 2026). Planteamiento: Raúl Gabino Quilantán, OLEUM Consultoría.
+Inspirado en "La nueva asimetría", Javier Treviño (SDP Noticias, 10-oct-2026), y en *A Conceptual Framework for AI-Augmented Statecraft*, Charlie Pozniak (Belfer Center, 2026). Autor: Raúl Gabino Quilantán (proyecto personal). Contacto: raulgabino@gmail.com.
 
 Fuentes públicas. Las citas son fragmentos breves de sus fuentes originales.
